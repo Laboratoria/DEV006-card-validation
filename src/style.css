@@ -1,0 +1,55 @@
+header{
+  border-bottom: 15px solid rgb(243, 102, 20);
+}
+
+body{
+
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  padding: 0 100px;
+  background-image: url(./images/fondo_de_huellas.png);
+  justify-content: space-around;
+}
+
+nav a img{
+float: left;
+height: 100%;
+padding: 15px 0;
+}
+
+nav ul{
+  list-style: none;
+  float: right;
+  justify-content: space-around;
+}
+
+nav ul li{
+  display: inline-flex;
+  justify-content: space-around;
+  border: 2px solid rgb(131, 80, 5);
+  background: linear-gradient(
+    rgb(251, 255, 3),
+    white,
+    rgb(253, 139, 8));
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.fondo {
+  font-family: cursive;
+  background: linear-gradient(
+    to right,
+    rgb(247, 198, 92),
+    rgb(226, 189, 214),
+    rgb(235, 228, 136)
+  );
+}
+
+
+
+
