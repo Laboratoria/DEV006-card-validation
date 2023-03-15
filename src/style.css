@@ -1,10 +1,12 @@
-header{
-  border-bottom: 15px solid rgb(243, 102, 20);
+main{
+  background: linear-gradient(
+    rgb(248, 252, 198),
+    white,
+    rgb(255, 229, 199));
 }
 
-body{
-  font-style: fantasy, cursive;
-  background-color: whitesmoke;
+header{
+  border-bottom: 15px solid rgb(245, 100, 17);
 }
 
 nav {
@@ -18,7 +20,7 @@ nav {
 nav a img{
 float: left;
 height: 100%;
-padding: 15px 0;
+padding: 10px 0;
 }
 
 nav ul{
@@ -30,26 +32,26 @@ nav ul{
 nav ul li{
   display: inline-flex;
   justify-content: space-around;
-  border: 2px solid rgb(131, 80, 5);
+  border: 2px solid rgba(141, 66, 4, 0.863);
   background: linear-gradient(
     rgb(251, 255, 3),
     white,
     rgb(253, 139, 8));
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
 }
 
-.fondo {
+nav ul li a{
+  color: rgb(122, 43, 6);
   font-family: cursive;
-  background: linear-gradient(
-    to right,
-    rgb(247, 198, 92),
-    rgb(226, 189, 214),
-    rgb(235, 228, 136)
-  );
+  display: block;
+  font-size: larger;
+  font-weight: bolder;
 }
+
+
 
 
 
