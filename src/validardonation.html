@@ -2,44 +2,125 @@
 <html>
   <head>
     <meta charset="utf-8">
+  <!--Se insertó un ícono antes del nombre de la página para que aparezca en la pestaña-->
     <link rel="icon" type="image.png" href="images/corazon perro gato.png">
     <title>Donatón PetsFriends Wasi</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
+    <header class="header">
+      <div class="logomenup">
+        <img src="../src/images/logomenup.png" alt="logo de la marca">
+      </div>
+       <!-- Se utilizó nav para hacer una barra de menú desplegable con algunos enlaces de navegación-->
       <nav>
-        <a href="index.html"><img src="images/logomenup.png" alt="logomenup"></a>
-        <ul>
-          <li><a href="index.html" class="current">CONÓCENOS</a></li>
-          <li><a href="index.html" class="current">ADOPT</a></li>
-          <li><a href="validardonation.html">DONATE</a></li>
-        </ul>
+          <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contactanos.html">CONTAC</a></li>
+            <li><a href="adopta.html">ADOPT</a></li>
+          </ul>
       </nav>
-    </header>
-    <br>
-    <br>
+      <div class="donar">
+        <a href="validardonation.html">
+          <img src="../src/images/iconos/donar2.png" width="70px" height="50px" alt="donar2">
+        <a class="boton" href="validardonation.html">DONATE</a>
+        </a>
+        </div>
+      </header>
 
+  <main>
+    <div class="contenedor">
+            <!-- Tarjeta -->
+    <section class="tarjeta" id="tarjeta">
+          <div class="delantera">
+                <div class="logo-marca" id="logo-marca">
+                    <img src="images/logos/visa.png" alt="">
+                </div>
 
+            <img src="images/chip.png" class="chip" alt="">
 
+              <div class="datos">
+                  <div class="grupo" id="numero">
+                    <p class= "label">Número de tarjeta</p>
+                    <p class="numero">#### #### #### ####</p>
+                  </div>
+                <div class="flexbox">
+                  <div class="grupo" id="nombre">
+                    <p class="label">Nombre de la tarjeta</p>
+                    <p class="nombre">Ej. Nacdul Ramirez</p>
+                  </div>
 
-    <main>
-      <div class="contenedor">
-      <label for="Names">Nombres</label>
-      <input type="text" id="Names" name="Names" />
-      <br>
-      <label for="Surname">Apellidos</label>
-      <input type="text" id="Surname" name="Surname" />
-      <br>
-      <label for="Adress">Dirección</label>
-      <input type="text" id="Adress" name="Adress" />
+                  <div class="grupo" id="expiracion">
+                    <p class="label">Expiración</p>
+                    <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                  </div>
+                 </div>
+               </div>
+            </div>
+
+          <div class="trasera">
+            <div class="barra-magnetica"></div>
+            <div class="datos">
+                  <div class="grupo" id="firma">
+                      <p class="label">Firma</p>
+                      <div class="firma"><p></p></div>
+                  </div>
+                  <div class="grupo" id="ccv">
+                    <p class="label">CCV</p>
+                    <p class="ccv"></p>
+                  </div>
+            </div>
+            <p class="leyenda">Esta tarjeta es propiedad del Banco Pay Banck y es de uso personal e intransferible. En caso de pérdida o robo el titular deberá llamar a Banca por teléfono o quien la encuentre deberá entregarla en cualquier agencia del banco.</p>
+            <a href="#" class="link-banco">www.paybanck.com</a>
+          </div>
+        </section>
+        <!-- Contenedor botón abrir formulario -->
+        <div class="contenedor-btn">
+          <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+             <img src="images/iconos/iconosuma.png" width="60px" height="40px" alt="iconosuma"></button>
+        </div>
+
+  <!--formulario-->
+  <form action="" id="formulario" class="formulario-tarjeta">
+    <div class="grupo">
+      <label for="inputNumero">Número de tarjeta</label>
+      <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
     </div>
-    </main>
-    <footer class="fotBot">
-      <a href="index.html"><img src="images/logomenup.png" alt="logomenup"></a>
-      <h2>Contáctanos: +51 941 895 233      ||       informes@PetsFriendsWasi.com</h2>
-    </footer >
-    <script src="index.js" type="module"></script>
-  </body>
+    <div class="flexbox">
+      <div class="grupo expira">
+        <label for="selectMes">Expiración</label>
+        <div class="flexbox">
+            <div class="grupo-select">
+              <select name="mes" id="selectMes">
+                  <option disable selected>Mes</option>
+              </select>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="grupo-select">
+                <select name="year" id="selectYear">
+                  <option disable selected>Year</option>
+                </select>
+                <i class="fas fa-angle-down>"></i>
+            </div>
+        </div>
+      </div>
+      <div class="grupo ccv">
+        <label for="inputCCV">CCV</label>
+        <input type="text" id="inputCCV" maxlength="3">
+      </div>
+    </div>
+    <button type="submit" class="btn-validar">VALIDAR</button>
+  </form>
+        </div>
+  </main>
+
+  <footer class="footer">
+    <a href="index.html"><img src="images/logomenup.png" alt="logomenup"></a>
+    <br>
+   <strong><h2>Contáctanos: +51 941 895 233      ||       contacto@PetsFriendsWasi.com</h2></strong>
+  </footer >
+  <script src="validator.js" type="module"></script>
+</body>
 </html>
+
