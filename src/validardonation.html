@@ -75,17 +75,22 @@
             <a href="#" class="link-banco">www.paybanck.com</a>
           </div>
         </section>
+
         <!-- Contenedor botón abrir formulario -->
         <div class="contenedor-btn">
-          <button class="btn-abrir-formulario" id="btn-abrir-formulario">
-             <img src="images/iconos/iconosuma.png" width="60px" height="40px" alt="iconosuma"></button>
-        </div>
+          <button class="btn-abrir" id="btn-abrir">
+            <img src="images/iconos/iconosuma.png" alt="iconosuma"></button>
+       </div>
 
   <!--formulario-->
-  <form action="" id="formulario" class="formulario-tarjeta">
+  <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
     <div class="grupo">
       <label for="inputNumero">Número de tarjeta</label>
-      <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+      <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+    </div>
+    <div class="grupo">
+      <label for="inputNombre">Nombre</label>
+      <input type="text" id="inputNombre" maxlength="19" autocomplete="oof">
     </div>
     <div class="flexbox">
       <div class="grupo expira">
@@ -110,7 +115,16 @@
         <input type="text" id="inputCCV" maxlength="3">
       </div>
     </div>
-    <button type="submit" class="btn-validar">VALIDAR</button>
+    <div class="caja">
+      <label for="monto">Monto $</label>
+      <input type="number" id="monto" placeholder="000000" required>
+    </div>
+    <br>
+
+    <div class="VALIDAR">
+      <button id= "VALIDAR">VALIDAR TARJETA</button>
+    </div>
+
   </form>
         </div>
   </main>
@@ -120,7 +134,7 @@
     <br>
    <strong><h2>Contáctanos: +51 941 895 233      ||       contacto@PetsFriendsWasi.com</h2></strong>
   </footer >
-  <script src="validator.js" type="module"></script>
+  <script src="index.js" type="module"></script>
 </body>
 </html>
 

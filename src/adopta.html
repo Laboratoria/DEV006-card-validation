@@ -27,19 +27,26 @@
         </div>
       </header>
 
-    <main class="contenedor1">
+    <main class="main-adopta">
         <div class="box1">
       <h1> Datos Personales del adoptante</h1>
+      <br>
       <label for="Names">Nombres:</label>
-      <input type="text" id="Names" name="Names" />
+      <input type="text" id="Names" name="Names"/>
       <br>
       <br>
       <label for="Surname">Apellidos:</label>
-      <input type="text" id="Surname" name="Surname" />
+      <input type="text" id="Surname" name="Surname"/>
+      <br>
+      <br>
+      <div class="hb">
+      <label for="hb">Birthdate:</label>
+      <input type="date" id="hb" required>
+    </div>
       <br>
       <br>
       <label for="Adress">Dirección:</label>
-      <input type="text" id="Adress" name="Adress" />
+      <input type="text" id="Adress" name="Adress"/>
       <br>
       <br>
       <label for="Phone">Celular:</label>
@@ -48,9 +55,18 @@
       <br>
       <label for="correo">e-mail:</label>
       <input type="text" id="correo" name="correo"/>
+      <br>
+      <br>
+      <label for="opciones">Selecciona una opción:</label>
+      <select id="opciones" name="opciones">
+        <option value="option1">Perro</option>
+        <option value="option2">Gato</option>
+      <br>
         </div>
+    </select>
     <br>
     <br>
+    <button type="button" id="btn-adoptar" name="btn-adoptar" value="adoptar">ADOPTAR</button>
     <br>
     <br>
     </main>
