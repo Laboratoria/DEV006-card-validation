@@ -1,370 +1,374 @@
 body{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-family: cursive;
-font-size: 17px;
-font-weight: 500;
-background: linear-gradient(
-  rgb(245, 250, 170),
-  white,
-  rgb(255, 213, 164));
-}
-
-.main-index{
-text-align: center
-}
-
-.main-adopta .box1 {
-padding-left: 50px;
-width: 100%;
-max-width: 1000;
-color: rgb(190, 57, 4);
-font-weight: 600;
-}
-
-.main-adopta .box1 h1 {
-  padding: 15px 5px;
-  font-size: 25px;
-  font-weight: bolder;
-  color:  #61058b;
-}
-
-/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML--*/
-.header{
-border-bottom: 12px solid rgb(245, 100, 17);
-background-image: url(../src/images/fondo_de_huellas.png);
-display: flex;
-justify-content: space-between;
-align-items: center;
-height: 100px;
-padding: 10px 5%;
-}
-
-/*--cursor pointer para que se vea la manito a la hora de mover el mouse--*/
-.header .logomenup {
-cursor: pointer;
-}
-
-/*--tamaño del logo--*/
-.header .logomenup img{
-  height: 75px;
-  width: auto;
-  transition: all 0.3s;
-}
-
-/*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
-.header .logomenup img:hover{
- transform: scale(1.2);
-}
-
-/*-- darle forma a la lista desordenada (links)--*/
-.header .nav-links {
-  list-style: none;
-}
-
-.header .nav-links li{
-  display: inline-block;
-  padding: 0 20px;
-}
-
-.header .nav-links li:hover{
-  transform: scale(1.1);
-}
-
-.header .nav-links a{
-  font-size: 800;
-  font-weight: 800;
-  color: #b3480a;
-  text-decoration: none;
-}
-
-/*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
-.header .nav-links li a:hover{
-  color: #9c12f8;
-}
-
-/*--estilo de ícono DONATE--*/
-.donar {
-  font-weight: 600;
-  font-size: 20px;
-  color: #9c12f8;
-  padding: 5px;
-  background: #ffdf4e;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  text-align: center;
-  width: 220px;
+  box-sizing: border-box;
   margin: 0;
- }
-
-.header .donar img{
-  height: 60px;
-  width: auto;
-  transition: all 0.3s;
-}
-
-/*--aumentar el tamaño a la hora de pasar el cursor--*/
-.header .donar img:hover{
-  transform: scale(1.2);
- }
-.header .donar .btn:hover{
-  color: #9c12f8;
-  transform: scale(1.1);
-}
-
-/*--estilo de la página de validar donation--*/
-
-* {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}
-
-.contenedor{
-    width: 90%;
-    /*--límite para que no sea muy ancho con el max-width en caso el usuario acceda a la página desde una pantalla más grande que la de nosotros--*/
-    max-width: 1000px;
-    padding: 40px 20px;
-    /*--para centrar la página de manera horizontal se usa el margin auto --*/
-    margin: auto;
-    /*--Se trabaja con flexbox porque tenemos la tarjeta, un botón y el formulario --*/
-    display: flex;
-    /*-- se utilizó flex direccion para que los elementos como el botón y el formulario no se desplieguen hacia le derecha, sino mantenga el orden hacia abajo-*/
-    flex-direction: column;
-/*-- como rotamos la posición de flexbox de horizontal a vertical, debemos de invertir el alineado con el aling items center--*/
-/*-- por eso utilizamos el align porque debemos invertir el alineado centrado a horizontal--*/
-    align-items: center;
-}
-
-/*-- Estilos generales de la tarjeta--*/
-.tarjeta{
-  width: 100%;
-  max-width: 550px;
-  /*-- para poder rotar la tarjeta sin que la cara posterior se coloque debajo de la primera cara, quise darle un efecto 3D al rotar en el mismo lugar--*/
-  position: relative;
-  color: #da2f04;
-  transition: .3s ease all;
-  /*--por defecto una rotación de 0 grados, es decir que no se mueva y quede fija --*/
-  transform: rotateY(0deg);
-  transform-style: preserve-3d;
-  /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
-  backface-visibility: hidden;
-  cursor: pointer;
-  /*-- como tenemos 3 capas el z-index permite que cada capa se vea según el orden que lo establezcamos--*/
-  z-index: 2;
-}
-
-/*-- .tarjeta:hover es para cuando quieres que gire pero cuando pones el cursor encima--*/
-/*-- por eso se cambia hover por active--*/
-/*-- se crea tarjeta active para que cuando el usuario de un click sobre ella, la tarjeta gire--*/
-.tarjeta.active {
-  /*--y girará en 180°--*/
-  transform: rotateY(180deg);
-}
-
-/*-- Como tenemos 2 div dentro de nuestra tarjeta, quiero que ambas tengan estas características, tanto la tarjeta delantera y la trasera--*/
-.tarjeta > div {
-  padding: 30px;
-  border-radius: 15px;
-/*--para que tenga un alto mínimo se usa min-height--*/
-  min-width: 330px;
-  min-height: 310px;
-  display: flex;
-  flex-direction: column;
-/*--espaceado entre cada elemento sea separado se usa justify-content--*/
-  justify-content: space-between;
-/*--sombra con box-shadow--*/
-  box-shadow: 0 10px 10px 0 rgba(174, 82, 235, 0.3);
-}
-
-/*-----TARJETA DELANTERA-----*/
-.tarjeta .delantera {
-  width:100%;
-  background: url(../src/images/bg-tarjeta/fondodelantera1.png);
-  background-size: cover;
-}
-
-/*--cambiar los tamaños de chip, logo y fondo de la tarjeta ya que cogieron el tamaño del 100% por el display flex de los div anteriores--*/
-.delantera .logo-marca {
-  text-align: right;
-  min-height: 50px;
-}
-
-.delantera .logo-marca img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     max-width: 80px;
-}
-
-.delantera .chip{
-  width: 100%;
-  max-width: 65px;
-  max-width: 35px;
-}
-
-.delantera .grupo .label {
-  font-size: 18px;
-  font-weight: 630;
-  color: #8e2ca7;
-  margin-bottom: 5px;
-}
-
-.delantera .grupo .numero,
-.delantera .grupo .nombre,
-.delantera .grupo .expiracion {
-  color: #da2f04;
-  font-size: 18px;
-  /*--font weight para ponerlo en negrita--*/
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.delantera .flexbox {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-/*------ TARJETA TRASERA ------*/
-
-.trasera {
-  background: url(../src/images/bg-tarjeta/Ttrasera.png);
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  transform: rotateY(180deg);
-    /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
-  backface-visibility: hidden;
-}
-
-.trasera .barra-magnetica {
-  height: 40px;
-	background: #1c0127;
-	width: 100%;
-	position: absolute;
-	top: 30px;
-	left: 0;
-}
-
-.trasera .datos {
-  margin-top: 60px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.trasera .datos p {
-margin-bottom:5px;
-}
-
-.trasera .datos #firma{
-  width:70%;
-}
-
-.trasera .datos #firma .firma{
-  /*--para el código de barras repeating-linear-gradient--*/
-  background: repeating-linear-gradient(rgb(201, 143, 235) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
-}
-
-.trasera .datos #firma .firma p{
-  line-height: 40px;
-  font-family: unset, cursive;
-  color:rgb(37, 1, 58);
-  font-size: 25px;
-  padding: 0 10px;
-  text-transform: capitalize;
-}
-
-.trasera .datos #ccv{
-  width: 17%;
-}
-
-.trasera .datos #ccv .ccv{
-background: rgb(199, 149, 228);
-height: 40px;
-color: #fc8805;
-padding: 10px;
-text-align: center;
-}
-
-.trasera .leyenda{
-  font-size: 12px;
-  line-height: 23px;
-}
-
-.trasera .link-banco {
-  font-size: 16px;
-  font-weight: 300;
-  color:#9d05b1;
-}
-
-/*-- contenedor botón --*/
-
-.contenedor-btn {
-  position: relative;
-  top: -25px;
-  z-index: 3;
-  transition: all .3s ease;
-  }
-
-.contenedor-btn .btn-abrir {
-  cursor: pointer;
-  padding: 2px;
-  border:rgb(159, 22, 238);
-  border-radius: 200%;
-}
-
-.contenedor-btn .btn-abrir:hover{
-  background: rgb(255, 14, 203);
-}
-
-.contenedor-btn .btn-abrir img{
-  width: 50px;
-  height: 35px;
-  border-radius: 200%;
-  box-shadow: -5px 2px 8px rgba(196, 3, 255, 0.966);
-  transition: all .3s ease;
-}
-
-.contenedor-btn .btn-abrir .img:hover{
-  background: rgb(255, 14, 203);
-}
-
-.contenedor-btn .btn-abrir .img.active {
-  transform: rotate(45deg);
-}
-
-.formulario-tarjeta .VALIDAR #VALIDAR{
-  background: #9707bb;
-  font-size: 22PXs;
-  font-weight: 700px;
-  padding: 10px;
-}
-
-/*-- estilos del footer de todos los footers de los html--*/
-.footer{
-  border-bottom: 15px solid rgb(245, 100, 17);
-  height: 100px;
-  max-width: 100%;
-  padding: 5px;
-  background-image: url(images/fondo_de_huellas.png);
-}
-
-.footer a img{
-  float: left;
-  height: 70px;
-  max-width: 100%;
   padding: 0;
-}
-
-footer h2{
-  float: right;
-  padding: 5px 0;;
-  color: rgb(105, 44, 3);
-  font-size: 18px;
-  font-weight: 600;
   font-family: cursive;
-}
+  font-size: 17px;
+  font-weight: 500;
+  background: linear-gradient(
+    rgb(245, 250, 170),
+    white,
+    rgb(255, 213, 164));
+  }
+  
+  .main-index{
+  text-align: center;
+  }
+  
+  .main-adopta .box1 {
+  padding-left: 50px;
+  width: 100%;
+  max-width: 1000;
+  color: rgb(190, 57, 4);
+  font-weight: 600;
+  }
+  
+  .main-adopta .box1 h1 {
+    padding: 15px 5px;
+    font-size: 25px;
+    font-weight: bolder;
+    color:  #61058b;
+  }
+  
+  /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML--*/
+  .header{
+  border-bottom: 12px solid rgb(245, 100, 17);
+  background-image: url(../src/images/fondo_de_huellas.png);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 10px 5%;
+  }
+  
+  /*--cursor pointer para que se vea la manito a la hora de mover el mouse--*/
+  .header .logomenup {
+  cursor: pointer;
+  }
+  
+  /*--tamaño del logo--*/
+  .header .logomenup img{
+    height: 75px;
+    width: auto;
+    transition: all 0.3s;
+  }
+  
+  /*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
+  .header .logomenup img:hover{
+   transform: scale(1.2);
+  }
+  
+  /*-- darle forma a la lista desordenada (links)--*/
+  .header .nav-links {
+    list-style: none;
+  }
+  
+  .header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+  }
+  
+  .header .nav-links li:hover{
+    transform: scale(1.1);
+  }
+  
+  .header .nav-links a{
+    font-size: 800;
+    font-weight: 800;
+    color: #b3480a;
+    text-decoration: none;
+  }
+  
+  /*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
+  .header .nav-links li a:hover{
+    color: #9c12f8;
+  }
+  
+  /*--estilo de ícono DONATE--*/
+  .donar {
+    font-weight: 600;
+    font-size: 20px;
+    color: #9c12f8;
+    padding: 5px;
+    background: #ffdf4e;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    width: 220px;
+    margin: 0;
+   }
+  
+  .header .donar img{
+    height: 60px;
+    width: auto;
+    transition: all 0.3s;
+  }
+  
+  /*--aumentar el tamaño a la hora de pasar el cursor--*/
+  .header .donar img:hover{
+    transform: scale(1.2);
+   }
+  .header .donar .btn:hover{
+    color: #9c12f8;
+    transform: scale(1.1);
+  }
+  
+  /*--estilo de la página de validar donation--*/
+  
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  }
+  
+  .contenedor{
+      width: 90%;
+      /*--límite para que no sea muy ancho con el max-width en caso el usuario acceda a la página desde una pantalla más grande que la de nosotros--*/
+      max-width: 1000px;
+      padding: 40px 20px;
+      /*--para centrar la página de manera horizontal se usa el margin auto --*/
+      margin: auto;
+      /*--Se trabaja con flexbox porque tenemos la tarjeta, un botón y el formulario --*/
+      display: flex;
+      /*-- se utilizó flex direccion para que los elementos como el botón y el formulario no se desplieguen hacia le derecha, sino mantenga el orden hacia abajo-*/
+      flex-direction: column;
+  /*-- como rotamos la posición de flexbox de horizontal a vertical, debemos de invertir el alineado con el aling items center--*/
+  /*-- por eso utilizamos el align porque debemos invertir el alineado centrado a horizontal--*/
+      align-items: center;
+  }
+  
+  /*-- Estilos generales de la tarjeta--*/
+  .tarjeta{
+    width: 100%;
+    max-width: 550px;
+    /*-- para poder rotar la tarjeta sin que la cara posterior se coloque debajo de la primera cara, quise darle un efecto 3D al rotar en el mismo lugar--*/
+    position: relative;
+    color: #da2f04;
+    transition: .3s ease all;
+    /*--por defecto una rotación de 0 grados, es decir que no se mueva y quede fija --*/
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
+    backface-visibility: hidden;
+    cursor: pointer;
+    /*-- como tenemos 3 capas el z-index permite que cada capa se vea según el orden que lo establezcamos--*/
+    z-index: 2;
+  }
+  
+  /*-- .tarjeta:hover es para cuando quieres que gire pero cuando pones el cursor encima--*/
+  /*-- por eso se cambia hover por active--*/
+  /*-- se crea tarjeta active para que cuando el usuario de un click sobre ella, la tarjeta gire--*/
+  .tarjeta.active {
+    /*--y girará en 180°--*/
+    transform: rotateY(180deg);
+  }
+  
+  /*-- Como tenemos 2 div dentro de nuestra tarjeta, quiero que ambas tengan estas características, tanto la tarjeta delantera y la trasera--*/
+  .tarjeta > div {
+    padding: 30px;
+    border-radius: 15px;
+  /*--para que tenga un alto mínimo se usa min-height--*/
+    min-width: 330px;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+  /*--espaceado entre cada elemento sea separado se usa justify-content--*/
+    justify-content: space-between;
+  /*--sombra con box-shadow--*/
+    box-shadow: 0 10px 10px 0 rgba(174, 82, 235, 0.3);
+  }
+  
+  /*-----TARJETA DELANTERA-----*/
+  .tarjeta .delantera {
+    width:100%;
+    background: url(../src/images/bg-tarjeta/fondodelantera1.png);
+    background-size: cover;
+  }
+  
+  /*--cambiar los tamaños de chip, logo y fondo de la tarjeta ya que cogieron el tamaño del 100% por el display flex de los div anteriores--*/
+  .delantera .logo-marca {
+    text-align: right;
+    min-height: 50px;
+  }
+  
+  .delantera .logo-marca img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       max-width: 80px;
+  }
+  
+  .delantera .chip{
+    width: 100%;
+    max-width: 65px;
+    max-width: 35px;
+  }
+  
+  .delantera .grupo .label {
+    font-size: 18px;
+    font-weight: 630;
+    color: #8e2ca7;
+    margin-bottom: 5px;
+  }
+  
+  .delantera .grupo .numero,
+  .delantera .grupo .nombre,
+  .delantera .grupo .expiracion {
+    color: #da2f04;
+    font-size: 18px;
+    /*--font weight para ponerlo en negrita--*/
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .delantera .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /*------ TARJETA TRASERA ------*/
+  
+  .trasera {
+    background: url(../src/images/bg-tarjeta/Ttrasera.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+      /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
+    backface-visibility: hidden;
+  }
+  
+  .trasera .barra-magnetica {
+    height: 40px;
+    background: #1c0127;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+  
+  .trasera .datos {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .trasera .datos p {
+  margin-bottom:5px;
+  }
+  
+  .trasera .datos #firma{
+    width:70%;
+  }
+  
+  .trasera .datos #firma .firma{
+    /*--para el código de barras repeating-linear-gradient--*/
+    background: repeating-linear-gradient(rgb(201, 143, 235) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
+  }
+  
+  .trasera .datos #firma .firma p{
+    line-height: 40px;
+    font-family: unset, cursive;
+    color:rgb(37, 1, 58);
+    font-size: 25px;
+    padding: 0 10px;
+    text-transform: capitalize;
+  }
+  
+  .trasera .datos #ccv{
+    width: 17%;
+  }
+  
+  .trasera .datos #ccv .ccv{
+  background: rgb(199, 149, 228);
+  height: 40px;
+  color: #fc8805;
+  padding: 10px;
+  text-align: center;
+  }
+  
+  .trasera .leyenda{
+    font-size: 12px;
+    line-height: 23px;
+  }
+  
+  .trasera .link-banco {
+    font-size: 16px;
+    font-weight: 300;
+    color:#9d05b1;
+  }
+  
+  /*-- contenedor botón --*/
+  
+  .contenedor-btn {
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    transition: all .3s ease;
+    }
+  
+  .contenedor-btn .btn-abrir {
+    cursor: pointer;
+    padding: 2px;
+    border:rgb(159, 22, 238);
+    border-radius: 200%;
+  }
+  
+  .contenedor-btn .btn-abrir:hover{
+    background: rgb(255, 14, 203);
+  }
+  
+  .contenedor-btn .btn-abrir img{
+    width: 50px;
+    height: 35px;
+    border-radius: 200%;
+    box-shadow: -5px 2px 8px rgba(196, 3, 255, 0.966);
+    transition: all .3s ease;
+  }
+  
+  .contenedor-btn .btn-abrir .img:hover{
+    background: rgb(255, 14, 203);
+  }
+  
+  .contenedor-btn .btn-abrir .img.active {
+    transform: rotate(45deg);
+  }
+  
+  .formulario-tarjeta .VALIDAR #VALIDAR{
+    background: #9707bb;
+    font-size: 22PXs;
+    font-weight: 700px;
+    padding: 10px;
+  }
+  
+  /*-- estilos del footer de todos los footers de los html--*/
+  .footer{
+    border-bottom: 15px solid rgb(245, 100, 17);
+    height: 100px;
+    max-width: 100%;
+    padding: 5px;
+    background-image: url(images/fondo_de_huellas.png);
+  }
+  
+  .footer a img{
+    float: left;
+    height: 70px;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  footer h2{
+    float: right;
+    padding: 5px 0;;
+    color: rgb(105, 44, 3);
+    font-size: 18px;
+    font-weight: 600;
+    font-family: cursive;
+  }
+  
+  
+  
+  
