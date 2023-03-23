@@ -11,81 +11,9 @@ body{
     rgb(255, 204, 146));
   }
   
-  .main-index{
-  text-align: center;
-  }
-  
-
-  /*--ESTILO PAG 3--*/
-  .main-adopta .párrafo h{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-weight: bolder;
-    font-family: cursive;
-    font-size: 35px;
-    font-style: oblique;
-    color:#9805ac;
-    }
-  
-    .main-adopta .párrafo p{
-      text-align: justify;
-      font-size: 22px;
-      font-weight: bold;
-      padding: 15px;
-      color: #c74d06;
-    }
-  
-    .main-adopta h1{
-  background-color: rgba(248, 220, 169, 0.911);
-  text-align: center;
-  justify-content: center;
-  font-size: 35PX;
-  font-family: cursive;
-  font-weight: 1800;
-  color: #9805ac;
-    }
-  
-    .main-adopta .contenedor {
-    color: rgb(190, 57, 4);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    }
-  
-    .main-adopta .columna{
-    width: 100%;
-    float:none;
-    }
-  
-  .main-adopta .columna img{
-    width:auto;
-    float:none;
-    object-fit: cover;
-  }
-  
-  .main-adopta .ADOPTAR{
-    font-size: 22px;
-    font-weight: 700px;
-    padding: 10px;
-    display: flex;
-    width: 90%;
-    padding: 40px 20px;
-    margin: auto;
-    flex-direction: column;
-    align-items: center;
-  }
-  .main-adopta .ADOPTAR #btn-adoptar{
-    background-color: #9c2eb8;
-    font-family: cursive;
-    font-size: 25px;
-    font-weight: bolder;
-    color: white;
-    padding: 10px;
-  }
  
+  /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
 
-  /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML--*/
   .header{
   border-bottom: 12px solid rgb(245, 100, 17);
   background-image: url(../src/images/fondo_de_huellas.png);
@@ -170,6 +98,81 @@ body{
     transform: scale(1.1);
   }
   
+
+   /*--ESTILO PAG 1 --*/ 
+   .main-index{
+    text-align: center;
+    }
+    
+  
+    /*--ESTILO PAG 3--*/
+    .main-adopta .párrafo h{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-weight: bolder;
+      font-family: cursive;
+      font-size: 35px;
+      font-style: oblique;
+      color:#9805ac;
+      }
+    
+      .main-adopta .párrafo p{
+        text-align: justify;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 15px;
+        color: #c74d06;
+      }
+    
+      .main-adopta h1{
+    background-color: rgba(248, 220, 169, 0.911);
+    text-align: center;
+    justify-content: center;
+    font-size: 35PX;
+    font-family: cursive;
+    font-weight: 1800;
+    color: #9805ac;
+      }
+    
+      .main-adopta .contenedor {
+      color: rgb(190, 57, 4);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      }
+    
+      .main-adopta .columna{
+      width: 100%;
+      float:none;
+      }
+    
+    .main-adopta .columna img{
+      width:auto;
+      float:none;
+      object-fit: cover;
+    }
+    
+    .main-adopta .ADOPTAR{
+      font-size: 22px;
+      font-weight: 700px;
+      padding: 10px;
+      display: flex;
+      width: 90%;
+      padding: 40px 20px;
+      margin: auto;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main-adopta .ADOPTAR #btn-adoptar{
+      background-color: #9c2eb8;
+      font-family: cursive;
+      font-size: 25px;
+      font-weight: bolder;
+      color: white;
+      padding: 10px;
+    }
+   
 
     /* ESTILO DE LA 4TA PÁGINA HTML
   /*--estilo de la página de validar donation--*/
@@ -274,7 +277,6 @@ body{
   .delantera .grupo .expiracion {
     color: #da2f04;
     font-size: 18px;
-    /*--font weight para ponerlo en negrita--*/
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -393,6 +395,26 @@ body{
     transform: rotate(45deg);
   }
   
+.formulario-tarjeta {
+  background:rgb(247, 239, 140);
+  width: 100%;
+  max-width: 700px;
+  padding: 150px 30px 30px 30px;
+  border-radius: 10px;
+  position: relative;
+  top: -150px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path .3s ease-out;
+}
+
+/*-- cuando formulario tenga la clase active y se de un click quiero que tenga un clip-path--*/
+
+.formulario-tarjeta.tarjeta.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
   .formulario-tarjeta .VALIDAR #VALIDAR{
     background: #aa02d4;
     font-size: 25px;
@@ -402,6 +424,10 @@ body{
     font-family: cursive;
   }
   
+
+
+
+
   /*-- estilos del footer de todos los footers de los html--*/
   .footer{
     border-bottom: 15px solid rgb(245, 100, 17);
