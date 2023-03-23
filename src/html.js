@@ -1,4 +1,8 @@
 //hacer referencia del button adoptar a una url
+const saludo = "Bienvenido a PetsFriends Wasi";
+    alert(saludo);
+
+
 const newLocal = "http://127.0.0.1:5500/src/gracias.html";
 
 //crear la funcion para dar click
