@@ -15,19 +15,65 @@ body{
   text-align: center;
   }
   
-  .main-adopta .box1 {
-  padding-left: 50px;
-  width: 100%;
-  max-width: 1000;
-  color: rgb(190, 57, 4);
-  font-weight: 600;
+
+  /*--ESTILO PAG 3--*/
+  .main-adopta .párrafo h{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: cursive;
+    font-size: 35px;
+    font-style: oblique;
+    color:#9805ac;
+    }
+  
+    .main-adopta .párrafo p{
+      text-align: justify;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 15px;
+      color: #c74d06;
+    }
+  
+    .main-adopta h1{
+  background-color: rgba(248, 220, 169, 0.911);
+  text-align: center;
+  justify-content: center;
+  font-size: 35PX;
+  font-family: cursive;
+  font-weight: 1800;
+  color: #9805ac;
+    }
+  
+    .main-adopta .contenedor {
+    color: rgb(190, 57, 4);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    }
+  
+    .main-adopta .columna{
+    width: 100%;
+    float:none;
+    }
+  
+  .main-adopta .columna img{
+    width:auto;
+    float:none;
+    object-fit: cover;
   }
   
-  .main-adopta .box1 h1 {
-    padding: 15px 5px;
-    font-size: 25px;
-    font-weight: bolder;
-    color:  #61058b;
+  .main-adopta .ADOPTAR{
+    font-size: 22px;
+    font-weight: 700px;
+    padding: 10px;
+    display: flex;
+    width: 90%;
+    padding: 40px 20px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
   }
   
   /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML--*/
@@ -360,7 +406,7 @@ body{
     padding: 0;
   }
   
-  footer h2{
+  .footer h2{
     float: right;
     padding: 5px 0;;
     color: rgb(105, 44, 3);
