@@ -1,8 +1,9 @@
-//hacer referencia del button adoptar a una url
-const saludo = "Bienvenido a PetsFriends Wasi";
+//saludo al visitante con un alert
+const saludo = "Bienvenid@ a la FundaciónPetsFriends Wasi";
     alert(saludo);
 
 
+//hacer referencia del button adoptar a una url
 const newLocal = "http://127.0.0.1:5500/src/gracias.html";
 
 //crear la funcion para dar click
