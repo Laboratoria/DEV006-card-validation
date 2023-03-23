@@ -6,9 +6,9 @@ body{
   font-size: 17px;
   font-weight: 500;
   background: linear-gradient(
-    rgb(245, 250, 170),
+    rgb(255, 248, 155),
     white,
-    rgb(255, 213, 164));
+    rgb(255, 204, 146));
   }
   
   .main-index{
@@ -75,7 +75,16 @@ body{
     flex-direction: column;
     align-items: center;
   }
-  
+  .main-adopta .ADOPTAR #btn-adoptar{
+    background-color: #9c2eb8;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    padding: 10px;
+  }
+ 
+
   /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML--*/
   .header{
   border-bottom: 12px solid rgb(245, 100, 17);
@@ -136,7 +145,7 @@ body{
     font-size: 20px;
     color: #9c12f8;
     padding: 5px;
-    background: #ffdf4e;
+    background: #fffd70;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -161,8 +170,9 @@ body{
     transform: scale(1.1);
   }
   
+
+    /* ESTILO DE LA 4TA PÁGINA HTML
   /*--estilo de la página de validar donation--*/
-  
   * {
   padding: 0;
   margin: 0;
@@ -384,10 +394,12 @@ body{
   }
   
   .formulario-tarjeta .VALIDAR #VALIDAR{
-    background: #9707bb;
-    font-size: 22PXs;
-    font-weight: 700px;
+    background: #aa02d4;
+    font-size: 25px;
+    font-weight: bolder;
     padding: 10px;
+    color: white;
+    font-family: cursive;
   }
   
   /*-- estilos del footer de todos los footers de los html--*/
