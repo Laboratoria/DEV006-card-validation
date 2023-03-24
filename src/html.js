@@ -1,10 +1,9 @@
 //saludo al visitante con un alert
-const saludo = "Bienvenid@ a la FundaciónPetsFriends Wasi";
+const saludo = "Bienvenid@ a la Fundación PetsFriends Wasi",
+      nombre = ("");
     alert(saludo);
-
-const nombre= ("")
-nombre = prompt("Ingresa tu nombre", nombre);
-
+    //agregando un texto y un valor en este caso nombre
+nombre = prompt("Por favor, ingresa tu nombre"+ nombre);
 
 
 //hacer referencia del button adoptar a una url

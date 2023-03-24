@@ -6,9 +6,9 @@ body{
   font-size: 17px;
   font-weight: 500;
   background: linear-gradient(
-    rgb(255, 248, 155),
+    rgb(255, 246, 126),
     white,
-    rgb(255, 204, 146));
+    rgb(255, 202, 141));
   }
   
  
@@ -73,7 +73,7 @@ body{
     font-size: 20px;
     color: #9c12f8;
     padding: 5px;
-    background: #fffd70;
+    background: #fffc5d;
     border: none;
     border-radius: 20px;
     cursor: pointer;
