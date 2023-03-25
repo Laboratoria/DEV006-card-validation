@@ -1,9 +1,190 @@
-label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-input,
-label {
-    margin: 0.4rem 0;
+body {
+	background: rgb(228, 197, 248);
+	font-family: 'Lato', sans-serif;
 }
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	padding: 40px 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/*--------------- Estilos generales de las tarjetas-------------------*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #fff;
+    transition: 3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    cursor: pointer;
+    z-index: 2;
+   
+
+}
+
+.tarjeta .active {
+transform: rotateY(180deg);
+
+}
+.tarjeta > div {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+}
+.tarjeta .parte-delantera {
+    width: 100%;
+	background-image: url(imagenes/imagenes/candy-sweet.jpeg);
+    background-size: mediun;
+
+}
+
+.parte-delantera .logo-marca {
+    text-align: right;
+    min-height: 50%;
+}
+.parte-delantera .logo-marca img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+
+}
+.parte-delantera .chip {
+    width: 12%;
+    max-height: 50px;
+    margin-bottom: 20px;
+
+}
+.parte-delantera .grupo .label {
+    font-size: 16px;
+    color: #7d8994;
+    margin-bottom: 5px;
+}
+.parte-delantera .grupo .numero,
+.parte-delantera .grupo .nombre,
+.parte-delantera .grupo .expiracion {
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+
+}
+.parte-delantera .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.contenedor-btn .btn-abrir-formulario {
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 20px;
+	background: #2364d2;
+	color: #fff;
+	position: relative;
+	top: -25px;
+	z-index: 3;
+	border-radius: 100%;
+	box-shadow: -5px 4px 8px rgba(24,56,182,0.4);
+	padding: 5px;
+	transition: all .2s ease;
+	border: none;
+	cursor: pointer;
+}
+.contenedor-btn .btn-abrir-formulario:hover {
+	background: #1850b1;
+}
+
+.contenedor-btn .btn-abrir-formulario.active {
+	transform: rotate(45deg);
+}
+/* ---------- Formulario Tarjeta ----------*/
+.formulario-tarjeta {
+	background: #fcfbfb;
+	width: 100%;
+	max-width: 700px;
+	padding: 150px 30px 30px 30px;
+	border-radius: 10px;
+	position: relative;
+	top: -150px;
+	z-index: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition: clip-path .3s ease-out;
+}
+.formulario-tarjeta.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+	display: block;
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+.formulario-tarjeta input,
+.formulario-tarjeta select {
+	border: 2px solid #93BDED;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+
+}
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select :hover{
+	border: 2px solid #93BDED;
+
+}
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select :focus {
+	outline: rgb (4,4,4);
+	box-shadow: 1xp 7xp 10px -5px rgba(90,116,148,0.3);
+
+}
+.formulario-tarjeta input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	 
+}
+.formulario-tarjeta .flexbox {
+	display: flex; 
+	justify-content: space-between;
+
+}
+.formulario-tarjeta .expira {
+	width: 100px;
+
+}
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right: 15px;
+	
+}
+
+.input-con-error {
+	background-color: red;
+}
+

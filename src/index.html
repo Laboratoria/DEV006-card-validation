@@ -6,15 +6,77 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <input type="text" name="" id="numero-tarjeta" pattern="[0-9]+">
-      <input type="button" value="validar" id="boton-validar">
-      
-      
+    
+
+    <div class="contenedor">
+      <section class="tarjeta" id="tarjeta">
+        <div class="parte-delantera">
+          <div class="logo-marca">
+            <img src="imagenes/imagenes/visa.png" alt="">
+          </div>
+          <img src="imagenes/imagenes/chip-tarjeta.png" class="chip" alt="" />
+          <div class="datos">
+            <div class="grupo" id="numero">
+              <p class="label">Número Tarjeta</p>
+              <p class="numero" id="mostrar-tarjeta">#### #### #### ####</p>
+            </div>
+            <div class="flexbox">
+              <div class="grupo" id="Nombre">
+                <p class="label">Nombre</p>
+                <p class="Nombre" id="nombre-tarjeta">NOMBRE APELLIDO</p>
+              </div>
+
+              <div class="grupo" id="Expiracion">
+                <p class="label">Expiracion</p>
+                <p class="Expiracion"><span class="mes" id="mes-exp">MM</span>/<span class="year" id="year-exp">AA</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+      <!-- Contenedor Boton Abrir Formulario -->
+		<div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+			</button>
+		</div>
+
+    <!-- Formulario -->
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo" id="grupo-input-tarjeta">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" maxlength="19" autocomplete="off">
+			</div>
+      <div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+      <div class="grupo expira">
+        <label for="selectMes">Expiracion</label>
+        <div class="flexbox">
+          <div class="grupo-select">
+            <select name="mes" id="selectMes">
+              <option disabled selected>Mes</option>
+            </select>
+            <div class="grupo-select">
+              <select name="year" id="selectYear">
+                <option disabled selected>Año</option>
+              </select>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-enviar" id="boton-enviar">Enviar</button>
       
 
+    </form>
+    <header>
     </header>
-    <main></main>
+    <main>
+    </main>
+    
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
