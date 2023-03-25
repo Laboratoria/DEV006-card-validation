@@ -36,7 +36,7 @@
           <br>
           En <u>PetsFriends Wasi</u> encontrarás muchos amigos de cuatro patas que necesitan de mucho amor y quieren ser parte de tu familia. <br>
           Si deseas <u>adoptar</u> a uno de nuestros peluditos puedes llenar el siguiente formulario, y en un lapso de 72 horas hábiles estaremos en contacto contigo para coordinar una entrevista. Importante ser <u>mayor de 18 años</u>, y si eres menor de edad, puedes decirle a tus papitos para que completen el formulario. 
-          <center><H2>¡Gracias por formar parte de nuestra familia!</H2></center> 
+          <center><h2>¡Gracias por formar parte de nuestra familia!</h2></center> 
         </p>
       </div>
       <br>
@@ -46,6 +46,7 @@
       <h1> DATOS PERSONALES DEL ADOPTANTE </h1>
       <br>
 <br>
+<form>
 <div class="contenedor">
   <div class="columna">
     <label for="Names">Nombres: </label>
@@ -63,15 +64,15 @@
 <br>
 <br>
       <label for="Adress">Dirección: </label>
-      <input type="text" id="Adress" name="Adress"/>
+      <input type="text" id="Adress" name="Adress" required>
 <br>
 <br>
       <label for="Phone">Celular: </label>
-      <input type="text" id="Phone" placeholder="Ej. +51 862 235 277" name="Phone" required/>
+      <input type="text" id="Phone" placeholder="Ej. +51 862 235 277" name="Phone" required>
 <br>
 <br>
       <label for="correo">e-mail:</label>
-      <input type="text" id="correo" name="correo" required/>
+      <input type="text" id="correo" name="correo" required>
 <br>
 <br>
     <label for="opciones">Selecciona una opción:</label>
@@ -85,10 +86,10 @@
 </div>
 </div>
 <div class="ADOPTAR">
-<a href="http://127.0.0.1:5500/src/gracias.html">
-  <button type="button" id="btn-adoptar" name="btn-adoptar" value="adoptar">ADOPTAR</button></a>
+  <button type="submit" id="btn-adoptar" name="btn-adoptar" value="adoptar">ADOPTAR</button>
 </div>
   <br>
+</form>
   </main>
 
 <footer class="footer">
@@ -96,6 +97,6 @@
     <br>
    <strong><h2>Contáctanos: +51 941 895 233      ||       contacto@PetsFriendsWasi.com</h2></strong>
   </footer >
-  <script src="index.js" type="module"></script>
+  <script src="index.html" type="module"></script>
 </body>
 </html>
