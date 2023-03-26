@@ -158,6 +158,7 @@ body{
       margin: auto;
       flex-direction: column;
       align-items: center;
+      cursor: pointer;
     }
     .main-adopta .ADOPTAR #btn-adoptar{
       background-color: #9c2eb8;
@@ -325,7 +326,7 @@ body{
   
   .trasera .datos #firma .firma{
     /*--para el código de SEGURIDAD repeating-linear-gradient--*/
-    background: repeating-linear-gradient(rgb(212, 144, 252) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
+    background: repeating-linear-gradient(rgb(209, 129, 255) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
   }
   
   .trasera .datos #firma .firma p{
@@ -390,7 +391,7 @@ body{
   
   /*--formulario--*/
  .formulario-tarjeta {
-  background:rgba(255, 139, 187, 0.897);
+  background:rgba(231, 135, 255, 0.801);
   width: 100%;
   max-width: 700px;
   padding: 150px 30px 30px 30px;
@@ -403,19 +404,58 @@ body{
 }
 
 /*-- cuando formulario tenga la clase active y se de un click quiero que tenga un clip-path--*/
- .formulario-tarjeta.active{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.formulario-tarjeta.active{
+  /*--funciona con JS--*/
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+.formulario-tarjeta label{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
-  .Validar #validar {
-    background: #c704f8d3;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 3px;
-    color: white;
-    font-family: cursive;
-  }
+.formulario-tarjeta input, .formulario-tarjeta select{
+  border: 2px solid rgba(255, 57, 189, 0.877);
+  font-size: 16px;
+  height: 30px;
+  width: 100%;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*--para que las lineas del border de cada espacio a completar en el formulario cambien de color--*/
+.formulario-tarjeta input:hover, .formulario-tarjeta select:hover{
+  border: 2px solid rgb(194, 2, 219);
+}
+
+.formulario-tarjeta input{
+  margin-bottom: 20px;
+}
+
+.formulario-tarjeta .Validar #validar {
+border: none;
+box-shadow: 2px solid rgba(255, 57, 189, 0.877);
+font-size: 17px;
+background:rgba(255, 253, 254, 0.445);
+font-weight: bold;
+padding: 10 px;
+font-family: cursive;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.formulario-tarjeta .Validar #validar:hover{
+  border: 2px solid rgb(194, 2, 219);
+  background: rgb(192, 185, 185);
+}
   
+.formulario-tarjeta .flexbox{
+display: flex;
+justify-content: space-between;
+}
+
   /*--ESTILO DE LA PAG5--*/
 .main-gracias .contenedor-imagenes{
      display: flex;

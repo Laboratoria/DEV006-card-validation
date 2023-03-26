@@ -8,9 +8,9 @@ tarjeta.addEventListener('click', () => {
 
 const btnAbrir = document.querySelector('#btnAbrir');
 const formulario = document.querySelector('#formulario-tarjeta');
-//para abrir el formulario
 btnAbrir.addEventListener('click', ()=>{
   btnAbrir.classList.toggle('active');
+  //para abrir el formulario
   formulario.classList.toggle('active');
 });
 
