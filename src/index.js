@@ -1,6 +1,6 @@
 import validator from './validator.js';
 const tarjeta = document.querySelector('#tarjeta');
-//rotar la tarjeta con un clickA
+//rotar la tarjeta con un click
 tarjeta.addEventListener('click', () => {
   tarjeta.classList.toggle('active');
 });

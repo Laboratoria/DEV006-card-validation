@@ -1,7 +1,5 @@
 body{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: cursive;
   font-size: 17px;
   font-weight: 500;
@@ -11,9 +9,7 @@ body{
     rgb(255, 202, 141));
   }
   
- 
   /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
-
   .header{
   border-bottom: 12px solid rgb(245, 100, 17);
   background-image: url(../src/images/fondo_de_huellas.png);
@@ -393,7 +389,6 @@ body{
   }
   
   /*--formulario--*/
-
  .formulario-tarjeta {
   background:rgba(255, 139, 187, 0.897);
   width: 100%;
