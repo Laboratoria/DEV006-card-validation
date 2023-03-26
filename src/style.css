@@ -197,7 +197,7 @@ body{
       align-items: center;
   }
   
-  /*-- Estilos generales de la tarjeta--*/
+  /*------ Estilos generales de la tarjeta ------*/
   .tarjeta{
     width: 100%;
     max-width: 550px;
@@ -207,6 +207,7 @@ body{
     transition: .3s ease all;
     /*--por defecto una rotación de 0 grados, es decir que no se mueva y quede fija --*/
     transform: rotateY(0deg);
+    /*-- efecto de girar la tarjeta--*/
     transform-style: preserve-3d;
     /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
     backface-visibility: hidden;
@@ -218,6 +219,7 @@ body{
   /*-- .tarjeta:hover es para cuando quieres que gire pero cuando pones el cursor encima--*/
   /*-- por eso se cambia hover por active--*/
   /*-- se crea tarjeta active para que cuando el usuario de un click sobre ella, la tarjeta gire--*/
+  /*-- la tarjeta active se mostrará con js al dar click--*/
   .tarjeta.active {
     /*--y girará en 180°--*/
     transform: rotateY(180deg);
@@ -239,6 +241,7 @@ body{
   }
   
   /*-----TARJETA DELANTERA-----*/
+  /*--- FONDO DE GATITO DE LA TARJETA--*/
   .tarjeta .delantera {
     width:100%;
     background: url(../src/images/bg-tarjeta/fondodelantera1.png);
@@ -254,6 +257,7 @@ body{
   .delantera .logo-marca img {
        width: 100%;
        height: 100%;
+       /*--LA IMAGEN DEL LOGO SE VUELVE MÁS PEQUEÑA--*/
        object-fit: cover;
        max-width: 80px;
   }
@@ -277,6 +281,7 @@ body{
     color: #da2f04;
     font-size: 18px;
     font-weight: 600;
+    /*--PARA QUE ESTÉN EN MAYUSCULAS UPPERCASE--*/
     text-transform: uppercase;
   }
   
@@ -287,12 +292,13 @@ body{
   }
   
   /*------ TARJETA TRASERA ------*/
-  
+  /*-- FONDO Y ESTILO DE LA TARJETA TRASERA--*/
   .trasera {
     background: url(../src/images/bg-tarjeta/Ttrasera.png);
     background-size: cover;
     position: absolute;
     top: 0;
+    /*--GIRAMOS LA TARJETA 180 GRADOS CON LA PROPIEDAD DE TRANSFORM --*/
     transform: rotateY(180deg);
       /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
     backface-visibility: hidden;
@@ -300,7 +306,7 @@ body{
   
   .trasera .barra-magnetica {
     height: 40px;
-    background: #1c0127;
+    background: #2e033f;
     width: 100%;
     position: absolute;
     top: 30px;
@@ -322,14 +328,14 @@ body{
   }
   
   .trasera .datos #firma .firma{
-    /*--para el código de barras repeating-linear-gradient--*/
-    background: repeating-linear-gradient(rgb(201, 143, 235) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
+    /*--para el código de SEGURIDAD repeating-linear-gradient--*/
+    background: repeating-linear-gradient(rgb(212, 144, 252) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
   }
   
   .trasera .datos #firma .firma p{
     line-height: 40px;
     font-family: unset, cursive;
-    color:rgb(37, 1, 58);
+    color:rgb(23, 1, 36);
     font-size: 25px;
     padding: 0 10px;
     text-transform: capitalize;
@@ -340,7 +346,7 @@ body{
   }
   
   .trasera .datos #ccv .ccv{
-  background: rgb(199, 149, 228);
+  background: rgba(199, 149, 228, 0.781);
   height: 40px;
   color: #fc8805;
   padding: 10px;
@@ -359,43 +365,37 @@ body{
   }
   
   /*-- contenedor botón --*/
-  
-  .contenedor-btn {
+  .contenedor-btn .btn-abrir{
     position: relative;
     top: -25px;
+    border-style: none;
+  }
+
+    .contenedor-btn .btn-abrir img{
+    position: relative;
     z-index: 3;
     transition: all .3s ease;
-    }
-  
-  .contenedor-btn .btn-abrir {
-    cursor: pointer;
     padding: 2px;
-    border:rgb(159, 22, 238);
+    border:rgb(238, 22, 148);
     border-radius: 200%;
-  }
-  
-  .contenedor-btn .btn-abrir:hover{
-    background: rgb(255, 14, 203);
-  }
-  
-  .contenedor-btn .btn-abrir img{
-    width: 50px;
-    height: 35px;
-    border-radius: 200%;
-    box-shadow: -5px 2px 8px rgba(196, 3, 255, 0.966);
+    cursor: pointer;
     transition: all .3s ease;
+    border-radius: 200%;
+    box-shadow: -5px 2px 8px rgba(196, 3, 255, 0.856);
   }
-  
-  .contenedor-btn .btn-abrir .img:hover{
+
+  .contenedor-btn .btn-abrir img:hover{
     background: rgb(255, 14, 203);
   }
-  
-  .contenedor-btn .btn-abrir .img.active {
+
+  .contenedor-btn .btn-abrir img.active{
     transform: rotate(45deg);
   }
   
-.formulario-tarjeta {
-  background:rgb(247, 239, 140);
+  /*--formulario--*/
+
+ .formulario-tarjeta {
+  background:rgba(255, 139, 187, 0.897);
   width: 100%;
   max-width: 700px;
   padding: 150px 30px 30px 30px;
@@ -408,17 +408,15 @@ body{
 }
 
 /*-- cuando formulario tenga la clase active y se de un click quiero que tenga un clip-path--*/
-
-.formulario-tarjeta.tarjeta.active{
+ .formulario-tarjeta.active{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-
-  .formulario-tarjeta .VALIDAR #VALIDAR{
-    background: #aa02d4;
-    font-size: 25px;
-    font-weight: bolder;
-    padding: 10px;
+  .Validar #validar {
+    background: #c704f8d3;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 3px;
     color: white;
     font-family: cursive;
   }
@@ -430,6 +428,76 @@ body{
       flex-direction: column;
       align-items: center;
 }
+
+/*-- po pup--*/
+.overlay{
+  background: #fd03aa4f;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ visibility: hidden;
+}
+
+.overlay.active{
+visibility: visible;
+}
+
+.popup{
+background: rgba(229, 255, 133, 0.904);
+box-shadow: 0px 0px 6px 0px rgba(43, 35, 39, 0.432);
+border-radius: 5px;
+padding: 20px;
+text-align: center;
+width: 550px;
+transition: .3s ease all;
+transform: scale(0.6);
+opacity: 0;
+}
+
+.popup h3{
+  color: antiquewhite;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#nombreUsuario{
+font-size: 25px;
+font-weight: 600px;
+padding: 12px;
+}
+
+.popup p{
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.popup a{
+  text-decoration: none;
+  padding: 7px 20px;
+  color: #fff;
+  background: #fd03aa8c;
+  border-radius: 13px;
+  box-shadow: #fd03aad7;
+  font-size: 16px;
+  transition: .3s ease all;
+}
+
+.popup a:hover{
+  background: rgb(167, 0, 167);
+}
+
+/*--animación--*/
+.popup.active{
+  opacity: 1;
+  transform: scale(1);
+}
+
   /*-- estilos del footer de todos los footers de los html--*/
   .footer{
     border-bottom: 15px solid rgb(245, 100, 17);

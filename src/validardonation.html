@@ -32,7 +32,6 @@
   <main>
     <!-- haciendo el formulario dinámico para la tarjeta de crédito-->
     <div class="contenedor">
-
   <!--simulación de la tarjeta de crédito-->
     <section class="tarjeta" id="tarjeta">
       <!-- TARJETA DELANTERA-->
@@ -69,6 +68,7 @@
             <div class="datos">
                   <div class="grupo" id="firma">
                       <p class="label">Firma</p>
+<!---SE COLOCA ESTE DIV CLASS FIRMA PARA QUE LUEGO CON JS SE AUTOCOMPLE LA FIRMA DEL DUEÑO DE LA TARJETA--->
                       <div class="firma"><p></p></div>
                   </div>
                   <div class="grupo" id="ccv">
@@ -83,20 +83,20 @@
 
         <!-- Contenedor botón abrir formulario -->
         <div class="contenedor-btn">
-          <button class="btn-abrir" id="btn-abrir">
-            <img src="images/iconos/iconosuma.png" alt="iconosuma"></button>
+          <button class="btn-abrir" id="btn-abrir" value="btn-abrir">
+            <img src="images/iconos/iconosuma.png" width="70px"  alt="iconosuma"></button>
        </div>
 
   <!--formulario-->
-  
   <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
     <div class="grupo">
       <label for="inputNumero">Número de tarjeta</label>
-      <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+      <input type="text" id="inputNumero" maxlength="16" autocomplete="off">
     </div>
     <div class="grupo">
       <label for="inputNombre">Nombre</label>
-      <input type="text" id="inputNombre" maxlength="19" autocomplete="oof">
+       <!--maxlength para que tenga máximo 16 caracteres-->
+      <input type="text" id="inputNombre" maxlength="16" autocomplete="oof">
     </div>
 
     <div class="flexbox">
@@ -107,13 +107,13 @@
               <select name="mes" id="selectMes">
                   <option disable selected>Mes</option>
               </select>
-              <i class="fas fa-angle-down"></i>
+               <i class=""></i>
             </div>
             <div class="grupo-select">
                 <select name="year" id="selectYear">
-                  <option disable selected>Year</option>
+                  <option disable selected>Año</option>
                 </select>
-                <i class="fas fa-angle-down>"></i>
+                <i class=""></i>
             </div>
         </div>
       </div>
@@ -123,18 +123,26 @@
       </div>
     </div>
     <div class="caja">
-      <label for="monto">Monto $</label>
-      <input type="number" id="monto" placeholder="000000" required>
+      <label for="cantidad">Cantidad $</label>
+      <input type="number" id="cantidad" placeholder="000" required>
     </div>
     <br>
-
-
-    <div class="VALIDAR">
-      <a href="http://127.0.0.1:5500/src/gracias.html">
-      <button type="submit" id= "VALIDAR" name="VALIDAR" value="validartarjeta">VALIDAR TARJETA</button></a>
+    <div class="Validar">
+      <button type="submit" id= "validar" name="validar" value="validartarjeta">VALIDAR TARJETA</button>
     </div>
-
+<br>
+<br>
+<button class="popup" id="popup" disabled>CONFIRMAR DONACIÓN</button>
+<br>
    </form>
+   <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+    <h3>La donación se realizó con éxito!</h3>
+    <h4 id="nombreUsuario"></h4>
+    <p>¡GRACIAS POR TU DONACIÓN, SIGAMOS UNIÉNDONOS POR LOS ANIMALES! Con tu ayuda podremos mejorar la calidad de vida de cientos de animales en situación de calle Y abandono.</BR></p>
+   <a href="index.html">INICIO</a>
+  </div>
+  </div>
   </div>
 </main>
 
