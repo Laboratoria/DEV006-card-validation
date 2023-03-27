@@ -1,5 +1,5 @@
 import validator from './validator.js';
-console.log(validator);
+
 
 const tarjeta = document.querySelector('#tarjeta');
 //addEventListener para girar la tarjeta con un click
@@ -18,7 +18,7 @@ btnAbrir.addEventListener('click', () => {
 //Para agregar los DÍAS al label= selectMes
 //agregamos un ciclo FOR para crear las 12 opciones que son los meses del año
 for (let i = 1; i <= 12; i++) {
-  let opcion = document.createElement('option');
+  const opcion = document.createElement('option');
   opcion.value = i;
   opcion.innerText = i;
   formulario.selectMes.appendChild(opcion);
@@ -28,7 +28,7 @@ for (let i = 1; i <= 12; i++) {
 //yearActual + 4 para que solo muestre hasta 4 años despues del actual
 const yearActual = new Date().getFullYear();
 for (let i = yearActual; i <= yearActual + 4; i++) {
-  let opcion = document.createElement('option');
+  const opcion = document.createElement('option');
   opcion.value = i;
   opcion.innerText = i;
   formulario.selectYear.appendChild(opcion);
@@ -38,8 +38,14 @@ for (let i = yearActual; i <= yearActual + 4; i++) {
 //para reemplazar lo que se escribe en los input y también se copie en la tarjeta de gatito
 const numeroTarjeta = document.querySelector('#tarjeta .numero');
 //se accede al formulario, luego inputNumero y se reemplazan los valores
+//el addEventListener detecta cuando el usuario presiona y suelta la tecla y se ejecutará un evento
 formulario.inputNumero.addEventListener('keyup', (e) => {
-  let valorInput = e.target.value;
+  //se crea el valorInput para q la informacion ingresada se guarde dentro de una variable 
+  const valorInput = e.target.value;
+  //para eliminar los espacios se hace con replace las '' van vacias porque no quiero que lo reemplace con nada
+  //para que se borren las letras tambien se hace el mismo paso con una expresion regular (/\D/g,'')
+  //para que se separen por grupo de 4 se coloca otra expresion regular ([0-9]{4})
+  formulario.inputNumero.value = valorInput.replace(/\s/g, '').replace(/\D/g, '').replace(/([0-9]{4})/g, '$1 ');
 
   numeroTarjeta.textContent = valorInput;
   //si el usuario borra el numero de tarjeta y el espacio no se quede en blanco hacemos un if
@@ -55,7 +61,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 //inputNombre 
 const nombreTarjeta = document.querySelector('#tarjeta .nombre');
 formulario.inputNombre.addEventListener('keyup', (e) => {
-  let valorInput = e.target.value;
+  const valorInput = e.target.value;
 
   //para que detecte numeros y no se puedan escribir
   formulario.inputNombre.value = valorInput.replace(/[0-9]/g, '');
@@ -87,4 +93,6 @@ const yearExpiracion = document.querySelector('#tarjeta #expiracion .year');
 formulario.selectYear.addEventListener('change', (e) => {
   yearExpiracion.textContent = e.target.value.slice(2); //slice(2) para que nos permita ver los 2 ultimos digitos del año
   mostrarFrente();
-})
+});
+
+console.log(validator);

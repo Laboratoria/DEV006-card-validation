@@ -95,9 +95,9 @@
       <!--formulario-->
       <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
         <div class="grupo">
-          <!--Se limitan los caracteres máximo a 19 con maxLength-->
+          <!--Se limitan los caracteres máximo a 16 con maxLength-->
           <label for="inputNumero">Número de tarjeta</label>
-          <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required>
+          <input type="text" class="inputNumero" id="inputNumero" name="numero" value="" minlength="11" maxlength="20" autocomplete="off" required>
         </div>
         <div class="grupo">
           <label for="inputNombre">Nombre y Apellido</label>
@@ -145,8 +145,8 @@
           <h4 id="nombreUsuario"></h4>
           <p>¡GRACIAS POR TU DONACIÓN, SIGAMOS UNIÉNDONOS POR LOS ANIMALES! Con tu ayuda podremos mejorar la calidad de
             vida de cientos de animales en situación de calle y abandono.</p>
-          <a href="index.html">INICIO</a>
-        </div>
+        <a href="index.html">INICIO</a>
+          </div>
       </div>
     </div>
   </main>
