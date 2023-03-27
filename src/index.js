@@ -1,6 +1,5 @@
 import validator from './validator.js';
 
-
 const tarjeta = document.querySelector('#tarjeta');
 //addEventListener para girar la tarjeta con un click
 tarjeta.addEventListener('click', () => {
