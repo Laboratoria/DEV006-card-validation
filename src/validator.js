@@ -2,9 +2,13 @@ import Util from "./util.js";
 
 const validator = {
   isValid: (numeroTarjeta) => {
+    if (numeroTarjeta === ""){
+      return false;
+    }
     const numeroArray = Util.invertirCadena(numeroTarjeta).split("");
     let numeroAsumar = 0
     for (let index = 0; index < numeroArray.length; index++) {
+      //Se obtiene el valor de la cadena y este es transformado a su presentación númerica//
       const element = parseInt(numeroArray[index]);
       if ((index + 1) % 2 === 0) {
         const numeroMultiplicado = element * 2;

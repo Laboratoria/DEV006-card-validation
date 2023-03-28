@@ -6,17 +6,59 @@
 
 body {
 	background: rgb(228, 197, 248);
+	background-image: url(imagenes/imagenes/download.png);
 	font-family: 'Lato', sans-serif;
+	position: relative;
+	padding-bottom: 7em;
+}
+/*--------------- Estilos Header-------------------*/
+header {
+	width: 100%;
+	background-color: #F0A3DF;
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 1%;
+}
+header img {
+	width: 60%;
+	margin-left: 50%;
 }
 
+header div.titulos {
+	margin: auto 5%;
+}
+/*--------------- Estilos Contenido de la pagina-------------------*/
 .contenedor {
+	background-color: aliceblue;
+	
 	width: 90%;
 	max-width: 1000px;
+	max-height: 550px;
 	padding: 40px 20px;
 	margin: auto;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-wrap: nowrap;
+	border-radius: 30pt;
+}
+div.contenedor div.resumen-compra {
+	text-align: center;
+	width: 40%;
+}
+div.contenedor div.tarjeta {
+	width: 60%;
+}
+
+table.resumen-compra{
+	width: 100%;
+}
+table th {
+	padding: 20px;
+}
+table td.no-padding{
+	padding: 0px;
+}
+table td {
+	padding: 20px;
 }
 /*--------------- Estilos generales de las tarjetas-------------------*/
 * {
@@ -26,23 +68,17 @@ body {
 }
 
 .tarjeta {
-    width: 100%;
+    width: 70%;
     max-width: 550px;
     position: relative;
     color: #fff;
     transition: 3s ease all;
-    transform: rotateY(0deg);
     transform-style: preserve-3d;
     backface-visibility: hidden;
     cursor: pointer;
     z-index: 2;
-   
-
-}
-
-.tarjeta .active {
-transform: rotateY(180deg);
-
+	margin: auto;
+	right: -30px;
 }
 .tarjeta > div {
     padding: 30px;
@@ -54,9 +90,11 @@ transform: rotateY(180deg);
     box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
 }
 .tarjeta .parte-delantera {
-    width: 100%;
-	background-image: url(imagenes/imagenes/candy-sweet.jpeg);
-    background-size: mediun;
+    width: 80%;
+	background-size: cover;
+	background-image: url(imagenes/imagenes/degrade.jpeg);
+	background-repeat: no-repeat;
+	min-height: 0px;
 
 }
 
@@ -65,45 +103,45 @@ transform: rotateY(180deg);
     min-height: 50%;
 }
 .parte-delantera .logo-marca img {
-    width: 100%;
-    height: 100%;
+	width: 70px;
     object-fit: cover;
-    max-width: 80px;
 
 }
 .parte-delantera .chip {
     width: 12%;
-    max-height: 50px;
-    margin-bottom: 20px;
+	margin-top: 5px;
+    margin-bottom: 15px;
 
 }
 .parte-delantera .grupo .label {
-    font-size: 16px;
-    color: #7d8994;
+    font-size: 12px;
+    color: black;
+	font-weight: bolder;
     margin-bottom: 5px;
 }
 .parte-delantera .grupo .numero,
 .parte-delantera .grupo .nombre,
 .parte-delantera .grupo .expiracion {
-    color: #fff;
-    font-size: 22px;
+    color: blueviolet;
+	font-weight: bold;
+    font-size: 12px;
     text-transform: uppercase;
 
 }
 .parte-delantera .flexbox {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .contenedor-btn .btn-abrir-formulario {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	font-size: 20px;
 	line-height: 20px;
-	background: #2364d2;
+	background: #d9b6d4;
 	color: #fff;
 	position: relative;
-	top: -25px;
+	top: -50px;
 	z-index: 3;
 	border-radius: 100%;
 	box-shadow: -5px 4px 8px rgba(24,56,182,0.4);
@@ -111,26 +149,34 @@ transform: rotateY(180deg);
 	transition: all .2s ease;
 	border: none;
 	cursor: pointer;
+	margin: 0 auto;
 }
+
 .contenedor-btn .btn-abrir-formulario:hover {
-	background: #1850b1;
+	background: rgba(225, 115, 237, 0.4);
 }
 
 .contenedor-btn .btn-abrir-formulario.active {
 	transform: rotate(45deg);
 }
+.tarjeta div.contenedor-btn {
+    min-height: 0px;
+    display: flex;
+    box-shadow: none;
+}
 /* ---------- Formulario Tarjeta ----------*/
 .formulario-tarjeta {
 	background: #fcfbfb;
-	width: 100%;
+	width: 80%;
 	max-width: 700px;
-	padding: 150px 30px 30px 30px;
+	padding: 100px 30px 30px 30px;
 	border-radius: 10px;
 	position: relative;
 	top: -150px;
 	z-index: 1;
 	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 	transition: clip-path .3s ease-out;
+	right: -45px;
 }
 .formulario-tarjeta.active {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -145,8 +191,7 @@ transform: rotateY(180deg);
 .formulario-tarjeta input,
 .formulario-tarjeta select {
 	border: 2px solid #93BDED;
-	font-size: 18px;
-	height: 50px;
+	font-size: 10px;
 	width: 100%;
 	padding: 5px 12px;
 	transition: .3s ease all;
@@ -165,7 +210,7 @@ transform: rotateY(180deg);
 
 }
 .formulario-tarjeta input {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-transform: uppercase;
 	 
 }
@@ -174,17 +219,84 @@ transform: rotateY(180deg);
 	justify-content: space-between;
 
 }
-.formulario-tarjeta .expira {
-	width: 100px;
-
-}
 .formulario-tarjeta .grupo-select {
 	width: 100%;
-	margin-right: 15px;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.btn-contenedor {
+	width: 100%;
+	text-align: center;
+}
+
+button.btn-enviar {
+	width: 40px;
+	font-size: 10px;
+	line-height: 20px;
+	background: #d9b6d4;
+	color: #fff;
+	z-index: 3;
+	border-radius: 40%;
+	box-shadow: -5px 4px 8px rgba(24,56,182,0.4);
+	padding: 5px;
+	transition: all .2s ease;
+	border: none;
+	cursor: pointer;
+	margin: 10px auto;
 	
 }
 
 .input-con-error {
-	background-color: red;
+	background-color: rgb(255, 102, 135);
+}
+footer {
+	width: 100%;
+	background-color: #e9e0ec;
+	display: flex;
+	flex-wrap: nowrap;
+	position: absolute;
+	bottom: -25px;
+	padding: 30px;
+
+}
+footer img {
+	float: right;
+	width: 40%;
+}
+
+.titulos-footer {
+	text-align: left;
+}
+
+.icono {
+	width: 50px;
+}
+nav {
+	float:left;
+	
+  }
+
+nav ul {
+	list-style: none;
+	overflow: hidden; 
+  }
+nav ul li {
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;;
+	font-size: 20px;
+}
+nav ul li a {
+	display: block; 
+	padding: 20px;
+	color: #23c0ec;
+	text-decoration: none;
+	
+  }
+nav ul li:hover {
+	background: #f9f4ba;
+}
+nav{
+	background-color: #fff;
+	
 }
 

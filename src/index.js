@@ -73,7 +73,7 @@ inputEnviar.addEventListener("click", () => {
     formularioConErrores = true;
   }
   if (!formularioConErrores) {
-    alert("Su tarjeta nro. " + validator.maskify(inputTarjeta.value) + " se agrego correctamente");
+    alert("Su tarjeta nro. " + validator.maskify(inputTarjeta.value) + " envió correctamente");
   }
 
 });

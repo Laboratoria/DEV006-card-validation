@@ -6,78 +6,143 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-
-    <div class="contenedor">
-      <section class="tarjeta" id="tarjeta">
-        <div class="parte-delantera">
-          <div class="logo-marca">
-            <img src="imagenes/imagenes/visa.png" alt="">
-          </div>
-          <img src="imagenes/imagenes/chip-tarjeta.png" class="chip" alt="" />
-          <div class="datos">
-            <div class="grupo" id="numero">
-              <p class="label">Número Tarjeta</p>
-              <p class="numero" id="mostrar-tarjeta">#### #### #### ####</p>
-            </div>
-            <div class="flexbox">
-              <div class="grupo" id="Nombre">
-                <p class="label">Nombre</p>
-                <p class="Nombre" id="nombre-tarjeta">NOMBRE APELLIDO</p>
-              </div>
-
-              <div class="grupo" id="Expiracion">
-                <p class="label">Expiracion</p>
-                <p class="Expiracion"><span class="mes" id="mes-exp">MM</span>/<span class="year" id="year-exp">AA</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-      <!-- Contenedor Boton Abrir Formulario -->
-		<div class="contenedor-btn">
-			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
-			</button>
-		</div>
-
-    <!-- Formulario -->
-		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
-			<div class="grupo" id="grupo-input-tarjeta">
-				<label for="inputNumero">Número Tarjeta</label>
-				<input type="text" id="inputNumero" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" maxlength="19" autocomplete="off">
-			</div>
-      <div class="grupo">
-				<label for="inputNombre">Nombre</label>
-				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
-			</div>
-      <div class="grupo expira">
-        <label for="selectMes">Expiracion</label>
-        <div class="flexbox">
-          <div class="grupo-select">
-            <select name="mes" id="selectMes">
-              <option disabled selected>Mes</option>
-            </select>
-            <div class="grupo-select">
-              <select name="year" id="selectYear">
-                <option disabled selected>Año</option>
-              </select>
-              
-            </div>
-            
-          </div>
-        </div>
-      </div>
-      <button type="button" class="btn-enviar" id="boton-enviar">Enviar</button>
-      
-
-    </form>
     <header>
+
+      
+      <div>
+        <img src="imagenes/imagenes/logo-pagina.png" />
+      </div>
+      <div class="titulos">
+        <h1 class="titulo-pagina">DulciDory</h1>
+        <h4 class="">Online</h4>
+      </div>
+      
     </header>
-    <main>
-    </main>
+    <div class="menu">
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Gomitas</a></li>
+        <li><a href="#">Caramelos</a></li>
+        <li><a href="#">Packs de golosinas</a></li>
+        <li><a href="#">Sección de pago</a></li>
+      </ul>
+    </nav>
+  </div>
     
-    <footer></footer>
+    <div class="contenedor">
+      <div class="resumen-compra">
+          <h2>Resumen de su compra</h2>
+          <table class="resumen-compra">
+            <thead>
+              <tr>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="no-padding" colspan="3"><hr></td></tr>
+              <tr>
+                <td><img src="imagenes/imagenes/imagen-osito.png"></td>
+                <td>Gomitas de Osito</td>
+                <td>1</td>
+                <td>3.500</td>
+              </tr>
+              <tr><td class="no-padding" colspan="3"><hr></td></tr>
+
+              <tr>
+                <td><img src="imagenes/imagenes/imagen-osito.png"></td>
+                <td>Caramelos Acidos</td>
+                <td>1</td>
+                <td>3.500</td>
+              </tr>
+              <tr><td class="no-padding" colspan="3"><hr></td></tr>
+              <tr>
+                <td colspan="2">Total a Pagar:</td>
+                <td>7.000</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="tarjeta">
+        <section class="tarjeta" id="tarjeta">
+          <div class="parte-delantera">
+            <div class="logo-marca">
+              <img src="imagenes/imagenes/visa.svg" alt="">
+            </div>
+            <img src="imagenes/imagenes/chip-tarjeta.png" class="chip" alt="" />
+            <div class="datos">
+              <div class="grupo" id="numero">
+                <p class="label">Número Tarjeta</p>
+                <p class="numero" id="mostrar-tarjeta">#### #### #### ####</p>
+              </div>
+              <div class="flexbox">
+                <div class="grupo" id="Nombre">
+                  <p class="label">Nombre</p>
+                  <p class="nombre" id="nombre-tarjeta">NOMBRE APELLIDO</p>
+                </div>
+  
+                <div class="grupo" id="Expiracion">
+                  <p class="label">Expiracion</p>
+                  <p class="expiracion"><span class="mes" id="mes-exp">MM</span>/<span class="year" id="year-exp">AA</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contenedor Boton Abrir Formulario -->
+        <div class="contenedor-btn">
+          <button class="btn-abrir-formulario" id="btn-abrir-formulario" ><h1>+</h1>
+          </button>
+        </div>
+        <!-- Formulario -->
+        <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+          <div class="grupo" id="grupo-input-tarjeta">
+            <label for="inputNumero">Número Tarjeta</label>
+            <input type="text" id="inputNumero" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" maxlength="19" autocomplete="off">
+          </div>
+          <div class="grupo">
+            <label for="inputNombre">Nombre</label>
+            <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+          </div>
+          <div class="grupo expira">
+            <label for="selectMes">Expiracion</label>
+            <div class="grupo-select">
+              <select name="mes" id="selectMes">
+                <option disabled selected>Mes</option>
+              </select>
+              <div class="grupo-select">
+                <select name="year" id="selectYear">
+                  <option disabled selected>Año</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="btn-contenedor"><button type="button" class="btn-enviar" id="boton-enviar">Enviar</button></div>
+        </form>
+      </div>
+    </div>
+      <footer>
+        <div>
+          <a href="https://www.instagram.com/dorianys_10/?hl=es" target="_blank">
+            <img src="imagenes/imagenes/icono-instagram.png" class="icono" />
+          </a>
+          <a href="https://web.facebook.com/com/dorianys_10/?hl=es" target="_blank">
+            <img src="imagenes/imagenes/icono-facebook.png" class="icono" />
+          </a>
+        </div>
+         <div class="titulos-footer">
+          <h3 class="titulo-footer">Nuestras redes sociales</h3>
+          <h4 class=""></h4>
+          <h5 class="">dorianys_10</h5>
+          <h6 class="">siguenos en nuestras  redes sociales</h6>
+        </div>
+        <div class="fonos-de-contacto"> 
+        
+
+        </div>
+      </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
