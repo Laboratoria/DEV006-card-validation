@@ -11,7 +11,7 @@ body {
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
 .header {
   border-bottom: 12px solid rgb(245, 100, 17);
-  background-image: url(../src/images/fondo_de_huellas.png);
+  background-image: url(images/fondo_de_huellas.png);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -242,7 +242,7 @@ body {
 /*--- FONDO DE GATITO DE LA TARJETA--*/
 .tarjeta .delantera {
   width: 100%;
-  background: url(../src/images/bg-tarjeta/fondodelantera1.png);
+  background: url(images/bg-tarjeta/fondodelantera1.png);
   background-size: cover;
 }
 
@@ -292,7 +292,7 @@ body {
 /*------ TARJETA TRASERA ------*/
 /*-- FONDO Y ESTILO DE LA TARJETA TRASERA--*/
 .trasera {
-  background: url(../src/images/bg-tarjeta/Ttrasera.png);
+  background: url(images/bg-tarjeta/Ttrasera.png);
   background-size: cover;
   position: absolute;
   top: 0;

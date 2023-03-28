@@ -26,7 +26,7 @@ for (let i = 1; i <= 12; i++) {
 //se agrega ciclo FOR para que indique los años de expiracion
 //yearActual + 4 para que solo muestre hasta 4 años despues del actual
 const yearActual = new Date().getFullYear();
-for (let i = yearActual; i <= yearActual + 4; i++) {
+for (let i = yearActual; i <= yearActual + 6; i++) {
   const opcion = document.createElement('option');
   opcion.value = i;
   opcion.innerText = i;
