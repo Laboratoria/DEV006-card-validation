@@ -176,6 +176,7 @@ body {
 * {
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
 }
 
 .contenedor {
@@ -246,12 +247,12 @@ body {
 }
 
 /*--cambiar los tamaños de chip, logo y fondo de la tarjeta ya que cogieron el tamaño del 100% por el display flex de los div anteriores--*/
-.delantera .logo-marca {
+.delantera .logo {
   text-align: right;
   min-height: 50px;
 }
 
-.delantera .logo-marca img {
+.delantera .logo img {
   width: 100%;
   height: 100%;
   /*--LA IMAGEN DEL LOGO SE VUELVE MÁS PEQUEÑA--*/
@@ -273,7 +274,7 @@ body {
 }
 
 .delantera .grupo .numero,
-.delantera .grupo .nombre,
+.delantera .grupo .fullName,
 .delantera .grupo .expiracion {
   color: #e23104;
   font-size: 20px;
@@ -290,7 +291,7 @@ body {
 
 /*------ TARJETA TRASERA ------*/
 /*-- FONDO Y ESTILO DE LA TARJETA TRASERA--*/
-.trasera {
+.reversa {
   background: url(images/bg-tarjeta/Ttrasera.png);
   background-size: cover;
   position: absolute;
@@ -301,7 +302,7 @@ body {
   backface-visibility: hidden;
 }
 
-.trasera .barra-magnetica {
+.reversa .barra {
   height: 40px;
   background: #2e033f;
   width: 100%;
@@ -310,26 +311,26 @@ body {
   left: 0;
 }
 
-.trasera .datos {
+.reversa .datos {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
 }
 
-.trasera .datos p {
+.reversa .datos p {
   margin-bottom: 5px;
 }
 
-.trasera .datos #firma {
+.reversa .datos #firma {
   width: 70%;
 }
 
-.trasera .datos #firma .firma {
+.reversa .datos #firma .firma {
   /*--para el código de SEGURIDAD repeating-linear-gradient--*/
   background: repeating-linear-gradient(rgb(209, 129, 255) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
 }
 
-.trasera .datos #firma .firma p {
+.reversa .datos #firma .firma p {
   line-height: 40px;
   font-family: unset, cursive;
   color: rgb(23, 1, 36);
@@ -338,24 +339,12 @@ body {
   text-transform: capitalize;
 }
 
-.trasera .datos #ccv {
-  width: 17%;
-}
-
-.trasera .datos #ccv .ccv {
-  background: rgba(199, 149, 228, 0.781);
-  height: 40px;
-  color: #fc8805;
-  padding: 10px;
-  text-align: center;
-}
-
-.trasera .leyenda {
+.reversa .leyenda {
   font-size: 12px;
   line-height: 23px;
 }
 
-.trasera .link-banco {
+.reversa .link-banco {
   font-size: 16px;
   font-weight: 300;
   color: #9d05b1;
@@ -487,7 +476,6 @@ body {
   width: 101vw;
   transition: opacity 0.3s ease;
 }
-
 
 .modal{
   background-color: #fff;

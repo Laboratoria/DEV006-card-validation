@@ -29,11 +29,12 @@ const validator = {
       numReverse[i] = parseInt(numReverse[i]);
       //convierte el string en array
       console.log(numReverse);
-      if (i % 2 === 0) {
+
+      if (i % 2 === 0){
         //multiplicar x 1
         numArray[i] = numArray[i]*1
         console.log(numReverse);
-      }else {
+      } else {
         //multiplicar x 2
         numArray[i] = numArray[i]*2
         console.log(numReverse);
@@ -54,17 +55,17 @@ const validator = {
     //si la suma es divisible de 10 y el residuo es CERO, ES VÁLIDA, de lo contrario inválida
     if (suma % 10 === 0) {
       //si es true la tarjeta es válida
-      return true
+      return true;
       //resultado = true;
     } else {
       //alert ("El número de tarjeta de crédito es inválida.");
-      return false
+      return false;
       //resultado = false;
     }
   },
 
   //pcultando los solo los 4 primeros digitos
-  maskify: function (numero) {
+  maskify: function(numero) {
 
     //toString para convertir de numero a una cadena de caracteres
     numero = numero.toString();
@@ -72,14 +73,13 @@ const validator = {
     //un acumulador vacio llamado mask
     let mask = " ";
 
-    for (let j = 0; j < numero.length; j++) {
+    for (let i = 1; i < numero.length; i++) {
 
-      if (j > numero.length - 5) {
+      if (i > numero.length - 5) {
 
-        mask = mask + numero[j]
+        mask = mask + numero[i]
 
-      } else {
-
+      }else {
         mask = mask + "#"
       }
 
@@ -87,7 +87,6 @@ const validator = {
     console.log(mask);
     return mask
   }
-
 }
 
 export default validator;

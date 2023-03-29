@@ -2,7 +2,6 @@ import validator from './validator.js';
 
 //llamar al elemento del html por su ID
 const numero = document.getElementById('inputNumero');
-
 const msjVal = document.getElementById('msjVal');
 const msj = document.getElementById('msj');
 const cerrar = document.getElementById('cerrar');
@@ -32,11 +31,12 @@ document.getElementById('validar').onclick = function(){
   if (resultado === true){
   //debe mostrarse algo
   //ventana emergente
-    msj.innerHTML = "Se verificó tu N° " + mask + " ¡GRACIAS POR TU DONACIÓN, SIGAMOS UNIÉNDONOS POR LOS ANIMALES! Con tu ayuda podremos mejorar la calidad devida de cientos de animales en situación de calle y abandono.";
+    msj.innerHTML = "Se verificó tu N°" + mask;
     //se debe mostrar una alerta como ventana emergente
     msjVal.classList.add('show');
   }
 }
+
 
 //para cerrar la ventana emergente
 cerrar.addEventListener('click', () =>  {
@@ -90,7 +90,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 
 
 //inputNombre 
-const nombreTarjeta = document.querySelector('#tarjeta .nombre');
+const nombreTarjeta = document.querySelector('#tarjeta .fullName');
 formulario.inputNombre.addEventListener('keyup', (e) => {
   const valorInput = e.target.value;
 
