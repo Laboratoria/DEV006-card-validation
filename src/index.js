@@ -1,10 +1,57 @@
 import validator from './validator.js';
 
+//llamar al elemento del html por su ID
+const numero = document.getElementById('inputNumero');
+
+const msjVal = document.getElementById('msjVal');
+const msj = document.getElementById('msj');
+const cerrar = document.getElementById('cerrar');
+
+
+//llamando al button VALIDAR por si ID
+document.getElementById('validar').onclick = function(){
+
+  const numArray = numero.value;
+
+  if(numArray.length < 13 || numArray.length > 19){
+    alert ("Tu número de tarjeta debe contener entre 13 a 19 dígitos");
+    // eslint-disable-next-line no-console
+    console.log(numero);
+    return false
+  }
+
+  //Algoritmo de Luhn
+  const resultado = validator.isValid(numero.value);
+  // eslint-disable-next-line no-console
+  console.log(resultado);
+
+
+
+  //MASKIFY
+  const mask = validator.maskify(numero.value);
+  if (resultado === true){
+  //debe mostrarse algo
+  //ventana emergente
+    msj.innerHTML = "Se verificó tu N° " + mask + " ¡GRACIAS POR TU DONACIÓN, SIGAMOS UNIÉNDONOS POR LOS ANIMALES! Con tu ayuda podremos mejorar la calidad devida de cientos de animales en situación de calle y abandono.";
+    //se debe mostrar una alerta como ventana emergente
+    msjVal.classList.add('show');
+  }
+}
+
+//para cerrar la ventana emergente
+cerrar.addEventListener('click', () =>  {
+  msjVal.classList.remove('show');
+});
+
+
+
+
 const tarjeta = document.querySelector('#tarjeta');
 //addEventListener para girar la tarjeta con un click
 tarjeta.addEventListener('click', () => {
   tarjeta.classList.toggle('active');
 });
+
 
 // addEventListener para abrir, botón abrir el formulario
 const btnAbrir = document.querySelector('#btnAbrir');
@@ -14,24 +61,7 @@ btnAbrir.addEventListener('click', () => {
   formulario.classList.toggle('active');
 });
 
-//Para agregar los DÍAS al label= selectMes
-//agregamos un ciclo FOR para crear las 12 opciones que son los meses del año
-for (let i = 1; i <= 12; i++) {
-  const opcion = document.createElement('option');
-  opcion.value = i;
-  opcion.innerText = i;
-  formulario.selectMes.appendChild(opcion);
-}
 
-//se agrega ciclo FOR para que indique los años de expiracion
-//yearActual + 4 para que solo muestre hasta 4 años despues del actual
-const yearActual = new Date().getFullYear();
-for (let i = yearActual; i <= yearActual + 6; i++) {
-  const opcion = document.createElement('option');
-  opcion.value = i;
-  opcion.innerText = i;
-  formulario.selectYear.appendChild(opcion);
-}
 
 //inputNumero
 //para reemplazar lo que se escribe en los input y también se copie en la tarjeta de gatito
@@ -44,7 +74,8 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
   //para eliminar los espacios se hace con replace las '' van vacias porque no quiero que lo reemplace con nada
   //para que se borren las letras tambien se hace el mismo paso con una expresion regular (/\D/g,'')
   //para que se separen por grupo de 4 se coloca otra expresion regular ([0-9]{4})
-  formulario.inputNumero.value = valorInput.replace(/\s/g, '').replace(/\D/g, '').replace(/([0-9]{4})/g, '$1 ');
+  //para borrar el espacio inicial y final se usa trim
+  formulario.inputNumero.value = valorInput.replace(/\s/g, '').replace(/\D/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
 
   numeroTarjeta.textContent = valorInput;
   //si el usuario borra el numero de tarjeta y el espacio no se quede en blanco hacemos un if
@@ -52,10 +83,11 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
   if (valorInput === '') {
     numeroTarjeta.textContent = "#### #### #### ####";
   }
-
   //volteamos la tarjeta para q el usuario vea el frente
-  mostrarFrente();
+  irFrente();
 });
+
+
 
 //inputNombre 
 const nombreTarjeta = document.querySelector('#tarjeta .nombre');
@@ -69,29 +101,54 @@ formulario.inputNombre.addEventListener('keyup', (e) => {
   if (valorInput === '') {
     nombreTarjeta.textContent = "Ej. Nacdul Ramirez";
   }
-  mostrarFrente();
+  irFrente();
 });
 
+
 //para voltear la tarjeta y mostrar la cara del frente
-const mostrarFrente = () => {
+const irFrente = () => {
   //hacer un if para comprobar si la tarjeta contiene el active y sele agrega el remove para que quite la clase y se votee
   if (tarjeta.classList.contains('active')) {
     tarjeta.classList.remove('active');
   }
 }
 
+
+//Para agregar los DÍAS al label= selectMes
+//agregamos un ciclo FOR para crear las 12 opciones que son los meses del año
+for (let i = 1; i <= 12; i++) {
+  const opcion = document.createElement('option');
+  opcion.value = i;
+  opcion.innerText = i;
+  formulario.selectMes.appendChild(opcion);
+}
+
+
 // Mes
 const mesExpiracion = document.querySelector('#tarjeta #expiracion .mes');
 formulario.selectMes.addEventListener('change', (e) => {
   mesExpiracion.textContent = e.target.value;
-  mostrarFrente();
+  irFrente();
 });
+
+
+//se agrega ciclo FOR para que indique los años de expiracion
+//yearActual + 4 para que solo muestre hasta 4 años despues del actual
+const yearActual = new Date().getFullYear();
+for (let i = yearActual; i <= yearActual + 6; i++) {
+  const opcion = document.createElement('option');
+  opcion.value = i;
+  opcion.innerText = i;
+  formulario.selectYear.appendChild(opcion);
+}
+
 
 //año
 const yearExpiracion = document.querySelector('#tarjeta #expiracion .year');
 formulario.selectYear.addEventListener('change', (e) => {
   yearExpiracion.textContent = e.target.value.slice(2); //slice(2) para que nos permita ver los 2 ultimos digitos del año
-  mostrarFrente();
+  irFrente();
 });
 
+// eslint-disable-next-line no-console
 console.log(validator);

@@ -97,7 +97,7 @@
         <div class="grupo">
           <!--Se limitan los caracteres máximo a 16 con maxLength-->
           <label for="inputNumero">Número de tarjeta</label>
-          <input type="text" id="inputNumero" name="numeroTarjeta" value="" minlength="11" maxlength="20" placeholder="#### #### #### 1234" autocomplete="off" required>
+          <input type="text" id="inputNumero" name="numeroTarjeta" value="" minlength="13" maxlength="19" placeholder="#### #### 1234 1233" autocomplete="off" required>
         </div>
         <div class="grupo">
           <label for="inputNombre">Nombre y Apellido</label>
@@ -134,24 +134,19 @@
           <input type="number" id="cantidad" placeholder="000 000 000" step="1" min="1" required>
         </div>
         <div class="Validar">
-          <button type="submit" id="validar" name="validar" value="validartarjeta">VALIDAR TARJETA</button>
+          <button id="validar" name="validar" value="validartarjeta">VALIDAR TARJETA</button>
         </div>
-        <button class="popup" id="popup" disabled>CONFIRMAR DONACIÓN</button>
         <br>
+        </div>
       </form>
-      <div class="overlay" id="overlay">
-        <div class="popup" id="popup">
+      <div id="popup">
+        <div class="msjVal" id="msjVal">
           <h3>La donación se realizó con éxito!</h3>
-          <h4 id="nombreUsuario"></h4>
-          <p>¡GRACIAS POR TU DONACIÓN, SIGAMOS UNIÉNDONOS POR LOS ANIMALES! Con tu ayuda podremos mejorar la calidad de
-            vida de cientos de animales en situación de calle y abandono.</p>
-        <a href="index.html">INICIO</a>
+          <p id="msj"></p>
+          <button id="cerrar">CERRAR</button>
           </div>
-      </div>
     </div>
   </main>
-
-
   <footer class="footer">
     <a href="index.html"><img src="images/logomenup.png" alt="logomenup"></a>
     <br>
