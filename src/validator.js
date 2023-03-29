@@ -23,26 +23,21 @@ const validator = {
     console.log(numReverse);
 
     let suma = 0; // variable vacia o cero
-
     //ciclo FOR par analizar cada elemento
     for (let i = 0; i < numReverse.length; i++) {
 
       numReverse[i] = parseInt(numReverse[i]);
       //convierte el string en array
       console.log(numReverse);
-
       if (i % 2 === 0) {
-
         //multiplicar x 1
-        numArray[i] = numArray[i] * 1
+        numArray[i] = numArray[i]*1
         console.log(numReverse);
-      } else {
+      }else {
         //multiplicar x 2
-        numArray[i] = numArray[i] * 2
+        numArray[i] = numArray[i]*2
         console.log(numReverse);
-
       }
-
 
       //si el digito es mayor o igual que 10
       if (numArray[i] >= 10) {
@@ -59,11 +54,10 @@ const validator = {
     //si la suma es divisible de 10 y el residuo es CERO, ES VÁLIDA, de lo contrario inválida
     if (suma % 10 === 0) {
       //si es true la tarjeta es válida
-      alert("El número de tarjeta de crédito es válida.");
       return true
       //resultado = true;
     } else {
-      alert("El número de tarjeta de crédito es inválida.");
+      //alert ("El número de tarjeta de crédito es inválida.");
       return false
       //resultado = false;
     }
