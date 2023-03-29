@@ -174,7 +174,6 @@ body {
 /* ESTILO DE LA 4TA PÁGINA HTML
   /*--estilo de la página de validar donation--*/
 * {
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
@@ -467,75 +466,71 @@ body {
   align-items: center;
 }
 
-/*-- po pup--*/
-.overlay {
-  background: #fd03aa4f;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.caja{
   display: flex;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 7px 0;
+}
+
+.container{
+  display: flex;
+  background-color: rgba(255, 126, 212, 0.699);
+  align-items:center;
   justify-content: center;
-  visibility: hidden;
-}
-
-.overlay.active {
-  visibility: visible;
-}
-
-.popup {
-  background: rgba(229, 255, 133, 0.904);
-  box-shadow: 0px 0px 6px 0px rgba(43, 35, 39, 0.432);
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  width: 550px;
-  transition: .3s ease all;
-  transform: scale(0.6);
+  position: fixed;
+  pointer-events: none;
   opacity: 0;
+  top:0;
+  left: 0;
+  height: 101vh;
+  width: 101vw;
+  transition: opacity 0.3s ease;
 }
 
-.popup h3 {
-  color: antiquewhite;
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 8px;
+
+.modal{
+  background-color: #fff;
+  width: 620px;
+  max-width: 100%;
+  padding: 28px 48px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-#nombreUsuario {
-  font-size: 25px;
-  font-weight: 600px;
-  padding: 12px;
+.modal h3{
+  margin: 0;
 }
 
-.popup p {
-  font-size: 20px;
-  line-height: 25px;
+.modal p{
+  opacity: 0.6;
+  font-size: 15px;
+  font-family: cursive;
 }
 
-.popup a {
-  text-decoration: none;
-  padding: 7px 20px;
-  color: #fff;
-  background: #fd03aa8c;
-  border-radius: 13px;
-  box-shadow: #fd03aad7;
-  font-size: 16px;
-  transition: .3s ease all;
-}
 
-.popup a:hover {
-  background: rgb(167, 0, 167);
-}
-
-/*--animación--*/
-.popup.active {
-  opacity: 1;
-  transform: scale(1);
-}
-
+#cerrar{
+  font-weight: 700;
+  font-size: 18px;
+  font-family: cursive;
+  color:rgba(255, 0, 106, 0.966);
+  background: rgba(255, 179, 232, 0.979);
+  border:rgba(255, 0, 106, 0.966);
+  border-radius: 50px;
+  cursor:pointer;
+  }
+  
+  #cerrar:hover{
+    background-color: #a20bb6d7;
+    color: antiquewhite;
+    transform: scale(1.1);
+  }
+  
+  .show{
+    pointer-events: auto;
+    opacity: 1;
+  }
 /*-- estilos del footer de todos los footers de los html--*/
 .footer {
   border-bottom: 15px solid rgb(245, 100, 17);

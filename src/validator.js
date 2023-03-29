@@ -15,7 +15,7 @@ const validator = {
     console.log(numero);
 
     //separa el string "1234 1234 1233" a 1, 2, 3 ... y convierte el n° de tarjeta en un array
-    const numArray = numero.split(",");
+    const numArray = numero.split("");
     console.log(numArray);
 
     //invertir el orden del array => 3, 2, 1

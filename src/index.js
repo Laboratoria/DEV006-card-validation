@@ -150,5 +150,4 @@ formulario.selectYear.addEventListener('change', (e) => {
   irFrente();
 });
 
-// eslint-disable-next-line no-console
 console.log(validator);
