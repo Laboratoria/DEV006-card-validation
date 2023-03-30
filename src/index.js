@@ -8,7 +8,8 @@ const cerrar = document.getElementById('cerrar');
 
 
 //llamando al button VALIDAR por si ID
-document.getElementById('validar').onclick = function(){
+document.getElementById('validar').addEventListener('click', function (event) {
+  event.preventDefault()
 
   const numArray = numero.value;
 
@@ -35,7 +36,8 @@ document.getElementById('validar').onclick = function(){
     //se debe mostrar una alerta como ventana emergente
     msjVal.classList.add('show');
   }
-}
+});
+
 
 
 //para cerrar la ventana emergente
@@ -75,7 +77,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
   //para que se borren las letras tambien se hace el mismo paso con una expresion regular (/\D/g,'')
   //para que se separen por grupo de 4 se coloca otra expresion regular ([0-9]{4})
   //para borrar el espacio inicial y final se usa trim
-  formulario.inputNumero.value = valorInput.replace(/\s/g, '').replace(/\D/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
+  formulario.inputNumero.value = valorInput.replace(/\s/g, '').replace(/\D/g, '').trim();
 
   numeroTarjeta.textContent = valorInput;
   //si el usuario borra el numero de tarjeta y el espacio no se quede en blanco hacemos un if
@@ -150,4 +152,5 @@ formulario.selectYear.addEventListener('change', (e) => {
   irFrente();
 });
 
+// eslint-disable-next-line no-console
 console.log(validator);

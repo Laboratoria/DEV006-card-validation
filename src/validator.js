@@ -10,7 +10,7 @@
 //6. si resultado de la suma no es divisible de 10 = inválida
 
 const validator = {
-  isValid: function (numero) {
+  isValid: (numero) => {
     //Reconoce el N° de string entregado por el usuario Ej. 1234 1234 1233
     console.log(numero);
 
@@ -23,6 +23,7 @@ const validator = {
     console.log(numReverse);
 
     let suma = 0; // variable vacia o cero
+
     //ciclo FOR par analizar cada elemento
     for (let i = 0; i < numReverse.length; i++) {
 
@@ -30,13 +31,13 @@ const validator = {
       //convierte el string en array
       console.log(numReverse);
 
-      if (i % 2 === 0){
+      if (i % 2 === 0) {
         //multiplicar x 1
-        numArray[i] = numArray[i]*1
+        numArray[i] = numArray[i] * 1;
         console.log(numReverse);
       } else {
         //multiplicar x 2
-        numArray[i] = numArray[i]*2
+        numArray[i] = numArray[i] * 2;
         console.log(numReverse);
       }
 
@@ -71,9 +72,9 @@ const validator = {
     numero = numero.toString();
 
     //un acumulador vacio llamado mask
-    let mask = " ";
+    let mask = "";
 
-    for (let i = 1; i < numero.length; i++) {
+    for (let i = 0; i < numero.length; i++) {
 
       if (i > numero.length - 5) {
 

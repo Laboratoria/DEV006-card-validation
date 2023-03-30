@@ -15,6 +15,7 @@ Para dirigirse a esta aplicación debe dirigirse a: https://github.com/Dul31/DEV
 
 ## 1.   INTRODUCCIÓN  
 PetsFriends Wasi es una fundación sin fines de lucro que ayuda a los animales en situación de abandono. Es por ello que se creó este proyecto llamado DONATÓN "Huellitas Felices" con la finalidad de realizar una campaña de adopción y recaudación de fondos para ayudar a perros y gatos de la calle. 
+
 ## 2. Resumen del proyecto
 La aplicacion consta de 4 hojas. La primera, donde se presenta la imagen central del flyer de la campaña de donación. La segunda, donde se encuentra la informacion para que se puedan contactar con la fundación, celular, instagram, correo y  dirección. La tercera, donde se incentiva a la adopción y a la no compra de mascotas, además de un formulario para poder adoptar, el único requisito es llenar todos los campos para que sea válido. Y la última, donde se puede donar monetariamente a la fundación para seguir ayudando a los animales de la calle. Para poder donar se debe llenar un formulario y cumplir algunos requisitos para que tu donación al ingresar tu numero de tarjeta de crédito sea válida.
 
