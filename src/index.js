@@ -90,7 +90,6 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 });
 
 
-
 //inputNombre 
 const nombreTarjeta = document.querySelector('#tarjeta .fullName');
 formulario.inputNombre.addEventListener('keyup', (e) => {
@@ -152,5 +151,9 @@ formulario.selectYear.addEventListener('change', (e) => {
   irFrente();
 });
 
-// eslint-disable-next-line no-console
+
+document.getElementById('btn-adoptar').addEventListener('click', function (){
+  window.location.href= "gracias.html";
+});
+
 console.log(validator);
