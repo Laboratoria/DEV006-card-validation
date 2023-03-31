@@ -152,8 +152,8 @@ formulario.selectYear.addEventListener('change', (e) => {
 });
 
 
-document.getElementById('btn-adoptar').addEventListener('click', function (){
-  window.location.href= "gracias.html";
+document.getElementById('btn-adoptar').addEventListener('click', () => {
+  window.location.href = "gracias.html";
 });
 
 // eslint-disable-next-line no-console
