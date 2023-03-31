@@ -156,4 +156,5 @@ document.getElementById('btn-adoptar').addEventListener('click', function (){
   window.location.href= "gracias.html";
 });
 
+// eslint-disable-next-line no-console
 console.log(validator);

@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   font-family: cursive;
-  font-size: 17px;
+  font-size: 23px;
   font-weight: 500;
   background: linear-gradient(rgb(255, 246, 126),
       white,
@@ -107,24 +107,24 @@ body {
   justify-content: center;
   font-weight: bolder;
   font-family: cursive;
-  font-size: 35px;
+  font-size: 38px;
   font-style: oblique;
   color: #9805ac;
 }
 
 .main-adopta .párrafo p {
   text-align: justify;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   padding: 15px;
-  color: #c74d06;
+  color: #b84300;
 }
 
 .main-adopta h1 {
   background-color: rgba(248, 220, 169, 0.911);
   text-align: center;
   justify-content: center;
-  font-size: 35PX;
+  font-size: 35px;
   font-family: cursive;
   font-weight: 1800;
   color: #9805ac;
