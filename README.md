@@ -1,5 +1,5 @@
 # DONATÓN PetsFriends Wasi-Card Validation
-Para dirigirse a esta aplicación debe dirigirse a: https://github.com/Dul31/DEV006-card-validation.git
+Para dirigirse a esta aplicación debe ingresar al siguiente link: https://dul31.github.io/src/
 ## Índice
 * [1. Introducción](#1-introducción)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
