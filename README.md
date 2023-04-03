@@ -20,7 +20,7 @@ FLYER DE CONTACTO: (https://drive.google.com/drive/folders/1uBDx6Q4iAsVtaMUMNKz6
 La aplicacion consta de 5 hojas. La primera, donde se presenta la imagen central del flyer de la campaña de donación. La segunda, donde se encuentra la información para que se puedan contactar con la fundación, celular, instagram, correo y dirección. La tercera, donde se incentiva a la adopción y a la no compra de mascotas, además de un formulario para poder adoptar, el único requisito es llenar todos los campos para que sea válido, y al dar click en el boton ADOPTAR te redigirá a la última hoja donde se te agradece. Y la cuarta, donde se puede donar monetariamente a la fundación para seguir ayudando a los animales de la calle. Para poder donar se debe llenar un formulario y cumplir algunos requisitos para que tu donación sea válida. <br>
 
 Para que tu donación sea válida se evaluará lo siguiente: <br>
-*Tu N° de tarjeta debe tener entre 11 y 19 dígitos como máximo.  
+*Tu N° de tarjeta debe tener mínimo 11 y 19 dígitos como máximo.  
 <br>
 *Debes llenar todos los campos de lo contrario no podrás donar.<br>
 * Para validar tu N° de tarjeta debe pasar el filtro por el algoritmo de Luhn (que viene predeterminado dentro de la simulación del app). <br>
