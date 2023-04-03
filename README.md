@@ -27,7 +27,7 @@ Para que tu donación sea válida se evaluará lo siguiente: <br>
 
 -Cuenta con mensaje de alert en caso no cumplas el primer requisito. <br>
 
-Si cumples con estos requisitos y tu tarjeta es válida, al dar click en el botón VALIDAR TARJETA, retornará una ventana emergente con el siguiente mensaje: Tu donación se realizó con éxito, se verificó tu N° de tarjeta ############1234.
+Si cumples con estos requisitos y si tu tarjeta es válida , al dar click en el botón VALIDAR TARJETA, retornará una ventana emergente con el siguiente mensaje: Tu donación se realizó con éxito, se verificó tu N° de tarjeta ############1234. De lo contrario saldrá en la consola que es inválido.
 
 ## 3. Prototipo de baja fidelidad
 (https://drive.google.com/drive/my-drive)
