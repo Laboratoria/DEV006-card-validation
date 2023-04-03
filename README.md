@@ -3,8 +3,8 @@ Para dirigirse a esta aplicación debe dirigirse a: https://github.com/Dul31/DEV
 ## Índice
 * [1. Introducción](#1-introducción)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Prototio de baja fidelidad](#3-Prototipo-de-baja-fidelidad)
-* [4. Prototio de alta fidelidad](#3-Prototipo-de-alta-fidelidad)
+* [3. Prototipo de baja fidelidad](#3-Prototipo-de-baja-fidelidad)
+* [4. Prototipo de alta fidelidad](#3-Prototipo-de-alta-fidelidad)
 * [5. Autora](#5-Autora)
 ***
 
