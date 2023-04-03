@@ -151,8 +151,8 @@ formulario.selectYear.addEventListener('change', (e) => {
   irFrente();
 });
 
-
-document.getElementById('btn-adoptar').addEventListener('click', () => {
+const btnAdoptar = document.getElementById('btn-adoptar');
+btnAdoptar.addEventListener('click', () => {
   window.location.href = "gracias.html";
 });
 
