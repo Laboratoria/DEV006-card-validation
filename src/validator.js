@@ -59,7 +59,7 @@ const validator = {
       return true;
       //resultado = true;
     } else {
-      alert ("El número de tarjeta de crédito es inválida.");
+      //alert ("El número de tarjeta de crédito es inválida.");
       return false;
       //resultado = false;
     }
