@@ -13,8 +13,8 @@ document.getElementById('validar').addEventListener('click', function (event) {
 
   const numArray = numero.value;
 
-  if(numArray.length < 13 || numArray.length > 19){
-    alert ("Tu número de tarjeta debe contener entre 13 a 19 dígitos");
+  if(numArray.length < 11 || numArray.length > 19){
+    alert ("Tu número de tarjeta debe contener entre 12 a 19 dígitos");
     // eslint-disable-next-line no-console
     console.log(numero);
     return false
