@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "meta-viewport": "off",
+    "axe/language": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "document-title": "off"
+      }
+    ],
+    "button-type": "off",
+    "axe/name-role-value": "off",
+    "axe/forms": "off",
+    "no-inline-styles": "off",
+    "detect-css-reflows/layout": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 14.8"
+  ]
+}
