@@ -60,7 +60,7 @@ body {
 
 /*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
 .header .nav-links li a:hover {
-  color: #ffa305;
+  color: #ff7605;
   font-size: 1.6rem;
   font-weight: 980;
 }
@@ -92,7 +92,7 @@ body {
 }
 
 .header .donar .btn:hover {
-  color: #ffa305;
+  color:  #ff7605;
   font-size: 1.5rem;
   cursor: pointer;
 }
