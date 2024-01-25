@@ -6,6 +6,7 @@ body {
   background: linear-gradient(rgb(255, 246, 126),
       white,
       rgb(255, 202, 141));
+
 }
 
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
@@ -16,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  padding: 2px 5%;
+  padding: 10px 5%;
 }
 
 /*--cursor pointer para que se vea la manito a la hora de mover el mouse--*/
@@ -59,16 +60,17 @@ body {
 
 /*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
 .header .nav-links li a:hover {
-  color: #9c12f8;
+  color: #ffa305;
+  font-size: 1.6rem;
+  font-weight: 980;
 }
 
 /*--estilo de ícono DONATE--*/
 .donar {
   font-weight: 900;
   font-size: 1.4rem;
-  color: #9c12f8;
   padding: 5px;
-  background: #fffc5d;
+  background: #fffaeaad;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -90,15 +92,14 @@ body {
 }
 
 .header .donar .btn:hover {
-  color: #9c12f8;
-  transform: scale(1.1);
+  color: #ffa305;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /*--ESTILO PAG 1 --*/
 .main-index {
   text-align: center;
-  margin-top: -85px;
-  margin-bottom: -145px;
 }
 
 /*--ESTILO PAG 3--*/
@@ -176,6 +177,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .contenedor {
@@ -533,7 +535,7 @@ body {
   border-bottom: 15px solid rgb(245, 100, 17);
   height: 100px;
   max-width: 100%;
-  padding: 15px;
+  padding: 5px 15px;
   background-image: url(images/fondo_de_huellas.png);
 }
 
@@ -547,7 +549,7 @@ body {
 .footer h2 {
   float: right;
   padding: 3% 0;
-  margin-top: -45px;
+  margin-top: -50px;
   color: rgb(105, 44, 3);
   font-size: 1.3rem;
   font-family: cursive;
