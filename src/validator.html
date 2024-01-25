@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!--Se insertó un ícono antes del nombre de la página para que aparezca en la pestaña-->
+  <link rel="icon" type="image.png" href="images/corazon perro gato.png">
+  <title>Donatón PetsFriends Wasi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logomenup">
+      <img src="images/logomenup.png" alt="logo de la marca">
+    </div>
+    <!-- Se utilizó nav para hacer una barra de menú desplegable con algunos enlaces de navegación-->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="contactanos.html">CONTACT</a></li>
+        <li><a href="adopta.html">ADOPT</a></li>
+      </ul>
+    </nav>
+    <div class="donar">
+      <a href="validardonation.html">
+        <img src="images/iconos/donar2.png" width="70px" height="50px" alt="donar2">
+        <a class="boton" href="validardonation.html">DONATE</a>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- haciendo el formulario dinámico para la tarjeta de crédito-->
+    <div class="contenedor">
+      <!--simulación de la tarjeta de crédito-->
+      <section class="tarjeta" id="tarjeta">
+        <!-- TARJETA DELANTERA-->
+        <div class="delantera">
+          <div class="logo" id="logo">
+            <img src="images/logos/visa.png" alt="">
+          </div>
+          <img src="images/chip.png" class="chip" alt="">
+
+          <!--DATOS DENTRO DE LA TARJETA CON FLEXBOX-->
+          <div class="datos">
+            <!-- AGRUPAMOS CADA VALOR CON LOS DATOS QUE APARECERÁN DENTRO DE LA TARJETA-->
+            <div class="grupo" id="numero">
+              <p class="label">Número de tarjeta</p>
+              <p class="numero">#### #### #### ####</p>
+            </div>
+            <div class="flexbox">
+              <div class="grupo" id="fullName">
+                <p class="label">Nombre de la tarjeta</p>
+                <p class="fullName">Ej. Nacdul Ramirez</p>
+              </div>
+
+              <div class="grupo" id="expiracion">
+                <p class="label">Expiración</p>
+                <!-- sE PONE UN SPAN A MES Y A YEAR POR SEPARADO PARA QUE CUANDO SE CAMBIE LA FECHA O EL MES SE HAGA DE MANERA INDEPENDIENTE-->
+                <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reversa">
+          <div class="barra"></div>
+          <div class="datos">
+            <div class="grupo" id="firma">
+              <p class="label">Firma</p>
+            </div>
+          </div>
+          <p class="leyenda">Esta tarjeta es propiedad del Banco Pay Banck y es de uso personal e intransferible. En
+            caso de pérdida o robo el titular deberá llamar a Banca por teléfono o quien la encuentre deberá entregarla
+            en cualquier agencia del banco.</p>
+          <a href="#" class="link-banco">www.paybanck.com</a>
+        </div>
+      </section>
+
+      <!-- Contenedor botón abrir formulario -->
+      <div class="contenedor-btn">
+        <button class="btn-abrir" id="btnAbrir" value="btnAbrir">
+          <img src="images/iconos/iconosuma.png" width="70px" alt="iconosuma"></button>
+      </div>
+
+      <!--formulario-->
+      <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+        <div class="grupo">
+          <!--Se limitan los caracteres máximo a 16 con maxLength-->
+          <label for="inputNumero">Número de tarjeta</label>
+          <input type="text" id="inputNumero" name="numeroTarjeta" value="" minlength="11" maxlength="19" placeholder="#### #### #### ####" autocomplete="off" required>
+        </div>
+        <div class="grupo">
+          <label for="inputNombre">Nombre y Apellido</label>
+          <input type="text" id="inputNombre" autocomplete="off" required>
+        </div>
+
+        <div class="flexbox">
+          <div class="grupo expira">
+            <label for="selectMes">Expiración</label>
+            <div class="flexbox">
+              <div class="grupo-select">
+                <select name="mes" id="selectMes">
+                  <option disable selected>Mes</option>
+                </select>
+
+              </div>
+              <br>
+              <div class="grupo-select">
+                <select name="year" id="selectYear">
+                  <option disable selected>Año</option>
+                </select>
+
+              </div>
+            </div>
+          </div>
+          <div class="grupo ccv">
+            <label for="inputCCV">CCV</label>
+            <input type="text" id="inputCCV" name="cvv" maxlength="3" required>
+          </div>
+        </div>
+        <div class="caja">
+          <label for="cantidad">Cantidad $</label>
+          <!-- step para poner la cantidad base a donar, en este caso $1 como minimo -->
+          <input type="number" id="cantidad" placeholder="000 000 000" step="1" min="1" required>
+        </div>
+        <div class="Validar">
+          <button id="validar" name="validar" value="validartarjeta">VALIDAR TARJETA</button>
+        </div>
+        <br>
+        <div id="msjVal" class="container">
+          <div class="modal">
+          <h3>La donación se realizó con éxito!</h3>
+          <p id="msj"></p>
+          <button id="cerrar">CERRAR</button>
+          </div>
+        </div>
+  </form>
+</div>
+  </main>
+  <footer class="footer">
+    <a href="index.html"><img src="images/logomenup.png" alt="logomenup"></a>
+    <br>
+    <strong>
+      <h2>Contáctanos: +51 941 895 233 || contacto@PetsFriendsWasi.com</h2>
+    </strong>
+  </footer>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
