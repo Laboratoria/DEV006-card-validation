@@ -6,6 +6,7 @@ Para dirigirse a esta aplicación debe ingresar al siguiente link: <falta la pá
 ## Índice
 
 * [1. Introducción](#1-introducción)
+
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Prototipo de baja fidelidad](#3-prototipo-de-baja-fidelidad)
 * [4. Prototipo de alta fidelidad](#4-prototipo-de-alta-fidelidad)
