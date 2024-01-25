@@ -16,7 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  padding: 10px 5%;
+  padding: 2px 5%;
 }
 
 /*--cursor pointer para que se vea la manito a la hora de mover el mouse--*/
@@ -26,7 +26,7 @@ body {
 
 /*--tamaño del logo--*/
 .header .logomenup img {
-  height: 75px;
+  height: 80px;
   width: auto;
   transition: all 0.3s;
 }
@@ -43,7 +43,7 @@ body {
 
 .header .nav-links li {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 .header .nav-links li:hover {
@@ -51,8 +51,8 @@ body {
 }
 
 .header .nav-links a {
-  font-size: 800;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: #b3480a;
   text-decoration: none;
 }
@@ -64,8 +64,8 @@ body {
 
 /*--estilo de ícono DONATE--*/
 .donar {
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 1.4rem;
   color: #9c12f8;
   padding: 5px;
   background: #fffc5d;
@@ -74,12 +74,12 @@ body {
   cursor: pointer;
   transition: all 0.3s ease 0s;
   text-align: center;
-  width: 220px;
-  margin: 0;
+  width: auto;
+  height: auto;
 }
 
 .header .donar img {
-  height: 60px;
+  height: 50px;
   width: auto;
   transition: all 0.3s;
 }
@@ -97,6 +97,8 @@ body {
 /*--ESTILO PAG 1 --*/
 .main-index {
   text-align: center;
+  margin-top: -85px;
+  margin-bottom: -145px;
 }
 
 /*--ESTILO PAG 3--*/
@@ -173,7 +175,6 @@ body {
   /*--estilo de la página de validar donation--*/
 * {
   margin: 0;
-  box-sizing: border-box;
   padding: 0;
 }
 
@@ -532,7 +533,7 @@ body {
   border-bottom: 15px solid rgb(245, 100, 17);
   height: 100px;
   max-width: 100%;
-  padding: 5px;
+  padding: 15px;
   background-image: url(images/fondo_de_huellas.png);
 }
 
@@ -545,11 +546,10 @@ body {
 
 .footer h2 {
   float: right;
-  padding: 5px 0;
-  ;
+  padding: 3% 0;
+  margin-top: -45px;
   color: rgb(105, 44, 3);
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 1.3rem;
   font-family: cursive;
 }
 
