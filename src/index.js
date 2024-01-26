@@ -32,7 +32,7 @@ document.getElementById('validar').addEventListener('click', function (event) {
   if (resultado === true){
   //debe mostrarse algo
   //ventana emergente
-    msj.innerHTML = "Se verificó tu N°" + mask;
+    msj.innerHTML = "Card verified N°" + mask;
     //se debe mostrar una alerta como ventana emergente
     msjVal.classList.add('show');
   }
