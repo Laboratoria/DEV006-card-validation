@@ -1,23 +1,22 @@
 body {
   box-sizing: border-box;
   font-family: cursive;
-  font-size: 23px;
-  font-weight: 500;
-  background: linear-gradient(rgb(255, 246, 126),
-      white,
+  font-weight: 300;
+  background: linear-gradient(rgb(255, 247, 142),
+      rgba(255, 255, 255, 0.861),
       rgb(255, 202, 141));
-
 }
 
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
 .header {
-  border-bottom: 12px solid rgb(245, 100, 17);
+  border-bottom: 6px solid rgb(245, 100, 17);
   background-image: url(images/fondo_de_huellas.png);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  padding: 10px 5%;
+  padding: 0 21px 2px 0;
+  margin: 0;
 }
 
 /*--cursor pointer para que se vea la manito a la hora de mover el mouse--*/
@@ -27,14 +26,15 @@ body {
 
 /*--tamaño del logo--*/
 .header .logomenup img {
-  height: 80px;
+  height: 4.5em;
   width: auto;
   transition: all 0.3s;
+  padding-left: 21px;
 }
 
 /*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
 .header .logomenup img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /*-- darle forma a la lista desordenada (links)--*/
@@ -44,7 +44,7 @@ body {
 
 .header .nav-links li {
   display: inline-block;
-  padding: 0 25px;
+  padding: 0 1em;
 }
 
 .header .nav-links li:hover {
@@ -52,37 +52,38 @@ body {
 }
 
 .header .nav-links a {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #b3480a;
+  font-size: 1.25rem;
+  font-weight: 650;
+  color:  rgb(105, 44, 3);
   text-decoration: none;
+  text-shadow: 3px 2px 3px rgba(229, 72, 5, 0.673);
 }
 
 /*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
 .header .nav-links li a:hover {
   color: #ff7605;
-  font-size: 1.6rem;
-  font-weight: 980;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 /*--estilo de ícono DONATE--*/
 .donar {
-  font-weight: 900;
+  font-weight: 600;
   font-size: 1.4rem;
-  padding: 5px;
-  background: #fffaeaad;
+  background: #fff8dfad;
   border: none;
-  border-radius: 20px;
+  border-radius: 18px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  text-align: center;
   width: auto;
   height: auto;
+  text-shadow: 2px 2px 4px rgba(126, 124, 124, 0.628);
+  padding: 5px;
 }
 
 .header .donar img {
-  height: 50px;
   width: auto;
+  height: 2.5em;
   transition: all 0.3s;
 }
 
@@ -91,15 +92,14 @@ body {
   transform: scale(1.2);
 }
 
-.header .donar .btn:hover {
-  color:  #ff7605;
-  font-size: 1.5rem;
-  cursor: pointer;
+.donar .btn{
+color:  #ff7605;
 }
 
-/*--ESTILO PAG 1 --*/
-.main-index {
-  text-align: center;
+.header .donar .btn:hover {
+  color:  #ff058f;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /*--ESTILO PAG 3--*/
@@ -181,7 +181,7 @@ body {
 }
 
 .contenedor {
-  width: 90%;
+  width: 98%;
   /*--límite para que no sea muy ancho con el max-width en caso el usuario acceda a la página desde una pantalla más grande que la de nosotros--*/
   max-width: 1000px;
   padding: 40px 20px;
@@ -229,7 +229,7 @@ body {
   padding: 30px;
   border-radius: 15px;
   /*--para que tenga un alto mínimo se usa min-height--*/
-  min-width: 330px;
+  min-width: 30px;
   min-height: 310px;
   display: flex;
   flex-direction: column;
@@ -354,7 +354,7 @@ body {
 /*-- contenedor botón --*/
 .contenedor-btn .btn-abrir {
   position: relative;
-  top: -25px;
+  top: -30px;
   border-style: none;
 }
 
@@ -368,11 +368,11 @@ body {
   cursor: pointer;
   transition: all .3s ease;
   border-radius: 200%;
-  box-shadow: -5px 2px 8px rgba(196, 3, 255, 0.856);
+  box-shadow: -5px 2px 8px rgba(255, 14, 114, 0.77);
 }
 
 .contenedor-btn .btn-abrir img:hover {
-  background: rgb(255, 14, 203);
+  background: rgba(255, 14, 114, 0.77);
 }
 
 .contenedor-btn .btn-abrir img.active {
@@ -383,7 +383,7 @@ body {
 .formulario-tarjeta {
   background: rgba(231, 135, 255, 0.801);
   width: 100%;
-  max-width: 600px;
+  max-width: 630px;
   padding: 125px 30px 7px 30px;
   border-radius: 10px;
   position: relative;
@@ -407,9 +407,9 @@ body {
 
 .formulario-tarjeta input,
 .formulario-tarjeta select {
-  border: 3px solid rgba(255, 57, 189, 0.877);
+  border: 3px solid  rgba(255, 14, 114, 0.837);
   font-size: 16px;
-  height: 30px;
+  height: 32px;
   width: 100%;
   padding: 5px 15px;
   border-radius: 5px;
@@ -419,7 +419,7 @@ body {
 /*--para que las lineas del border de cada espacio a completar en el formulario cambien de color--*/
 .formulario-tarjeta input:hover,
 .formulario-tarjeta select:hover {
-  border: 2px solid rgb(194, 2, 219);
+  border: 3px solid  rgb(194, 2, 219);
 }
 
 .formulario-tarjeta input {
@@ -427,12 +427,12 @@ body {
 }
 
 .formulario-tarjeta .Validar #validar {
-  border: 3px solid rgba(113, 112, 113, 0.783);;
-  box-shadow: 3px solid rgba(255, 52, 187, 0.877);
+  border: 3px solid rgb(255, 255, 255);
   font-size: 18px;
-  background: rgba(255, 253, 254, 0.526);
+  color: white;
+  background: rgba(17, 17, 17, 0.622);
   font-weight: bold;
-  padding: 10px;
+  padding: 0.42em;
   font-family: cursive;
   border-radius: 5px;
   cursor: pointer;
@@ -441,8 +441,9 @@ body {
 }
 
 .formulario-tarjeta .Validar #validar:hover {
-  border: 2px solid rgb(194, 2, 219);
-  background: rgb(192, 185, 185);
+  border: 5px solid   #e23104;
+  background: rgba(255, 254, 254, 0.85);
+  color: black;
 }
 
 .formulario-tarjeta .flexbox {
@@ -453,18 +454,26 @@ body {
 /*--ESTILO DE LA PAG5--*/
 .main-gracias{
   display: flex;
-  height: 1300px;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .contenedor-imagenes{
   display: flex;
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
+}
+
+article{
+  flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+article img{
+  width: 100%;
+  height: auto;
+  margin: 5px;
 }
 
 .caja{
@@ -532,8 +541,8 @@ body {
   }
 /*-- estilos del footer de todos los footers de los html--*/
 .footer {
-  border-bottom: 15px solid rgb(245, 100, 17);
-  height: 100px;
+  border-top: 8px solid rgb(245, 100, 17);
+  height: 7em;
   max-width: 100%;
   padding: 5px 15px;
   background-image: url(images/fondo_de_huellas.png);
@@ -541,7 +550,7 @@ body {
 
 .footer a img {
   float: left;
-  height: 70px;
+  height: 60px;
   max-width: 100%;
   padding: 0;
 }

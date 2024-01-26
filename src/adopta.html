@@ -1,113 +1,141 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <!--Se insertó un ícono antes del nombre de la página para que aparezca en la pestaña-->
+    <link rel="icon" type="image.png" href="images/corazon perro gato.png" />
+    <title>Donatón PetsFriends Wasi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <!--Se insertó un ícono antes del nombre de la página para que aparezca en la pestaña-->
-  <link rel="icon" type="image.png" href="images/corazon perro gato.png">
-  <title>Donatón PetsFriends Wasi</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <header class="header">
+      <div class="logomenup">
+        <img src="images/logomenup.png" alt="logo de la marca" />
+      </div>
+      <!-- Se utilizó nav para hacer una barra de menú desplegable con algunos enlaces de navegación-->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contactanos.html">CONTACT US</a></li>
+          <li><a href="adopta.html">ADOPT</a></li>
+        </ul>
+      </nav>
 
-<body>
-  <header class="header">
-    <div class="logomenup">
-      <img src="images/logomenup.png" alt="logo de la marca">
-    </div>
-    <!-- Se utilizó nav para hacer una barra de menú desplegable con algunos enlaces de navegación-->
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="contactanos.html">CONTAC</a></li>
-        <li><a href="adopta.html">ADOPT</a></li>
-      </ul>
-    </nav>
-    <div class="donar">
-      <a href="validardonation.html">
-        <img src="images/iconos/donar3.png" width="70px" height="50px" alt="donar3">DONATE</a>
-    </div>
-  </header>
+      <div class="donar">
+        <a href="validardonation.html">
+          <img src="images/iconos/donar3.png" width="70px" height="50px" alt="donar3">
+          <a class="btn" href="validardonation.html">DONATE</a>
+        </a>
+      </div>
+    </header>
 
-  <main class="main-adopta">
-    <br>
-    <div class="párrafo">
-      <h>¿Alguna vez has pensado en adoptar una mascota? ¿Qué te ha detenido?</h>
-      <br>
-      <p>Tal vez el deseo siempre ha estado ahí pero por alguna razón piensas que todavía no es el momento. Esto es más
-        común de lo que crees y se debe a que para dar el siguiente paso es fundamental que generes una conexión real y
-        física con un animal y vayas más allá de la idea de adoptar. Visitar un refugio de animales es un buen primer
-        paso en este proceso. <br>
-        <br>
-        En <u>PetsFriends Wasi</u> encontrarás muchos amigos de cuatro patas que necesitan de mucho amor y quieren ser
-        parte de tu familia. <br>
-        Si deseas <u>ADOPTAR</u> a uno de nuestros peluditos puedes llenar el siguiente formulario, y en un lapso de 72
-        horas hábiles estaremos en contacto contigo para coordinar una entrevista. Importante ser <u>mayor de 18
-          años</u>, y si eres menor de edad, puedes decirle a tus papitos para que completen el formulario.
-        <center>
-          <h2>¡Gracias por formar parte de nuestra familia!</h2>
-        </center>
-      </p>
-    </div>
-    <br>
-    <br>
-    <br>
-
-    <h1> DATOS PERSONALES DEL ADOPTANTE </h1>
-    <br>
-    <br>
-    <form action="gracias.html">
-      <div class="contenedor">
-        <div class="columna">
-          <label for="Names">Nombres: </label>
-          <input type="text" id="Names" placeholder="Ej: Nacdul V." required>
-          <br>
-          <br>
-          <label for="Surname">Apellidos: </label>
-          <input type="text" id="Surname" placeholder="Ej. Ramirez Zavala" required>
-          <br>
-          <br>
-          <div class="hb">
-            <label for="hb">Birth Date:</label>
-            <input type="date" id="hb" required>
+    <main class="main-adopta">
+      <section class="párrafo">
+        <h>Have you ever thought about adopting a pet? What has stopped you?</h>
+        <br />
+        <p>
+          Perhaps the desire has always been there, but for some reason, you
+          think it isn't the right time. This is more common than you think and
+          it's because, to take the next step, it's essential to establish a
+          real and physical connection with an animal and go beyond the idea of
+          adoption. Visiting an animal shelter is a good first step in this
+          process. <br />
+          <br />
+          In <u>PetsFriends Wasi</u> you'll find many four-legged friends in
+          need of lots of love, eager to become part of your family. <br />
+          If you wish to <u>ADOPT</u> one of our furry friends, you can fill out
+          the following form, and within a period of 72 hours, we'll be in touch
+          with you to coordinate an interview. It's very important to be
+          <u> 18 years or older</u>, and if you are underage, you can ask your
+          parents to complete the form.
+          <center>
+            <h2>Thank you for being part of our family!</h2>
+          </center>
+        </p>
+      </section>
+      <section class="informacion">
+        <h1>ADOPTER'S INFORMATION</h1>
+        <br />
+        <form action="gracias.html">
+          <div class="contenedor">
+            <div class="columna">
+              <label for="Names">Names: </label>
+              <input
+                type="text"
+                id="Names"
+                placeholder="Ej: Nacdul V."
+                required
+              />
+              <br />
+              <br />
+              <label for="Surname">Last name: </label>
+              <input
+                type="text"
+                id="Surname"
+                placeholder="Ej. Ramirez Zavala"
+                required
+              />
+              <br />
+              <br />
+              <div class="hb">
+                <label for="hb">Birth Date:</label>
+                <input type="date" id="hb" required />
+              </div>
+              <br />
+              <br />
+              <label for="Adress">Adress: </label>
+              <input type="text" id="Adress" name="Adress" required />
+              <br />
+              <br />
+              <label for="Phone">Cell phone: </label>
+              <input
+                type="text"
+                id="Phone"
+                placeholder="Ej. +51 862 235 277"
+                name="Phone"
+                required
+              />
+              <br />
+              <br />
+              <label for="correo">e-mail:</label>
+              <input type="text" id="correo" name="correo" required />
+              <br />
+              <br />
+              <label for="opciones">Select an option:</label>
+              <select id="opciones" name="opciones">
+                <option value="option1">Dog</option>
+                <option value="option2">Cat</option>
+              </select>
+            </div>
+            <div class="columna">
+              <img
+                src="images/adoptame.jpg"
+                width="340px"
+                height="340px"
+                alt="adoptame"
+              />
+            </div>
           </div>
-          <br>
-          <br>
-          <label for="Adress">Dirección: </label>
-          <input type="text" id="Adress" name="Adress" required>
-          <br>
-          <br>
-          <label for="Phone">Celular: </label>
-          <input type="text" id="Phone" placeholder="Ej. +51 862 235 277" name="Phone" required>
-          <br>
-          <br>
-          <label for="correo">e-mail:</label>
-          <input type="text" id="correo" name="correo" required>
-          <br>
-          <br>
-          <label for="opciones">Selecciona una opción:</label>
-          <select id="opciones" name="opciones">
-            <option value="option1">Perro</option>
-            <option value="option2">Gato</option>
-          </select>
-        </div>
-        <div class="columna">
-          <img src="images/adoptame.jpg" width="340px" height="340px" alt="adoptame">
-        </div>
-      </div>
-      <div class="adoptar">
-        <button id="btn-adoptar" name="btn-adoptar" value="Haz click">ADOPTAR</button>
-      </div>
-      <br>
-    </form>
-  </main>
+          <div class="adoptar">
+            <button id="btn-adoptar" name="btn-adoptar" value="Haz click">
+              SEND
+            </button>
+          </div>
+          <br />
+        </form>
+      </section>
+    </main>
 
-  <footer class="footer">
-    <a href="index.html"><img src="images/logomenup.png" alt="logomenup"></a>
-    <br>
-    <strong>
-      <h2>Contáctanos: +51 941 895 233 || contacto@PetsFriendsWasi.com</h2>
-    </strong>
-  </footer>
-  <script src="index.js" type="module"></script>
-</body>
+    <footer class="footer">
+      <a href="index.html"
+        ><img src="images/logomenup.png" alt="logomenup"
+      /></a>
+      <br />
+      <strong>
+        <h2>Contact us: +51 941 895 233 || contacto@PetsFriendsWasi.com</h2>
+      </strong>
+    </footer>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
