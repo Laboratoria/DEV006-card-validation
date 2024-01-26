@@ -109,14 +109,13 @@ color:  #ff7605;
   justify-content: center;
   font-weight: bolder;
   font-family: cursive;
-  font-size: 38px;
-  font-style: oblique;
+  font-size: 1.8em;
   color: #9805ac;
 }
 
 .main-adopta .párrafo p {
   text-align: justify;
-  font-size: 26px;
+  font-size: 1.22em;
   font-weight: bold;
   padding: 15px;
   color: #b84300;
