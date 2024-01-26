@@ -57,11 +57,9 @@ const validator = {
     if (suma % 10 === 0) {
       //si es true la tarjeta es válida
       return true;
-      //resultado = true;
     } else {
-      alert ("El número de tarjeta de crédito es inválida.");
+      alert ("The credit card number is invalid.");
       return false;
-      //resultado = false;
     }
   },
 
