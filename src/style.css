@@ -107,40 +107,45 @@ color:  #ff7605;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-weight: bolder;
+  font-weight: 600;
   font-family: cursive;
-  font-size: 1.8em;
+  font-size: 1.55em;
   color: #9805ac;
+  padding: 10px;
 }
 
 .main-adopta .párrafo p {
   text-align: justify;
   font-size: 1.22em;
   font-weight: bold;
-  padding: 15px;
+  padding: 0 85px;
   color: #b84300;
 }
 
 .main-adopta h1 {
-  background-color: rgba(248, 220, 169, 0.911);
   text-align: center;
   justify-content: center;
   font-size: 35px;
   font-family: cursive;
   font-weight: 1800;
-  color: #9805ac;
+  color:  #ff058f;
+  padding-top: 65px;
+  text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
 }
 
 .main-adopta .contenedor {
-  color: rgb(190, 57, 4);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .main-adopta .columna {
-  width: 100%;
-  float: none;
+  padding: 0 5px;
+  color: rgb(194, 2, 219);
+  font-size: 1.1em;
+  font-weight: 600;
+  box-sizing: border-box;
 }
 
 .main-adopta .columna img {
@@ -148,6 +153,14 @@ color:  #ff7605;
   float: none;
   object-fit: cover;
 }
+
+.main-adopta .columna input{
+  display: flex;
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  }
 
 .main-adopta .adoptar {
   font-size: 22px;
@@ -159,16 +172,18 @@ color:  #ff7605;
   margin: auto;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   cursor: pointer;
 }
 
 .main-adopta .adoptar #btn-adoptar {
-  background-color: #9c2eb8be;
+  background-color: #fe1897be;
   font-family: cursive;
   font-size: 25px;
   font-weight: bolder;
   color: white;
   padding: 10px;
+  border-radius: 22px;
 }
 
 /* ESTILO DE LA 4TA PÁGINA HTML
