@@ -118,8 +118,8 @@ color:  #ff7605;
   text-align: justify;
   font-size: 1.22em;
   font-weight: bold;
-  padding: 0 85px;
-  color: #b84300;
+  padding: 0 85px 9px 85px;
+  color: #c24903;
 }
 
 .main-adopta h1 {
@@ -127,7 +127,7 @@ color:  #ff7605;
   justify-content: center;
   font-size: 35px;
   font-family: cursive;
-  font-weight: 1800;
+  font-weight: 800;
   color:  #ff058f;
   padding-top: 65px;
   text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
@@ -146,6 +146,8 @@ color:  #ff7605;
   font-size: 1.1em;
   font-weight: 600;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .main-adopta .columna img {
@@ -159,9 +161,20 @@ color:  #ff7605;
   width: 100%;
   padding: 4px;
   margin-bottom: 3px;
-  border-radius: 5px;
+  border-radius: 4px;
+  cursor: pointer;
   }
 
+#opciones{
+  border-radius: 5px;
+  appearance: none;
+  padding: 5px 60px;
+  cursor: pointer;
+}
+
+#opciones option {
+  border-radius: 5px;
+}
 .main-adopta .adoptar {
   font-size: 22px;
   font-weight: 700px;
@@ -177,13 +190,23 @@ color:  #ff7605;
 }
 
 .main-adopta .adoptar #btn-adoptar {
-  background-color: #fe1897be;
+  background: linear-gradient(rgb(255, 20, 153),
+  rgba(255, 135, 215, 0.893),
+  rgba(238, 112, 255, 0.915));
   font-family: cursive;
   font-size: 25px;
-  font-weight: bolder;
+  font-weight: 600;
   color: white;
-  padding: 10px;
-  border-radius: 22px;
+  padding: 7px 15px;
+  border-radius: 9px;
+  cursor: pointer;
+  border:2px solid rgb(207, 21, 236);
+}
+
+.main-adopta .adoptar #btn-adoptar:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 3px solid rgba(9, 9, 9, 0.837);
 }
 
 /* ESTILO DE LA 4TA PÁGINA HTML
@@ -381,7 +404,6 @@ color:  #ff7605;
   border-radius: 200%;
   cursor: pointer;
   transition: all .3s ease;
-  border-radius: 200%;
   box-shadow: -5px 2px 8px rgba(255, 14, 114, 0.77);
 }
 
