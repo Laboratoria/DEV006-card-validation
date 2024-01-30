@@ -106,10 +106,10 @@ color:  #ff7605;
 .main-adopta h1 {
   text-align: center;
   flex-direction: row;
-  font-weight: 600;
+  font-weight: 620;
   font-size: 1.6em;
   color: #9805ac;
-  padding: 16px;
+  padding: 14px;
 }
 
 .main-adopta p {
@@ -121,6 +121,7 @@ color:  #ff7605;
 }
 
 .main-adopta h2{
+  padding-bottom: 9px;
   color:  rgb(105, 44, 3);
   text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
 }
@@ -130,20 +131,29 @@ section .informacion{
 }
 
 .neon{
+  width: 74%;
+  text-align: center;
   background-color: #ffffff;
   border-radius: 10px;
-  width: auto;
+  cursor: pointer;
+  margin: 0 190px;
+  padding-top: 5px;
 }
 
-.main-adopta h3 {
+.neon:hover{
+  box-shadow: 0 0 25px rgb(255, 20, 153);
+}
+
+.main-adopta .neon {
   /*--color:  #ff058f;---*/
   overflow: hidden;
   border-radius: 10px;
 }
 
-.main-adopta h3 img{
+.main-adopta .neon img{
     width: 100%;
-    height: 250px;
+    justify-content: center;
+    height: 200px;
     border: 12px solid transparent;
     border-radius: 8px;
     animation: neonAnimation 8s linear infinite;
