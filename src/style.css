@@ -2,9 +2,9 @@ body {
   box-sizing: border-box;
   font-family: cursive;
   font-weight: 300;
-  background: linear-gradient(rgb(255, 247, 142),
+  background: linear-gradient(rgb(255, 247, 141),
       rgba(255, 255, 255, 0.861),
-      rgb(255, 202, 141));
+      rgb(255, 215, 170));
 }
 
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
@@ -103,34 +103,64 @@ color:  #ff7605;
 }
 
 /*--ESTILO PAG 3--*/
-.main-adopta .párrafo h {
-  display: flex;
+.main-adopta h1 {
+  text-align: center;
   flex-direction: row;
-  justify-content: center;
   font-weight: 600;
-  font-family: cursive;
-  font-size: 1.55em;
+  font-size: 1.6em;
   color: #9805ac;
-  padding: 10px;
+  padding: 16px;
 }
 
-.main-adopta .párrafo p {
+.main-adopta p {
   text-align: justify;
-  font-size: 1.22em;
-  font-weight: bold;
-  padding: 0 85px 9px 85px;
+  font-size: 1.2em;
+  font-weight: 650;
+  padding: 3px 120px;
   color: #c24903;
 }
 
-.main-adopta h1 {
-  text-align: center;
-  justify-content: center;
-  font-size: 35px;
-  font-family: cursive;
-  font-weight: 800;
-  color:  #ff058f;
-  padding-top: 65px;
+.main-adopta h2{
+  color:  rgb(105, 44, 3);
   text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
+}
+
+section .informacion{
+  display: flex;
+}
+
+.neon{
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: auto;
+}
+
+.main-adopta h3 {
+  /*--color:  #ff058f;---*/
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.main-adopta h3 img{
+    width: 100%;
+    height: 250px;
+    border: 12px solid transparent;
+    border-radius: 8px;
+    animation: neonAnimation 8s linear infinite;
+}
+@keyframes neonAnimation {
+  0% {
+      border-color: #73ff50;
+  }
+  33% {
+      border-color: #ff09b5;
+  }
+  66% {
+      border-color: #0ff7ff;
+  }
+  100% {
+      border-color: #fff708;
+  }
 }
 
 .main-adopta .contenedor {
@@ -146,8 +176,7 @@ color:  #ff7605;
   font-size: 1.1em;
   font-weight: 600;
   box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+
 }
 
 .main-adopta .columna img {
@@ -162,22 +191,21 @@ color:  #ff7605;
   padding: 4px;
   margin-bottom: 3px;
   border-radius: 4px;
-  cursor: pointer;
   }
 
 #opciones{
   border-radius: 5px;
   appearance: none;
-  padding: 5px 60px;
+  padding: 4px 72px;
   cursor: pointer;
 }
 
 #opciones option {
   border-radius: 5px;
 }
-.main-adopta .adoptar {
+.main-adopta .send {
   font-size: 22px;
-  font-weight: 700px;
+  font-weight: 700;
   padding: 10px;
   display: flex;
   width: 90%;
@@ -189,7 +217,7 @@ color:  #ff7605;
   cursor: pointer;
 }
 
-.main-adopta .adoptar #btn-adoptar {
+.main-adopta .send #btn-send {
   background: linear-gradient(rgb(255, 20, 153),
   rgba(255, 135, 215, 0.893),
   rgba(238, 112, 255, 0.915));
@@ -203,10 +231,10 @@ color:  #ff7605;
   border:2px solid rgb(207, 21, 236);
 }
 
-.main-adopta .adoptar #btn-adoptar:hover{
+.main-adopta .send #btn-send:hover{
   cursor: pointer;
   transform: scale(1.1);
-  border: 3px solid rgba(9, 9, 9, 0.837);
+  border: 3px solid rgba(20, 20, 20, 0.837);
 }
 
 /* ESTILO DE LA 4TA PÁGINA HTML
