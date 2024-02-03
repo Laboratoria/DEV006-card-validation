@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import validator from './validator.js';
 
 //llamar al elemento del html por su ID
@@ -154,3 +155,7 @@ btnAdoptar.addEventListener('click', () => {
 
 // eslint-disable-next-line no-console
 console.log(validator);
+
+
+
+
