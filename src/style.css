@@ -2,9 +2,11 @@ body {
   box-sizing: border-box;
   font-family: cursive;
   font-weight: 300;
-  background-image: url("images/Diseño\ sin\ título.png");
+  background-image:url("images/Diseño\ sin\ título.png");
   background-size: cover;
   background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
@@ -30,7 +32,7 @@ body {
   height: 4.5em;
   width: auto;
   transition: all 0.3s;
-  padding-left: 21px;
+  padding-left: 12px;
 }
 
 /*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
@@ -56,7 +58,8 @@ body {
   font-size: 1.49rem;
   font-weight: 650;
   color:  rgb(36, 36, 36);
-  text-decoration:dashed;
+  text-decoration: underline;
+  text-decoration-color: hsla(0, 100%, 50%, 0.1);
   text-shadow: 3px 2px 5px rgba(255, 89, 200, 0.893);
 }
 
@@ -71,7 +74,7 @@ body {
 .donar {
   font-weight: 600;
   font-size: 1.4rem;
-  background: #ffe3fdab;
+  background: #fffb007f;
   border: none;
   border-radius: 18px;
   cursor: pointer;
@@ -80,6 +83,7 @@ body {
   height: auto;
   text-shadow: 2px 2px 6px rgba(255, 89, 200, 0.893);
   padding: 5px;
+  text-decoration: none;
 }
 
 .header .donar img {
@@ -95,12 +99,14 @@ body {
 
 .donar .btn{
 color:  #d418ec;
+text-decoration: none;
 }
 
 .header .donar .btn:hover {
   color:  #ff058f;
   font-size: 1.5rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /*--ESTILO PAG 3--*/
@@ -128,18 +134,13 @@ color:  #d418ec;
   text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
 }
 
-section .informacion{
+.title {
   display: flex;
-}
-
-.neon{
-  width: 74%;
-  text-align: center;
-  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   border-radius: 10px;
   cursor: pointer;
-  margin: 0 190px;
-  padding-top: 5px;
 }
 
 .neon:hover{
@@ -152,6 +153,7 @@ section .informacion{
 }
 
 .main-adopta .neon img{
+  background-color: #ffffff;
     width: 100%;
     justify-content: center;
     height: 200px;
@@ -172,18 +174,15 @@ section .informacion{
   100% {
       border-color: #fff708;
   }
-}
+  }
 
- /*--#myForm{
-  display: none;
-} --*/
 
-.main-adopta .contenedor {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
+  #myForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 
 .main-adopta .columna {
   padding: 0 5px;
@@ -624,7 +623,7 @@ article img{
   height: 7em;
   max-width: 100%;
   padding: 5px 15px;
-  background-image: url(images/fondo_de_huellas.png);
+  background-image: url("images/Captura.PNG");
 }
 
 .footer a img {
