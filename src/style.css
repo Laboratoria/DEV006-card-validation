@@ -203,7 +203,7 @@ text-decoration: none;
   display: flex;
   width: 100%;
   padding: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   border-radius: 6px;
   text-align: left;
   border: 2px solid #ccc;
@@ -264,7 +264,7 @@ text-decoration: none;
   padding: 10px;
   display: flex;
   width: 90%;
-  padding: 40px 20px;
+  padding: 22px 20px;
   margin: auto;
   flex-direction: column;
   align-items: center;
@@ -663,7 +663,7 @@ article img{
 /*-- estilos del footer de todos los footers de los html--*/
 .footer{
   background: linear-gradient(90deg, #8C52FF, #5CE1E6);
-  height: 180px;
+  height: 250px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
