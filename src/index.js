@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import validator from './validator.js';
 
@@ -155,7 +156,5 @@ btnAdoptar.addEventListener('click', () => {
 
 // eslint-disable-next-line no-console
 console.log(validator);
-
-
 
 

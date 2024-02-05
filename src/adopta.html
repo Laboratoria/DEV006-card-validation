@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <div class="logomenup">
-        <img src="images/RECORTADO.png" alt="logo de la marca" />
+        <img src="images/logo.png" alt="logo de la marca" />
       </div>
       <!-- Se utilizó nav para hacer una barra de menú desplegable con algunos enlaces de navegación-->
       <nav>
@@ -31,6 +31,7 @@
 
     <main class="main-adopta">
       <section class="párrafo">
+        <br>
         <h1>Have you ever thought about adopting a pet? What has stopped you?</h1>
         <p>
           Perhaps the desire has always been there, but for some reason, you
@@ -53,13 +54,12 @@
       </br>
       </section>
       <section class="informacion">
-        <article class="title">
+        <div class="title">
           <figure class= "neon" id="neonDiv">
            <img src="images/adoptme2.png" alt="titulo">
           </figure>
-         </article>
+        </div>
         <form action="gracias.html" id="myForm">
-          <div class="contenedor">
             <div class="columna">
               <label for="Names">Names: </label>
               <input
@@ -67,23 +67,23 @@
                 id="Names"
                 placeholder="Ej: Nacdul V."
                 required
+                autocomplete="given-name"
               />
               <br />
-              <label for="Surname">Surname: </label>
+              <label for="Last name">Last name: </label>
               <input
                 type="text"
-                id="Surname"
+                id="Last name"
                 placeholder="Ej. Ramirez Zavala"
-                required
-              />
+                required autocomplete="family-name"/>
               <br />
               <div class="hb">
-                <label for="hb">Birth Date:</label>
+                <label for="hb">Birthday:</label>
                 <input type="date" id="hb" required />
               </div>
               <br />
               <label for="Adress">Adress: </label>
-              <input type="text" id="Adress" name="Adress" required />
+              <input type="text" id="Adress" name="Adress" required  autocomplete="street-address"/>
               <br />
               <label for="Phone">Cell phone: </label>
               <input
@@ -91,11 +91,10 @@
                 id="Phone"
                 placeholder="Ej. +51 862 235 277"
                 name="Phone"
-                required
-              />
+                required autocomplete="tel-extension"/>
               <br />
               <label for="correo">e-mail:</label>
-              <input type="text" id="correo" name="correo" required />
+              <input type="text" id="correo" name="correo" required autocomplete="email"/>
               <br />
               <label for="opciones">Select an option:</label>
               <br>
@@ -103,30 +102,54 @@
                 <option value="option1">Dog</option>
                 <option value="option2">Cat</option>
               </select>
+              <div class="send">
+                <button id="btn-send" name="btn-enviar" value="Haz click">
+                  SEND
+                </button>
+              </div>
             </div>
-            <div class="send">
-              <button id="btn-send" name="btn-enviar" value="Haz click">
-                SEND
-              </button>
-            </div>
-          </div>
-          <div class="contenedor">
+          <section class ="img-adopta">
+          <div class="columna1" id="columna1">
             <img class="imagen" src="images/adopt3.jpeg" width="500px" height="600px" alt="adopt3" />
-           <!--  <img class="imagen2" src="images/adopt5.jpeg" width="500px" height="600px" alt="adop5" />-->
           </div>
-          <br />
+        </section>
         </form>
       </section>
     </main>
     <footer class="footer">
-      <a href="index.html"
-        ><img src="images/logomenup.png" alt="logomenup"
+      <div class="logo">
+      <a href="index.html"> <img src="images/logosinfondo.png" alt="logofooter"></a>
+      </div>
+      <div class="contacto">
+        <h3>Contact us:</h3>
+        <br>
+        <h3>+51 941 895 233</h3>
+        <br>
+        <a href="mailto:petsfriendswasi@gmail.com" style="color: white; text-decoration: none;">petsfriendswasi@gmail.com</a>
+      </div>
+      <div class="redes">
+        <a
+        href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr"
+        class="social-icono"
+        ><img src="images/iconos/facebook.png" alt="facebook"
       /></a>
-      <br />
-      <strong>
-        <h2>Contact us: +51 941 895 233 || contacto@PetsFriendsWasi.com</h2>
-      </strong>
-    </footer>
+      <a href="https://www.instagram.com/" class="social-icono">
+        <img src="images/iconos/insta.png" alt="instagram"
+      /></a>
+      <a
+        href="https://twitter.com/i/flow/login"
+        class="social-icono"
+      >
+        <img src="images/iconos/twitter.png" alt="twitter" />
+      </a>
+    </div>
+    <article class="autora">
+      <div class="Copyriht">
+        <p1>Copyright &copy; 2023 | All rights reserved</p1>
+        <p1>Created by Nacdul Ramirez Zavala-Laboratoria</p1>
+      </div>
+    </article>
+      </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
