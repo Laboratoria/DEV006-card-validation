@@ -110,7 +110,7 @@ text-decoration: none;
 
 /*--ESTILO PAG 3--*/
 .main-adopta{
-  background-image:url("images/Diseño\ sin\ título.png");
+  background-image:url("images/fondomain.png");
   background-size: 100% 100%;
   position: relative; /* Importante para que los elementos dentro del main respeten el z-index */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -304,6 +304,14 @@ text-decoration: none;
 
 /* ESTILO DE LA 4TA PÁGINA HTML
   /*--estilo de la página de validar donation--*/
+  .main-validation{
+    background-image:url("images/fondovalidation.png");
+    background-size: 100% 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
 * {
   margin: 0;
   padding: 0;
@@ -671,7 +679,7 @@ article img{
 /*-- estilos del footer de todos los footers de los html--*/
 .footer{
   background: linear-gradient(90deg, #8C52FF, #5CE1E6);
-  height: 250px;
+  height: 270px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
