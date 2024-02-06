@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 120px;
+  height: 110px;
   padding: 0 0 2px 0;
   margin: 0;
   z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
@@ -117,21 +117,23 @@ text-decoration: none;
   z-index: 1;
 }
 .main-adopta h1 {
+  width: 70%;
   text-align: center;
   flex-direction: row;
   font-weight: 620;
   font-size: 1.6em;
   color: #c103da;
-  padding: 14px;
   text-shadow: 2px 2px 4px rgba(126, 124, 124, 0.628);
+  margin: 0 auto 12px;
 }
 
 .main-adopta p {
   text-align: justify;
-  font-size: 1.22em;
+  font-size: 1.15em;
   font-weight: 650;
-  padding: 3px 160px;
+  width: 70%;
   color: rgb(49, 49, 49);
+  margin: 0 auto;
 }
 
 .main-adopta h2{
@@ -146,6 +148,8 @@ text-decoration: none;
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .neon:hover{
@@ -155,6 +159,8 @@ text-decoration: none;
 .main-adopta .neon {
   overflow: hidden;
   border-radius: 10px;
+  width: 80%;
+  padding: 5px 5px 0;
 }
 
 .main-adopta .neon img{
@@ -225,12 +231,14 @@ text-decoration: none;
 
 #opciones{
   border-radius: 6px;
+  width: 100%;
   appearance: none;
-  padding: 6px 90px;
+  padding: 6px;
   cursor: pointer;
   border: 2px solid #ccc;
   background-color: #f8f8f8;
   font-family: cursive;
+  text-align: center;
 }
 
 #opciones:hover{
