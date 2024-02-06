@@ -87,7 +87,7 @@ body {
 
 .header .donar img {
   width: auto;
-  height: 2.5em;
+  height: 2.35em;
   transition: all 0.3s;
 }
 
@@ -304,6 +304,12 @@ text-decoration: none;
 
 /* ESTILO DE LA 4TA PÁGINA HTML
   /*--estilo de la página de validar donation--*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   .main-validation{
     background-image:url("images/fondovalidation.png");
     background-size: 100% 100%;
@@ -311,12 +317,6 @@ text-decoration: none;
     background-repeat: no-repeat;
     z-index: 1;
   }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .contenedor {
   width: 98%;

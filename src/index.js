@@ -7,6 +7,7 @@ const numero = document.getElementById('inputNumero');
 const msjVal = document.getElementById('msjVal');
 const msj = document.getElementById('msj');
 const cerrar = document.getElementById('cerrar');
+const btnSend = document.getElementById('btn-send');
 
 
 //llamando al button VALIDAR por si ID
@@ -26,8 +27,6 @@ document.getElementById('validar').addEventListener('click', function (event) {
   const resultado = validator.isValid(numero.value);
   // eslint-disable-next-line no-console
   console.log(resultado);
-
-
 
   //MASKIFY
   const mask = validator.maskify(numero.value);
@@ -149,12 +148,11 @@ formulario.selectYear.addEventListener('change', (e) => {
   irFrente();
 });
 
-const btnAdoptar = document.getElementById('btn-adoptar');
-btnAdoptar.addEventListener('click', () => {
-  window.location.href = "gracias.html";
-});
-
 // eslint-disable-next-line no-console
 console.log(validator);
 
 
+btnSend.addEventListener('click', function (event) {
+  event.preventDefault()
+  window.location.href = "gracias.html";
+});
