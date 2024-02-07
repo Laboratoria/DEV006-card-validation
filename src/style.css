@@ -7,8 +7,66 @@ body {
   padding: 0;
 }
 
+/*ESTILOS ESPECÍFICOS DE LA BARRA DE MENÚ PAG 1*/
+.header-home{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  padding: 0 0 3px 0;
+  margin: 0;
+  z-index: 2;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0);
+}
+
+.logomenu img{
+height: 4em;
+width: auto;
+transition: all 0.3s;
+}
+
+/* ESTILO PAG 1*/
+.main-home{
+  position: relative;
+  height: 100vh;
+  background-image: url("images/donaton3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+  .footer-home {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 10px;
+    line-height: 12px;
+    text-shadow: 2px 2px 6px rgba(255, 16, 175, 0.893);
+    color:  rgb(29, 28, 28);
+  }
+
+  .footer-home > div {
+    flex-basis: calc(100% / 3);
+    text-align: center;
+  }
+
+  .footer-home h3
+  .Copyriht {
+    font-size: 1em;
+  }
+
+  .footer-home .logo img{
+    height: auto;
+    width: 90%;
+  }
+
+
+
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
-.header {
+.header-general {
   background-color: #fff;
   border-bottom: 4px solid  #ff058f;
   background-image: url("images/paws-paw.gif");
@@ -18,16 +76,12 @@ body {
   height: 110px;
   padding: 0 0 2px 0;
   margin: 0;
+  cursor: pointer;
   z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
 }
 
-/*--cursor pointer para que se vea la manito a la hora de mover el mouse--*/
-.header .logomenup {
-  cursor: pointer;
-}
-
 /*--tamaño del logo--*/
-.header .logomenup img {
+.header-general .logomenup img {
   height: 4.5em;
   width: auto;
   transition: all 0.3s;
@@ -35,25 +89,28 @@ body {
 }
 
 /*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
-.header .logomenup img:hover {
+.header-home:hover,
+.header-general .logomenup img:hover {
   transform: scale(1.1);
 }
 
 /*-- darle forma a la lista desordenada (links)--*/
-.header .nav-links {
+.header-home .nav-links,
+.header-general .nav-links {
   list-style: none;
 }
 
-.header .nav-links li {
+.header-home .nav-links li,
+.header-general .nav-links li {
   display: inline-block;
   padding: 0 1em;
 }
 
-.header .nav-links li:hover {
+.header-general .nav-links li:hover {
   transform: scale(1.1);
 }
 
-.header .nav-links a {
+.header-general .nav-links a {
   font-size: 1.49rem;
   font-weight: 650;
   color:  rgb(36, 36, 36);
@@ -63,7 +120,7 @@ body {
 }
 
 /*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
-.header .nav-links li a:hover {
+.header-general .nav-links li a:hover {
   color:  #ff058f;
   font-size: 1.6rem;
   font-weight: 900;
@@ -85,14 +142,14 @@ body {
   text-decoration: none;
 }
 
-.header .donar img {
+.donar img {
   width: auto;
   height: 2.35em;
   transition: all 0.3s;
 }
 
 /*--aumentar el tamaño a la hora de pasar el cursor--*/
-.header .donar img:hover {
+.donar img:hover {
   transform: scale(1.2);
 }
 
@@ -101,7 +158,7 @@ color:  #d418ec;
 text-decoration: none;
 }
 
-.header .donar .btn:hover {
+.donar .btn:hover {
   color:  #ff058f;
   font-size: 1.5rem;
   cursor: pointer;
