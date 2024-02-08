@@ -9,28 +9,56 @@ body {
 
 /*ESTILOS ESPECÍFICOS DE LA BARRA DE MENÚ PAG 1*/
 .header-home{
+  position: fixed;
   display: flex;
-  justify-content: space-evenly;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: flex-start;
   align-items: center;
-  height: 80px;
-  padding: 0 0 3px 0;
-  margin: 0;
+  height: 10%;
+  padding: 0 30px;
   z-index: 2;
   cursor: pointer;
-  background-color: rgba(128, 128, 128, 0);
+  background-color: rgba(90, 29, 128, 0.234);
 }
 
 .logomenu img{
 height: 4em;
 width: auto;
-transition: all 0.3s;
+}
+
+.barra-home {
+  flex: 1; /* El nav ocupará todo el espacio restante */
+}
+
+.home-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Alinea los enlaces en el centro */
+  align-items: center;
+}
+
+.home-links li {
+  margin: 0 3em; /* Espacio entre los elementos del menú */
+}
+
+.home-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 800;
+  text-shadow: 4px -2px 10px rgba(255, 16, 175, 0.893);
+  align-items: center;
 }
 
 /* ESTILO PAG 1*/
 .main-home{
   position: relative;
   height: 100vh;
-  background-image: url("images/donaton3.png");
+  background-image: url("images/flyerdonaton.png");
   background-size: cover;
   background-position: center;
 }
@@ -42,14 +70,14 @@ transition: all 0.3s;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 10px;
+    padding-bottom: 10px;
     line-height: 12px;
     text-shadow: 2px 2px 6px rgba(255, 16, 175, 0.893);
-    color:  rgb(29, 28, 28);
+    color:   rgb(36, 36, 36);
   }
 
   .footer-home > div {
-    flex-basis: calc(100% / 3);
+    flex-basis: calc(100% / 2);
     text-align: center;
   }
 
@@ -58,11 +86,10 @@ transition: all 0.3s;
     font-size: 1em;
   }
 
-  .footer-home .logo img{
+  .footer-home .redes img{
     height: auto;
-    width: 90%;
+    width: 20px;
   }
-
 
 
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
@@ -81,6 +108,7 @@ transition: all 0.3s;
 }
 
 /*--tamaño del logo--*/
+.logomenu img,
 .header-general .logomenup img {
   height: 4.5em;
   width: auto;
@@ -89,18 +117,15 @@ transition: all 0.3s;
 }
 
 /*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
-.header-home:hover,
 .header-general .logomenup img:hover {
   transform: scale(1.1);
 }
 
 /*-- darle forma a la lista desordenada (links)--*/
-.header-home .nav-links,
 .header-general .nav-links {
   list-style: none;
 }
 
-.header-home .nav-links li,
 .header-general .nav-links li {
   display: inline-block;
   padding: 0 1em;
@@ -237,7 +262,7 @@ text-decoration: none;
       border-color: #ef02fb;
   }
   66% {
-      border-color:#cff0f9;
+      border-color:#9bf3ff;
   }
   100% {
       border-color:#ff71f8;
@@ -733,7 +758,7 @@ article img{
     pointer-events: auto;
     opacity: 1;
   }
-/*-- estilos del footer de todos los footers de los html--*/
+/*-- estilos de todos los footers de los html--*/
 .footer{
   background: linear-gradient(90deg, #8C52FF, #5CE1E6);
   height: 270px;
