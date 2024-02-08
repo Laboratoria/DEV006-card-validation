@@ -17,14 +17,14 @@ body {
   justify-content: flex-start;
   align-items: center;
   height: 10%;
-  padding: 0 30px;
+  padding: 0 5%;
   z-index: 2;
   cursor: pointer;
   background-color: rgba(90, 29, 128, 0.234);
 }
 
 .logomenu img{
-height: 4em;
+height: 2em;
 width: auto;
 }
 
@@ -42,7 +42,7 @@ width: auto;
 }
 
 .home-links li {
-  margin: 0 3em; /* Espacio entre los elementos del menú */
+  margin: 0 2em; /* Espacio entre los elementos del menú */
 }
 
 .home-links li a {
@@ -50,7 +50,7 @@ width: auto;
   color: #fff;
   font-size: 1.2em;
   font-weight: 800;
-  text-shadow: 4px -2px 10px rgba(255, 16, 175, 0.893);
+  text-shadow: 0.1em -0.1em 0.3em rgba(255, 16, 175, 0.893);
   align-items: center;
 }
 
@@ -63,32 +63,87 @@ width: auto;
   background-position: center;
 }
 
+  /* Media query para ajustar la imagen del main-home en pantallas más pequeñas */
+  @media only screen and (max-height: 768px) {
+    .main-home {
+      background-size: contain; /* Ajusta el tamaño de la imagen para que se ajuste completamente al contenedor */
+      background-repeat: no-repeat; /* Evita la repetición de la imagen */
+      background-position: top; /* Ajusta la posición de la imagen para que esté en la parte superior */
+    }
+  }
+
+  @media only screen and (min-width: 1245px) {
+    .main-home {
+      background-size: 100% 100%; /* Cubrir toda la pantalla */
+    }
+  }
+
   .footer-home {
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-bottom: 10px;
-    line-height: 12px;
-    text-shadow: 2px 2px 6px rgba(255, 16, 175, 0.893);
+    padding-bottom: 1em;
+    line-height: 1.2em;
+    text-shadow: 0.1em -0.1em 0.3em rgba(255, 16, 175, 0.893);
     color:   rgb(36, 36, 36);
+    z-index: 3; /* Asegura que el footer esté por encima del contenido */
   }
 
   .footer-home > div {
-    flex-basis: calc(100% / 2);
+    flex-basis: 50%;
     text-align: center;
   }
 
-  .footer-home h3
-  .Copyriht {
+  .footer-home .Copyright {
     font-size: 1em;
+    color:   rgb(36, 36, 36);
+    font-weight: 600;
   }
 
-  .footer-home .redes img{
-    height: auto;
-    width: 20px;
+    /* Media query para pantallas de iPad y dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .footer-home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .footer-home {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3; /* Asegura que el footer esté por encima del contenido */
+    }
+  }
+
+  .footer-home > div {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+  @media only screen and (max-width: 768px) {
+    .header-home {
+      height: auto;
+      padding: 5px 0 0 0; /* Ajusta el relleno según sea necesario */
+    }
+    .logomenu img {
+      height: 2em; /* Ajusta el tamaño del logo según sea necesario */
+    }
+    .barra-home {
+      flex-direction: row; /* Cambia la dirección del flexbox para apilar los elementos verticalmente */
+      align-items: center; /* Centra los elementos verticalmente */
+    }
+    .home-links {
+      flex-direction: row; /* Apila los elementos del menú verticalmente */
+      margin-left: 20px
+    }
+    .home-links li {
+      margin: 0 5px; /* Ajusta el margen entre los elementos del menú */
+    }
   }
 
 
