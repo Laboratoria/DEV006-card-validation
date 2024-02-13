@@ -404,7 +404,8 @@ text-decoration: none;
   max-width: 550px;
   /*-- para poder rotar la tarjeta sin que la cara posterior se coloque debajo de la primera cara, quise darle un efecto 3D al rotar en el mismo lugar--*/
   position: relative;
-  color: #da2f04;
+  color: rgba(255, 0, 106, 0.966);
+  font-weight: 600;
   transition: .3s ease all;
   /*--por defecto una rotación de 0 grados, es decir que no se mueva y quede fija --*/
   transform: rotateY(0deg);
@@ -472,14 +473,14 @@ text-decoration: none;
 .delantera .grupo .label {
   font-size: 19px;
   font-weight: 630;
-  color: #8e2ca7;
+  color: #982db3;
   margin-bottom: 5px;
 }
 
 .delantera .grupo .numero,
 .delantera .grupo .fullName,
 .delantera .grupo .expiracion {
-  color: #e23104;
+  color: rgba(255, 0, 106, 0.966);
   font-size: 20px;
   font-weight: 600;
   /*--PARA QUE ESTÉN EN MAYUSCULAS UPPERCASE--*/
@@ -507,7 +508,7 @@ text-decoration: none;
 
 .reversa .barra {
   height: 40px;
-  background: #2e033f;
+  background: #570179;
   width: 100%;
   position: absolute;
   top: 30px;
@@ -550,6 +551,7 @@ text-decoration: none;
 .reversa .link-banco {
   font-size: 16px;
   font-weight: 300;
+  font-weight: 600;
   color: #9d05b1;
 }
 
@@ -642,9 +644,8 @@ text-decoration: none;
 }
 
 .formulario-tarjeta .Validar #validar:hover {
-  border: 5px solid   #e23104;
-  background: rgba(255, 254, 254, 0.85);
-  color: black;
+  border: 5px solid rgba(255, 14, 114, 0.837);
+  background:rgba(255, 0, 106, 0.966);
 }
 
 .formulario-tarjeta .flexbox {
@@ -742,7 +743,7 @@ article img{
   }
 /*-- estilos de todos los footers de los html--*/
 .footer{
-  background: linear-gradient(90deg, #8C52FF, #5CE1E6);
+  background: linear-gradient(90deg, #8C52FF, rgba(255, 16, 175, 0.74));
   height: 270px;
   display: flex;
   flex-wrap: wrap;
