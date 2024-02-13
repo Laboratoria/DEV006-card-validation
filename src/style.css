@@ -16,22 +16,18 @@ body {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  height: 10%;
-  padding: 0 5%;
+  padding: 1%;
   z-index: 2;
-  cursor: pointer;
   background-color: rgba(90, 29, 128, 0.234);
 }
-
 .logomenu img{
-height: 2em;
+height: 2.5em;
 width: auto;
 }
-
 .barra-home {
+cursor: pointer;
   flex: 1; /* El nav ocupará todo el espacio restante */
 }
-
 .home-links {
   list-style-type: none;
   margin: 0;
@@ -40,11 +36,9 @@ width: auto;
   justify-content: center; /* Alinea los enlaces en el centro */
   align-items: center;
 }
-
 .home-links li {
   margin: 0 2em; /* Espacio entre los elementos del menú */
 }
-
 .home-links li a {
   text-decoration: none;
   color: #fff;
@@ -53,99 +47,32 @@ width: auto;
   text-shadow: 0.1em -0.1em 0.3em rgba(255, 16, 175, 0.893);
   align-items: center;
 }
-
-/* ESTILO PAG 1*/
-.main-home{
-  position: relative;
-  height: 100vh;
-  background-image: url("images/flyerdonaton.png");
-  background-size: cover;
-  background-position: center;
+.donar-icon{
+  margin-right: -1.5em;
 }
 
-  /* Media query para ajustar la imagen del main-home en pantallas más pequeñas */
-  @media only screen and (max-height: 768px) {
-    .main-home {
-      background-size: contain; /* Ajusta el tamaño de la imagen para que se ajuste completamente al contenedor */
-      background-repeat: no-repeat; /* Evita la repetición de la imagen */
-      background-position: top; /* Ajusta la posición de la imagen para que esté en la parte superior */
-    }
-  }
-
-  @media only screen and (min-width: 1245px) {
-    .main-home {
-      background-size: 100% 100%; /* Cubrir toda la pantalla */
-    }
-  }
-
-  .footer-home {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    padding-bottom: 1em;
-    line-height: 1.2em;
-    text-shadow: 0.1em -0.1em 0.3em rgba(255, 16, 175, 0.893);
-    color:   rgb(36, 36, 36);
-    z-index: 3; /* Asegura que el footer esté por encima del contenido */
-  }
-
-  .footer-home > div {
-    flex-basis: 50%;
-    text-align: center;
-  }
-
-  .footer-home .Copyright {
-    font-size: 1em;
-    color:   rgb(36, 36, 36);
-    font-weight: 600;
-  }
-
-    /* Media query para pantallas de iPad y dispositivos móviles */
-@media only screen and (max-width: 768px) {
-  .footer-home {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    .footer-home {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 3; /* Asegura que el footer esté por encima del contenido */
-    }
-  }
-
-  .footer-home > div {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  }
+.main-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
+}
+.quienes-somos {
+  display: none;
 }
 
-  @media only screen and (max-width: 768px) {
-    .header-home {
-      height: auto;
-      padding: 5px 0 0 0; /* Ajusta el relleno según sea necesario */
-    }
-    .logomenu img {
-      height: 2em; /* Ajusta el tamaño del logo según sea necesario */
-    }
-    .barra-home {
-      flex-direction: row; /* Cambia la dirección del flexbox para apilar los elementos verticalmente */
-      align-items: center; /* Centra los elementos verticalmente */
-    }
-    .home-links {
-      flex-direction: row; /* Apila los elementos del menú verticalmente */
-      margin-left: 20px
-    }
-    .home-links li {
-      margin: 0 5px; /* Ajusta el margen entre los elementos del menú */
-    }
-  }
-
+.footer-home {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 1em;
+  line-height: 1.2em;
+  text-shadow: 0.2em 0.2em 0.6em rgba(255, 16, 175, 0.893);
+  color: white;
+  font-weight: 900;
+  z-index: 3; /* Asegura que el footer esté por encima del contenido */
+}
 
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
 .header-general {
@@ -854,8 +781,9 @@ article img{
   height: 45%;
 }
 
-.Copyright p1{
+.Copyright p{
   margin-top: auto;
   white-space: nowrap;
+  display: inline-block;
 }
 
