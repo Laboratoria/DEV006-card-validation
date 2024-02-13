@@ -1,5 +1,5 @@
 body {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Hace que el modelo de caja incluya el padding y border en el ancho y alto */
   font-family: cursive;
   font-weight: 300;
   background-position: center;
@@ -16,12 +16,11 @@ body {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  padding: 1%;
   z-index: 2;
   background-color: rgba(90, 29, 128, 0.234);
 }
 .logomenu img{
-height: 2.5em;
+height: 2.3em;
 width: auto;
 }
 .barra-home {
@@ -44,18 +43,30 @@ cursor: pointer;
   color: #fff;
   font-size: 1.2em;
   font-weight: 800;
-  text-shadow: 0.1em -0.1em 0.3em rgba(255, 16, 175, 0.893);
+  text-shadow: 0.1em 0.1em 0.2em rgba(255, 16, 175, 0.893),
+  0.1em -0.1em 0.2em rgba(255, 16, 175, 0.893),
+  -0.1em 0.1em 0.2em rgba(255, 16, 175, 0.893),
+  -0.1em -0.1em 0.2em rgba(255, 16, 175, 0.893);
   align-items: center;
 }
-.donar-icon{
-  margin-right: -1.5em;
+.donate-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.donate-text {
+  margin-left: 5px; /* Ajusta el margen para alinear el texto con la imagen */
 }
 
 .main-home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
+  min-height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
+}
+.campaña {
+  position: relative; /* Asegúrate de que el contenedor de la imagen tenga una posición relativa */
+  z-index: 1; /* Asegúrate de que el z-index del contenedor de la imagen sea menor que el del footer */
 }
 .quienes-somos {
   display: none;
@@ -66,13 +77,75 @@ cursor: pointer;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding-bottom: 1em;
-  line-height: 1.2em;
-  text-shadow: 0.2em 0.2em 0.6em rgba(255, 16, 175, 0.893);
+  padding: 1em 0;
+  background-color: rgba(90, 29, 128, 0.234);
   color: white;
-  font-weight: 900;
-  z-index: 3; /* Asegura que el footer esté por encima del contenido */
+  text-align: center;
+  font-weight: 550;
+  z-index: 3; /* Asegúrate de que el z-index del footer sea mayor que el del contenedor de la imagen */
 }
+.footer-home p {
+  margin: 0;
+}
+
+/* Estilos para hacer el encabezado responsive */
+@media screen and (max-width: 768px) {
+  .header-home{
+    height: auto;
+  }
+  .logomenu img{
+  max-width: 100%;
+  }
+  .barra-home{
+    flex-direction: row;
+  }
+  .home-links li a {
+    font-size: 1em;
+  }
+  .quienes-somos {
+    display: flex;
+    width: 100%;
+  }
+  .texto-bienvenida{
+    width: 78%;
+    color: rgb(36, 36, 36);
+  }
+  .texto-bienvenida h1{
+    font-size: 1.2em;
+    text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
+  }
+  .texto-bienvenida p{
+    text-align: justify;
+  }
+  .quienes-somos img{
+    background-image: url("images/huella-bienvenida.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .footer-home {
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    background-color: rgba(90, 19, 134, 0.486);
+    text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
+  }
+}
+
+/* Estilos para la sección de bienvenida en pantallas con altura menor a 1000px */
+@media screen and (max-height: 1000px) {
+  .campaña {
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Asegura que el contenedor tenga el mismo ancho que la pantalla */
+    height: 100vh; /* Asegura que el contenedor tenga el mismo alto que la pantalla */
+  }
+  .campaña img {
+    width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+  }
+}
+
 
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
 .header-general {
@@ -585,6 +658,9 @@ text-decoration: none;
 /*--formulario--*/
 .formulario-tarjeta {
   background: rgba(231, 135, 255, 0.801);
+  color:  rgb(36, 36, 36);
+  font-family: cursive;
+  font-weight: 650;
   width: 100%;
   max-width: 630px;
   padding: 125px 30px 7px 30px;
@@ -617,6 +693,9 @@ text-decoration: none;
   padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: cursive;
+  font-weight: 620;
+  color:  rgb(77, 76, 76);
 }
 
 /*--para que las lineas del border de cada espacio a completar en el formulario cambien de color--*/
@@ -629,13 +708,19 @@ text-decoration: none;
   margin-bottom: 7px;
 }
 
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+  box-shadow: 0 0 8px rgba(134, 5, 146, 0.644);
+  outline: none;
+}
+
 .formulario-tarjeta .Validar #validar {
   border: 3px solid rgb(255, 255, 255);
   font-size: 18px;
   color: white;
   background: rgba(17, 17, 17, 0.622);
   font-weight: bold;
-  padding: 0.42em;
+  padding: 0.4em;
   font-family: cursive;
   border-radius: 5px;
   cursor: pointer;
@@ -644,8 +729,11 @@ text-decoration: none;
 }
 
 .formulario-tarjeta .Validar #validar:hover {
-  border: 5px solid rgba(255, 14, 114, 0.837);
   background:rgba(255, 0, 106, 0.966);
+}
+
+.formulario-tarjeta .Validar #validar:focus{
+  box-shadow: 0 0 8px rgba(255, 5, 143, 0.76);
 }
 
 .formulario-tarjeta .flexbox {
@@ -743,14 +831,17 @@ article img{
   }
 /*-- estilos de todos los footers de los html--*/
 .footer{
-  background: linear-gradient(90deg, #8C52FF, rgba(255, 16, 175, 0.74));
+  background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
   height: 270px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding-top: 10px;
   line-height: 12px;
-  text-shadow: 2px 2px 6px rgba(255, 16, 175, 0.893);
+  text-shadow: -2px -2px 6px  rgb(56, 56, 56),
+  2px -2px 6px    rgb(56, 56, 56),
+  -2px 2px 6px  rgb(56, 56, 56),
+  2px 2px 6px  rgb(56, 56, 56);
   color:  rgb(255, 255, 255);
   z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
 }
