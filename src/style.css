@@ -632,10 +632,7 @@ text-decoration: none;
 .reversa .datos #firma {
   width: 70%;
 }
-.reversa .datos #firma .firma {
-  /*--para el código de SEGURIDAD repeating-linear-gradient--*/
-  background: repeating-linear-gradient(rgb(209, 129, 255) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
-}
+
 .reversa .datos #firma .firma p {
   line-height: 40px;
   font-family: unset, cursive;
@@ -756,17 +753,6 @@ text-decoration: none;
   display: flex;
   justify-content: space-between;
 }
-
-/*--ESTILO DE LA PAG5--*/
-.main-gracias{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.contenedor-imagenes{
-  display: flex;
-}
 article{
   flex: 1;
   display: flex;
@@ -841,7 +827,62 @@ article img{
     opacity: 1;
   }
 
+/*--ESTILO DE LA PAG5--*/
+.main-gracias{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.agradecimiento{
+  width: 80%;
+  text-align: center;
+  color: rgb(36, 36, 36);
+}
+.agradecimiento h1{
+  font-size: 1.5em;
+  padding: 2em;
+}
+.contenedor-imagenes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-auto-rows: minmax(200px, auto); /* altura variable */
+  gap: 20px; /* espacio entre las imágenes */
+}
+.contenedor-imagenes article{
+ margin: 10px;
+ overflow: hidden;
+ position: relative;
+}
+.contenedor-imagenes img{
+  width: 450px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow:  0 4px 6px rgba(255, 31, 244, 0.507);
+  transition: transform 0.3s ease;
+}
+.contenedor-imagenes img:hover {
+    transform: scale(1.05);
+}
+.album{
+  border-radius: 10px;
+}
 
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .contenedor-imagenes {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columnas */
+  }
+  .centrar-imagen img{
+    padding: 1.5em;
+  }
+}
+
+/* Media query para ajustar el diseño en pantallas aún más pequeñas */
+@media (max-width: 576px) {
+  .contenedor-imagenes {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 1 columna */
+  }
+}
 /*-- estilos de todos los footers de los html--*/
 .footer{
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
