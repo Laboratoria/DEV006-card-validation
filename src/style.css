@@ -57,7 +57,6 @@ cursor: pointer;
 .donate-text {
   margin-left: 5px; /* Ajusta el margen para alinear el texto con la imagen */
 }
-
 .main-home {
   display: flex;
   flex-direction: column;
@@ -77,7 +76,7 @@ cursor: pointer;
   left: 0;
   width: 100%;
   padding: 1em 0;
-  background-color: rgba(90, 29, 128, 0.234);
+  background-color: rgba(72, 24, 102, 0.356);
   color: white;
   text-align: center;
   font-weight: 550;
@@ -86,14 +85,14 @@ cursor: pointer;
 .footer-home p {
   margin: 0;
 }
-.popup{
-  display: flex;
+.popup-home{
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(37, 1, 34, 0.747); /* Fondo transparente fucsia */
+  background-color: rgba(68, 0, 62, 0.644); /* Fondo transparente fucsia */
   z-index: 9999;
 }
 .popup-content {
@@ -102,18 +101,18 @@ cursor: pointer;
   left: 50%;
   height: 68%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 196, 255, 0.979);
+  background-color: rgba(255, 234, 255, 0.979);
   padding: 20px;
   border-radius: 5px;
 }
-.close {
+.close-home {
   position: absolute;
   top: 0.15em;
   right: 1em;
   font-size: 2.5em;
   cursor: pointer;
 }
-.close:hover{
+.close-home:hover{
 color: #fb02a8;
 }
 .bienvenida img{
@@ -125,7 +124,6 @@ color: #fb02a8;
 .texto-saludo p{
   text-align: justify;
 }
-
 
 /* Estilos para hacer el encabezado responsive */
 @media screen and (max-width: 768px) {
@@ -168,7 +166,7 @@ color: #fb02a8;
     background-color: rgba(90, 19, 134, 0.486);
     text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
   }
-  .popup{
+  .popup-home{
     display: none !important;
   }
 }
@@ -193,45 +191,43 @@ color: #fb02a8;
 }
 
 
-/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
+/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 2 HASTA LA PAG 5--*/
 .header-general {
-  background-color: #fff;
-  border-bottom: 4px solid  #ff058f;
-  background-image: url("images/paws-paw.gif");
   display: flex;
+  background-color: #fff;
+  border-bottom: 5px solid  rgba(255, 89, 200, 0.959);
+  background-image: url("images/huella-bienvenida.gif");
   justify-content: space-evenly;
   align-items: center;
-  height: 110px;
-  padding: 0 0 2px 0;
+  padding: 6px 0 3px 0;
   margin: 0;
   cursor: pointer;
   z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
 }
-
 /*--tamaño del logo--*/
 .logomenu img,
 .header-general .logomenup img {
-  height: 4.5em;
+  height: 3.5em;
   width: auto;
   transition: all 0.3s;
-  padding-left: 12px;
 }
-
 /*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
 .header-general .logomenup img:hover {
   transform: scale(1.1);
 }
-
 /*-- darle forma a la lista desordenada (links)--*/
-.header-general .nav-links {
+.nav-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .header-general .nav-links li {
   display: inline-block;
   padding: 0 1em;
 }
-
 .header-general .nav-links li:hover {
   transform: scale(1.1);
 }
@@ -240,14 +236,13 @@ color: #fb02a8;
   font-size: 1.49rem;
   font-weight: 650;
   color:  rgb(36, 36, 36);
-  text-decoration: underline;
-  text-decoration-color: hsla(0, 100%, 50%, 0.1);
-  text-shadow: 3px 2px 5px rgba(255, 89, 200, 0.893);
+  text-decoration: none;
+  text-shadow: 2px 2px 2px rgba(255, 89, 200, 0.893);
 }
 
 /*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
 .header-general .nav-links li a:hover {
-  color:  #ff058f;
+  color:  rgba(255, 66, 192, 0.893);;
   font-size: 1.6rem;
   font-weight: 900;
 }
@@ -256,7 +251,6 @@ color: #fb02a8;
 .donar {
   font-weight: 600;
   font-size: 1.4rem;
-  background: #d6f9ff8a;
   border: none;
   border-radius: 18px;
   cursor: pointer;
@@ -280,12 +274,12 @@ color: #fb02a8;
 }
 
 .donar .btn{
-color:  #d418ec;
+color:  rgb(36, 36, 36);
 text-decoration: none;
 }
 
 .donar .btn:hover {
-  color:  #ff058f;
+  color: rgba(255, 89, 200, 0.893);
   font-size: 1.5rem;
   cursor: pointer;
   text-decoration: none;
@@ -293,7 +287,7 @@ text-decoration: none;
 
 /*--ESTILO PAG 3--*/
 .main-adopta{
-  background-image:url("images/fondomain.png");
+  background-image:url("images/fondomain2.png");
   background-size: 100% 100%;
   position: relative; /* Importante para que los elementos dentro del main respeten el z-index */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -306,10 +300,9 @@ text-decoration: none;
   font-weight: 620;
   font-size: 1.6em;
   color: #c103da;
-  text-shadow: 2px 2px 4px rgba(126, 124, 124, 0.628);
+  text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
   margin: 0 auto 12px;
 }
-
 .main-adopta p {
   text-align: justify;
   font-size: 1.15em;
@@ -318,36 +311,31 @@ text-decoration: none;
   color: rgb(49, 49, 49);
   margin: 0 auto;
 }
-
 .main-adopta h2{
   padding-bottom: 9px;
   color: rgb(49, 49, 49);
   text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
 }
-
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
-
 .neon:hover{
   box-shadow: 0 0 38px rgb(255, 20, 153);
 }
-
 .main-adopta .neon {
   overflow: hidden;
   border-radius: 10px;
-  width: 80%;
+  width: 75%;
   padding: 5px 5px 0;
 }
-
 .main-adopta .neon img{
-  background-color: #ffffff;
+    background-color: #ffffff;
     width: 100%;
     justify-content: center;
     height: 200px;
@@ -369,7 +357,6 @@ text-decoration: none;
       border-color:#ff71f8;
   }
   }
-
   #myForm{
     display: flex;
     flex-direction: row;
@@ -378,7 +365,6 @@ text-decoration: none;
     padding:  50px 0 30px 0;
     position: relative;
   }
-
 .main-adopta .columna {
   padding: 0 50px 0 0;
   color: rgb(194, 2, 219);
@@ -387,7 +373,6 @@ text-decoration: none;
   box-sizing: border-box;
   width: calc((100% - 600px) / 2);
 }
-
 .main-adopta .columna input{
   display: flex;
   width: 100%;
@@ -399,19 +384,16 @@ text-decoration: none;
   background-color: #f8f8f8;
   font-family: cursive;
   }
-
   /* Estilo para cuando el campo de entrada está enfocado */
 .columna input:focus {
   border-color: #ff058f; /* Cambia el color del borde al estar enfocado */
   box-shadow: 0 0 5px rgba(255, 5, 143, 0.5); /* Añade una sombra al estar enfocado */
   outline: none; /* Elimina el contorno predeterminado del navegador */
 }
-
   .columna input:hover{
     border-color: #aaa;
     cursor: pointer;
   }
-
 #opciones{
   border-radius: 6px;
   width: 100%;
@@ -423,32 +405,27 @@ text-decoration: none;
   font-family: cursive;
   text-align: center;
 }
-
 #opciones:hover{
   border-color: #aaa;
   cursor: pointer;
 }
-
 #opciones:focus {
   border-color: #ff058f;
   box-shadow: 0 0 5px rgba(255, 5, 143, 0.5);
   outline: none;
 }
-
   #columna1{
     display: flex;
     z-index: 2;
     opacity: 1;
     transition: none;
   }
-
   .columna1 img {
     flex: 1;
     width: auto;
     float: none;
     object-fit: cover;
   }
-
 .main-adopta .send {
   font-size: 22px;
   font-weight: 700;
@@ -462,12 +439,8 @@ text-decoration: none;
   text-align: center;
   cursor: pointer;
 }
-
-
 .main-adopta .send #btn-send {
-  background: linear-gradient(rgb(255, 20, 153),
-  rgba(255, 135, 215, 0.893),
-  rgba(238, 112, 255, 0.915));
+  background: rgba(218, 64, 238, 0.915);
   font-family: cursive;
   font-size: 25px;
   font-weight: 600;
@@ -475,14 +448,38 @@ text-decoration: none;
   padding: 7px 15px;
   border-radius: 9px;
   cursor: pointer;
-  border-color: #aaa;
+  border-color: #aaaaaa46;
 }
-
 .main-adopta .send #btn-send:hover{
   cursor: pointer;
   transform: scale(1.1);
   border: #4e4e4e 2px;
 }
+
+@media only screen and (max-width: 768px) {
+  .header-general {
+    flex-direction: row;
+    height: auto;
+  }
+  .title{
+    width: 100%;
+  }
+  #myForm{
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-adopta .columna {
+    padding: 0;
+    width: 50%; /* Ajustar el ancho para adaptarse a pantallas más pequeñas */
+  }
+  .main-adopta .send {
+    width: 90%; /* Ajustar el ancho del botón de envío */
+  }
+  .img-adopta {
+    margin-top: 20px;
+  }
+}
+
 
 /* ESTILO DE LA 4TA PÁGINA HTML
   /*--estilo de la página de validar donation--*/
@@ -564,7 +561,7 @@ text-decoration: none;
 /*--- FONDO DE GATITO DE LA TARJETA--*/
 .tarjeta .delantera {
   width: 100%;
-  background: url(images/bg-tarjeta/fondodelantera1.png);
+  background: url("images/bg-tarjeta/fondodelantera1.png");
   background-size: cover;
 }
 
@@ -614,7 +611,7 @@ text-decoration: none;
 /*------ TARJETA TRASERA ------*/
 /*-- FONDO Y ESTILO DE LA TARJETA TRASERA--*/
 .reversa {
-  background: url(images/bg-tarjeta/Ttrasera.png);
+  background: url("images/bg-tarjeta/Ttrasera.png");
   background-size: cover;
   position: absolute;
   top: 0;
@@ -820,7 +817,7 @@ article img{
 
 .container{
   display: flex;
-  background-color: rgba(255, 126, 212, 0.699);
+  background-color: rgba(173, 12, 120, 0.473);
   align-items:center;
   justify-content: center;
   position: fixed;
@@ -835,24 +832,26 @@ article img{
 
 .modal{
   background-color: #fff;
-  width: 620px;
+  width: 560px;
   max-width: 100%;
-  padding: 28px 48px;
+  padding: 28px 38px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
+  margin: auto; /* Centra el modal horizontalmente */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 .modal h3{
   margin: 0;
 }
-
 .modal p{
   opacity: 0.6;
   font-size: 15px;
   font-family: cursive;
 }
-
 #cerrar{
   font-weight: 700;
   font-size: 18px;
@@ -860,20 +859,21 @@ article img{
   color:rgba(255, 0, 106, 0.966);
   background: rgba(255, 179, 232, 0.979);
   border:rgba(255, 0, 106, 0.966);
-  border-radius: 50px;
+  border-radius: 35px;
   cursor:pointer;
+  width: 90px;
   }
-
   #cerrar:hover{
-    background-color: #a20bb6d7;
-    color: antiquewhite;
+    background-color:rgba(255, 0, 106, 0.966);
+    color: white;
     transform: scale(1.1);
   }
-
   .show{
     pointer-events: auto;
     opacity: 1;
   }
+
+
 /*-- estilos de todos los footers de los html--*/
 .footer{
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
@@ -883,10 +883,10 @@ article img{
   align-items: center;
   padding-top: 10px;
   line-height: 12px;
-  text-shadow: -2px -2px 6px  rgb(56, 56, 56),
-  2px -2px 6px    rgb(56, 56, 56),
-  -2px 2px 6px  rgb(56, 56, 56),
-  2px 2px 6px  rgb(56, 56, 56);
+  text-shadow: -2px -2px 6px  rgba(80, 80, 80, 0.733),
+  2px -2px 6px    rgba(80, 80, 80, 0.733),
+  -2px 2px 6px    rgba(80, 80, 80, 0.733),
+  2px 2px 6px   rgba(80, 80, 80, 0.733);
   color:  rgb(255, 255, 255);
   z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
 }
