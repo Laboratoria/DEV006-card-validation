@@ -67,6 +67,10 @@ cursor: pointer;
   position: relative; /* Asegúrate de que el contenedor de la imagen tenga una posición relativa */
   z-index: 1; /* Asegúrate de que el z-index del contenedor de la imagen sea menor que el del footer */
 }
+.campaña img {
+  width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
+  height: 100vh; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+}
 .quienes-somos {
   display: none;
 }
@@ -171,7 +175,7 @@ color: #fb02a8;
   }
 }
 
-/* Estilos para la sección de bienvenida en pantallas con altura menor a 1000px */
+/* Estilos para la sección de bienvenida en pantallas con altura menor a 800px */
 @media screen and (max-height: 800px) {
   .campaña {
     overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
