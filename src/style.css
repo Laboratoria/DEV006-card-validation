@@ -103,7 +103,7 @@ cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 68%;
+  height: 78%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 234, 255, 0.979);
   padding: 20px;
@@ -111,22 +111,26 @@ cursor: pointer;
 }
 .close-home {
   position: absolute;
-  top: 0.15em;
-  right: 1em;
-  font-size: 2.5em;
+  top: 0.2em;
+  right: 0.55em;
+  font-size: 2.3em;
   cursor: pointer;
 }
 .close-home:hover{
 color: #fb02a8;
 }
 .bienvenida img{
-  width: 78%;
+  width: 74%;
 }
 .texto-saludo{
   width: 94%;
 }
+.texto-saludo h1{
+  font-size: 1.39em;
+}
 .texto-saludo p{
   text-align: justify;
+  font-size: small;
 }
 
 /* Estilos para hacer el encabezado responsive */
