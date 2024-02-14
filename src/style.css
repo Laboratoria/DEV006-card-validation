@@ -239,7 +239,6 @@ color: #fb02a8;
 .header-general .nav-links li:hover {
   transform: scale(1.1);
 }
-
 .header-general .nav-links a {
   font-size: 1.49rem;
   font-weight: 650;
@@ -247,14 +246,12 @@ color: #fb02a8;
   text-decoration: none;
   text-shadow: 2px 2px 2px rgba(255, 89, 200, 0.893);
 }
-
 /*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
 .header-general .nav-links li a:hover {
   color:  rgba(255, 66, 192, 0.893);;
   font-size: 1.6rem;
   font-weight: 900;
 }
-
 /*--estilo de ícono DONATE--*/
 .donar {
   font-weight: 600;
@@ -269,29 +266,26 @@ color: #fb02a8;
   padding: 5px;
   text-decoration: none;
 }
-
 .donar img {
   width: auto;
   height: 2.35em;
   transition: all 0.3s;
 }
-
 /*--aumentar el tamaño a la hora de pasar el cursor--*/
 .donar img:hover {
   transform: scale(1.2);
 }
-
 .donar .btn{
 color:  rgb(36, 36, 36);
 text-decoration: none;
 }
-
 .donar .btn:hover {
   color: rgba(255, 89, 200, 0.893);
   font-size: 1.5rem;
   cursor: pointer;
   text-decoration: none;
 }
+
 
 /*--ESTILO PAG 3--*/
 .main-adopta{
@@ -496,7 +490,6 @@ text-decoration: none;
     padding: 0;
     box-sizing: border-box;
   }
-
   .main-validation{
     background-image:url("images/fondovalidation.png");
     background-size: 100% 100%;
@@ -504,7 +497,6 @@ text-decoration: none;
     background-repeat: no-repeat;
     z-index: 1;
   }
-
 .contenedor {
   width: 98%;
   /*--límite para que no sea muy ancho con el max-width en caso el usuario acceda a la página desde una pantalla más grande que la de nosotros--*/
@@ -540,7 +532,6 @@ text-decoration: none;
   /*-- como tenemos 3 capas el z-index permite que cada capa se vea según el orden que lo establezcamos--*/
   z-index: 2;
 }
-
 /*-- .tarjeta:hover es para cuando quieres que gire pero cuando pones el cursor encima--*/
 /*-- por eso se cambia hover por active--*/
 /*-- se crea tarjeta active para que cuando el usuario de un click sobre ella, la tarjeta gire--*/
@@ -549,7 +540,6 @@ text-decoration: none;
   /*--y girará en 180°--*/
   transform: rotateY(180deg);
 }
-
 /*-- Como tenemos 2 div dentro de nuestra tarjeta, quiero que ambas tengan estas características, tanto la tarjeta delantera y la trasera--*/
 .tarjeta>div {
   padding: 30px;
@@ -572,13 +562,11 @@ text-decoration: none;
   background: url("images/bg-tarjeta/fondodelantera1.png");
   background-size: cover;
 }
-
 /*--cambiar los tamaños de chip, logo y fondo de la tarjeta ya que cogieron el tamaño del 100% por el display flex de los div anteriores--*/
 .delantera .logo {
   text-align: right;
   min-height: 50px;
 }
-
 .delantera .logo img {
   width: 100%;
   height: 100%;
@@ -586,20 +574,17 @@ text-decoration: none;
   object-fit: cover;
   max-width: 80px;
 }
-
 .delantera .chip {
   width: 100%;
   max-width: 65px;
   max-width: 35px;
 }
-
 .delantera .grupo .label {
   font-size: 19px;
   font-weight: 630;
   color: #982db3;
   margin-bottom: 5px;
 }
-
 .delantera .grupo .numero,
 .delantera .grupo .fullName,
 .delantera .grupo .expiracion {
@@ -628,7 +613,6 @@ text-decoration: none;
   /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
   backface-visibility: hidden;
 }
-
 .reversa .barra {
   height: 40px;
   background: #570179;
@@ -637,26 +621,21 @@ text-decoration: none;
   top: 30px;
   left: 0;
 }
-
 .reversa .datos {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
 }
-
 .reversa .datos p {
   margin-bottom: 5px;
 }
-
 .reversa .datos #firma {
   width: 70%;
 }
-
 .reversa .datos #firma .firma {
   /*--para el código de SEGURIDAD repeating-linear-gradient--*/
   background: repeating-linear-gradient(rgb(209, 129, 255) 0, rgb(218, 155, 226) 5px, rgb(247, 180, 57) 5px, rgb(253, 189, 70) 10px);
 }
-
 .reversa .datos #firma .firma p {
   line-height: 40px;
   font-family: unset, cursive;
@@ -665,26 +644,22 @@ text-decoration: none;
   padding: 0 10px;
   text-transform: capitalize;
 }
-
 .reversa .leyenda {
   font-size: 12px;
   line-height: 23px;
 }
-
 .reversa .link-banco {
   font-size: 16px;
   font-weight: 300;
   font-weight: 600;
   color: #9d05b1;
 }
-
 /*-- contenedor botón --*/
 .contenedor-btn .btn-abrir {
   position: relative;
   top: -30px;
   border-style: none;
 }
-
 .contenedor-btn .btn-abrir img {
   position: relative;
   z-index: 3;
@@ -696,11 +671,9 @@ text-decoration: none;
   transition: all .3s ease;
   box-shadow: -5px 2px 8px rgba(255, 14, 114, 0.77);
 }
-
 .contenedor-btn .btn-abrir img:hover {
   background: rgba(255, 14, 114, 0.77);
 }
-
 .contenedor-btn .btn-abrir img.active {
   transform: rotate(45deg);
 }
@@ -733,7 +706,6 @@ text-decoration: none;
   margin-bottom: 5px;
   font-size: 16px;
 }
-
 .formulario-tarjeta input,
 .formulario-tarjeta select {
   border: 3px solid  rgba(255, 14, 114, 0.837);
@@ -753,17 +725,14 @@ text-decoration: none;
 .formulario-tarjeta select:hover {
   border: 3px solid  rgb(194, 2, 219);
 }
-
 .formulario-tarjeta input {
   margin-bottom: 7px;
 }
-
 .formulario-tarjeta input:focus,
 .formulario-tarjeta select:focus {
   box-shadow: 0 0 8px rgba(134, 5, 146, 0.644);
   outline: none;
 }
-
 .formulario-tarjeta .Validar #validar {
   border: 3px solid rgb(255, 255, 255);
   font-size: 18px;
@@ -777,15 +746,12 @@ text-decoration: none;
   display: flex;
   justify-content: center;
 }
-
 .formulario-tarjeta .Validar #validar:hover {
   background:rgba(255, 0, 106, 0.966);
 }
-
 .formulario-tarjeta .Validar #validar:focus{
   box-shadow: 0 0 8px rgba(255, 5, 143, 0.76);
 }
-
 .formulario-tarjeta .flexbox {
   display: flex;
   justify-content: space-between;
@@ -798,31 +764,26 @@ text-decoration: none;
   align-items: center;
   text-align: center;
 }
-
 .contenedor-imagenes{
   display: flex;
 }
-
 article{
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 article img{
   width: 100%;
   height: auto;
   margin: 5px;
 }
-
 .caja{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin: 7px 0;
 }
-
 .container{
   display: flex;
   background-color: rgba(173, 12, 120, 0.473);
@@ -837,7 +798,6 @@ article img{
   width: 101vw;
   transition: opacity 0.3s ease;
 }
-
 .modal{
   background-color: #fff;
   width: 560px;
