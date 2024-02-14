@@ -143,6 +143,10 @@ color: #fb02a8;
   .home-links li a {
     font-size: 1em;
   }
+  .campaña img {
+    width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+  }
   .quienes-somos {
     display: flex;
     width: 100%;
