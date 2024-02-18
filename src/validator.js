@@ -58,7 +58,6 @@ const validator = {
       //si es true la tarjeta es válida
       return true;
     } else {
-      alert ("The credit card number is invalid.");
       return false;
     }
   },
