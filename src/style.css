@@ -7,6 +7,28 @@ body {
   padding: 0;
 }
 
+/*ESTILO DE NAV PARA TODOS AL HACER CLICK O PASAR EL CURSOS*/
+nav{
+  display: block;
+}
+nav ul{
+  list-style: none;
+  float: right;
+}
+nav ul li a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+nav ul li a:hover{
+  background-color: rgba(144, 56, 202, 0.582);
+  color: white;
+}
+nav ul li a:active{
+  background-color:rgba(255, 16, 175, 0.836);
+}
+
+
 /*ESTILOS ESPECÍFICOS DE LA BARRA DE MENÚ PAG 1*/
 .header-home{
   position: fixed;
@@ -20,33 +42,18 @@ body {
   background-color: rgba(90, 29, 128, 0.234);
 }
 .logomenu img{
-height: 2.3em;
+height: 3.8em;
 width: auto;
 }
 .barra-home {
-cursor: pointer;
+  cursor: pointer;
   flex: 1; /* El nav ocupará todo el espacio restante */
-}
-.home-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* Alinea los enlaces en el centro */
-  align-items: center;
-}
-.home-links li {
-  margin: 0 2em; /* Espacio entre los elementos del menú */
 }
 .home-links li a {
   text-decoration: none;
   color: #fff;
   font-size: 1.2em;
   font-weight: 800;
-  text-shadow: 0.1em 0.1em 0.2em rgba(255, 16, 175, 0.893),
-  0.1em -0.1em 0.2em rgba(255, 16, 175, 0.893),
-  -0.1em 0.1em 0.2em rgba(255, 16, 175, 0.893),
-  -0.1em -0.1em 0.2em rgba(255, 16, 175, 0.893);
   align-items: center;
 }
 .donate-link {
@@ -203,7 +210,7 @@ color: #fb02a8;
 }
 
 
-/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 2 HASTA LA PAG 5--*/
+/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
 .header-general {
   display: flex;
   background-color: #fff;
@@ -214,82 +221,51 @@ color: #fb02a8;
   padding: 6px 0 3px 0;
   margin: 0;
   cursor: pointer;
-  z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
+  width: 100%;
 }
 /*--tamaño del logo--*/
-.logomenu img,
-.header-general .logomenup img {
-  height: 3.5em;
+.logomenup img {
+  height: 3.8em;
   width: auto;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 /*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
 .header-general .logomenup img:hover {
   transform: scale(1.1);
 }
 /*-- darle forma a la lista desordenada (links)--*/
+.home-links,
 .nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* Alinea los enlaces en el centro */
   align-items: center;
 }
-.header-general .nav-links li {
-  display: inline-block;
-  padding: 0 1em;
+.home-links li,
+.nav-links li {
+  padding: 0 1em; /* Espacio entre los elementos del menú */
 }
-.header-general .nav-links li:hover {
-  transform: scale(1.1);
-}
-.header-general .nav-links a {
-  font-size: 1.49rem;
-  font-weight: 650;
+.nav-links a {
+  font-size: 1.38rem;
+  font-weight: 850;
   color:  rgb(36, 36, 36);
   text-decoration: none;
-  text-shadow: 2px 2px 2px rgba(255, 89, 200, 0.893);
 }
-/*--cambia el color de marrón a morado cuando pasas el cursor sobre los link--*/
-.header-general .nav-links li a:hover {
-  color:  rgba(255, 66, 192, 0.893);;
-  font-size: 1.6rem;
-  font-weight: 900;
-}
+
 /*--estilo de ícono DONATE--*/
 .donar {
-  font-weight: 600;
-  font-size: 1.4rem;
-  border: none;
-  border-radius: 18px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  width: auto;
-  height: auto;
-  text-shadow: 2px 2px 6px rgba(255, 89, 200, 0.893);
-  padding: 5px;
-  text-decoration: none;
 }
 .donar img {
-  width: auto;
-  height: 2.35em;
   transition: all 0.3s;
 }
 /*--aumentar el tamaño a la hora de pasar el cursor--*/
 .donar img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
-.donar .btn{
-color:  rgb(36, 36, 36);
-text-decoration: none;
-}
-.donar .btn:hover {
-  color: rgba(255, 89, 200, 0.893);
-  font-size: 1.5rem;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 
 /*--ESTILO PAG 3--*/
 .main-adopta{
@@ -536,6 +512,7 @@ text-decoration: none;
   /*-- como tenemos 3 capas el z-index permite que cada capa se vea según el orden que lo establezcamos--*/
   z-index: 2;
 }
+
 /*-- .tarjeta:hover es para cuando quieres que gire pero cuando pones el cursor encima--*/
 /*-- por eso se cambia hover por active--*/
 /*-- se crea tarjeta active para que cuando el usuario de un click sobre ella, la tarjeta gire--*/
@@ -544,6 +521,7 @@ text-decoration: none;
   /*--y girará en 180°--*/
   transform: rotateY(180deg);
 }
+
 /*-- Como tenemos 2 div dentro de nuestra tarjeta, quiero que ambas tengan estas características, tanto la tarjeta delantera y la trasera--*/
 .tarjeta>div {
   padding: 30px;
