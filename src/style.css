@@ -21,13 +21,22 @@ nav ul li a{
   text-decoration: none;
 }
 nav ul li a:hover{
-  background-color: rgba(144, 56, 202, 0.582);
+  background-color: rgba(255, 16, 175, 0.74);
   color: white;
 }
 nav ul li a:active{
-  background-color:rgba(255, 16, 175, 0.836);
+  background-color:rgba(144, 56, 202, 0.582);
+}
+nav ul li a.donate-link:link, a.donate-link:visited{
+  background-color: rgba(144, 56, 202, 0.582);
+  color: white;
 }
 
+nav ul li a.donate-link:hover,
+nav ul li a.donate-link:focus {
+  background-color: rgba(255, 16, 175, 0.836); /* Color de fondo con la opacidad proporcionada */
+  color: white;
+}
 
 /*ESTILOS ESPECÍFICOS DE LA BARRA DE MENÚ PAG 1*/
 .header-home{
@@ -245,7 +254,7 @@ color: #fb02a8;
 }
 .home-links li,
 .nav-links li {
-  padding: 0 1em; /* Espacio entre los elementos del menú */
+  padding: 0 0.6em; /* Espacio entre los elementos del menú */
 }
 .nav-links a {
   font-size: 1.38rem;
@@ -261,10 +270,6 @@ color: #fb02a8;
 }
 .donar img {
   transition: all 0.3s;
-}
-/*--aumentar el tamaño a la hora de pasar el cursor--*/
-.donar img:hover {
-  transform: scale(1.1);
 }
 
 /*--ESTILO PAG 3--*/
