@@ -6,3 +6,7 @@ closeButton.addEventListener('click', function() {
   popup.style.display = 'none';
 });
 
+btnSend.addEventListener('click', function (event) {
+  event.preventDefault()
+  window.location.href = "gracias.html";
+});

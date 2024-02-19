@@ -7,7 +7,6 @@ const numero = document.getElementById('inputNumero');
 const msjVal = document.getElementById('msjVal');
 const msj = document.getElementById('msj');
 const cerrar = document.getElementById('cerrar');
-const btnSend = document.getElementById('btn-send');
 
 
 //llamando al button VALIDAR por si ID
@@ -152,9 +151,6 @@ formulario.selectYear.addEventListener('change', (e) => {
 console.log(validator);
 
 
-btnSend.addEventListener('click', function (event) {
-  event.preventDefault()
-  window.location.href = "gracias.html";
-});
+
 
 
