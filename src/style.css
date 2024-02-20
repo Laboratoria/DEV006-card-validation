@@ -853,9 +853,28 @@ article img{
 .album{
   border-radius: 10px;
 }
+.gracias-dona{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em 0 4.5em 0;
+}
+.gracias-dona a{
+  background-color: rgb(255, 57, 189);
+  padding: 10px;
+  color: black;
+  border-radius: 30px;
+  font-weight: 900;
+  margin-top: 1em;
+  text-decoration: none;
+}
+.gracias-dona a:hover{
+  background-color: #fb02a8;
+  color: white;
+}
 
 /* Media query para ajustar el diseño en pantallas más pequeñas */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .contenedor-imagenes {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columnas */
   }
