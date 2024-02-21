@@ -22,7 +22,8 @@
       {
         "list": "off"
       }
-    ]
+    ],
+    "detect-css-reflows/paint": "off"
   },
   "browserslist": [
     "defaults",

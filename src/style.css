@@ -291,7 +291,7 @@ color: #fb02a8;
   font-size: 1.6em;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
-  margin: 0 auto 12px;
+  margin: 0 auto 15px;
 }
 .main-adopta p {
   text-align: justify;
@@ -302,6 +302,8 @@ color: #fb02a8;
   margin: 0 auto;
 }
 .main-adopta h2{
+  margin-top: 13px;
+  text-align: center;
   padding-bottom: 9px;
   color: rgb(49, 49, 49);
   text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
@@ -404,22 +406,6 @@ color: #fb02a8;
   box-shadow: 0 0 5px rgba(255, 5, 143, 0.5);
   outline: none;
 }
-  #columna1{
-    display: flex;
-    z-index: 2;
-    opacity: 1;
-    transition: none;
-    position: relative;
-    max-width: 100%;
-  }
-  .columna1 img {
-    flex: 1;
-    width: auto;
-    float: none;
-    object-fit: cover;
-    position: relative;
-    overflow: hidden;
-  }
 .main-adopta .send {
   font-size: 22px;
   font-weight: 700;
@@ -452,6 +438,68 @@ color: #fb02a8;
 }
 .main-adopta .send #btn-send:active{
   background: rgba(228, 20, 255, 0.915);
+}
+#columna1 {
+  position: relative;
+  width: 450px;
+  height: 580px;
+}
+.mySlides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mySlides ul {
+  list-style-type: none; /* Elimina los puntos de lista */
+  padding: 0; /* Elimina el relleno interior */
+  margin: 0; /* Elimina el margen exterior */
+}
+
+.mySlides img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.mySlides .imagen {
+  opacity: 0; /* Comenzamos con opacidad 0 para todas las imágenes */
+}
+
+.mySlides .imagen:nth-child(1) {
+  animation: fadeInOut 90s infinite; /* Aplicar la animación a la primera imagen */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Comenzamos con opacidad 0 */
+  }
+  5% {
+    opacity: 1; /* Aparece la imagen1 durante 5 segundos (5% de 90s) */
+  }
+  35% {
+    opacity: 1; /* Mantenemos la imagen1 visible durante 30 segundos */
+  }
+  40% {
+    opacity: 0; /* Desvanecemos la imagen1 durante 5 segundos */
+  }
+  45% {
+    opacity: 0; /* Comenzamos con opacidad 0 para la imagen2 */
+  }
+  75% {
+    opacity: 1; /* Aparece la imagen2 durante 30 segundos */
+  }
+  80% {
+    opacity: 0; /* Desvanecemos la imagen2 durante 5 segundos */
+  }
+  85% {
+    opacity: 0; /* Comenzamos con opacidad 0 para la imagen3 */
+  }
+  100% {
+    opacity: 1; /* Aparece la imagen3 durante 15 segundos */
+  }
 }
 
 @media only screen and (max-width: 768px) {

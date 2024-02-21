@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!--Se insertó un ícono antes del nombre de la página para que aparezca en la pestaña-->
-    <link rel="icon" type="image.png" href="images/huellaicono.png">
+    <link rel="icon" type="image/png" href="images/huellaicono.png">
     <title>Donatón PetsFriends Wasi</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -40,15 +40,12 @@
           adoption. Visiting an animal shelter is a good first step in this
           process.
           <br />
-          In <u>PetsFriends Wasi</u> you'll find many four-legged friends in
-          need of lots of love, eager to become part of your family. If you wish to <u>ADOPT</u> one of our furry friends, you can fill out
+          In PetsFriends Wasi you'll find many four-legged friends in
+          need of lots of love, eager to become part of your family. If you wish to ADOPT one of our furry friends, you can fill out
           the following form, and within a period of 72 hours, we'll be in touch
-          with you to coordinate an interview. It's very important to be
-          <u> 18 years or older</u>, and if you are underage, you can ask your
+          with you to coordinate an interview. It's very important to be 18 years or older, and if you are underage, you can ask your
           parents to complete the form.
-          <center>
             <h2>Thank you for being part of our family!</h2>
-          </center>
         </p>
       <br>
     <br>
@@ -60,68 +57,63 @@
           </figure>
         </div>
         <form action="gracias.html" id="myForm">
-            <div class="columna">
-              <label for="Names">Names: </label>
-              <input
-                type="text"
-                id="Names"
-                placeholder="Ej: Nacdul V."
-                required
-                autocomplete="given-name"
-              />
-              <br />
-              <label for="Last name">Last name: </label>
-              <input
-                type="text"
-                id="Last name"
-                placeholder="Ej. Ramirez"
-                required autocomplete="family-name"/>
-              <br />
-              <div class="hb">
-                <label for="hb">Birthday:</label>
-                <input type="date" id="hb" required max="2006-01-01"/>
-              </div>
-              <br />
-              <label for="Adress">Adress: </label>
-              <input type="text" id="Adress" name="Adress" required  autocomplete="street-address"/>
-              <br />
-              <label for="Phone">Cell phone: </label>
-              <input
-                type="text"
-                id="Phone"
-                placeholder="Ej. +51 862 235 277"
-                name="Phone"
-                required autocomplete="tel-extension"/>
-              <br />
-              <label for="correo">e-mail:</label>
-              <input type="text" id="correo" name="correo" required autocomplete="email"/>
-              <br />
-              <label for="opciones">Select an option:</label>
-              <br>
-              <select id="opciones" name="opciones">
-                <option value="option1">Dog</option>
-                <option value="option2">Cat</option>
-              </select>
-              <div class="send">
-                <button id="btn-send" name="btn-enviar" value="Haz click">
-                  SEND
-                </button>
-              </div>
+          <div class="columna">
+            <label for="Names">Names: </label>
+            <input
+              type="text"
+              id="Names"
+              placeholder="Ej: Nacdul V."
+              required
+              autocomplete="given-name"
+            />
+            <br />
+            <label for="Last name">Last name: </label>
+            <input
+              type="text"
+              id="Last name"
+              placeholder="Ej. Ramirez Zavala"
+              required autocomplete="family-name"/>
+            <br />
+            <div class="hb">
+              <label for="hb">Birthday:</label>
+              <input type="date" id="hb" required />
             </div>
-          <section class ="img-adopta">
-          <div class="columna1" id="columna1">
-             <div class="mySlides">
-              <img class="imagen" src="images/adopt3.jpeg" width="500px" height="600px" alt="adopt3" />
-             </div>
-             <div class="mySlides">
-              <img class="imagen" src="images/adopt2.jpeg" width="500px" height="600px" alt="adopt2"/>
-             </div>
-             <div class="mySlides">
-              <img class="imagen" src="images/adopt5.jpeg" width="500px" height="600px" alt ="adopt5"/>
-             </div>
+            <br />
+            <label for="Adress">Adress: </label>
+            <input type="text" id="Adress" name="Adress" required  autocomplete="street-address"/>
+            <br />
+            <label for="Phone">Cell phone: </label>
+            <input
+              type="text"
+              id="Phone"
+              placeholder="Ej. +51 862 235 277"
+              name="Phone"
+              required autocomplete="tel-extension"/>
+            <br />
+            <label for="correo">e-mail:</label>
+            <input type="text" id="correo" name="correo" required autocomplete="email"/>
+            <br />
+            <label for="opciones">Select an option:</label>
+            <br>
+            <select id="opciones" name="opciones">
+              <option value="option1">Dog</option>
+              <option value="option2">Cat</option>
+            </select>
+            <div class="send">
+              <button id="btn-send" name="btn-enviar" value="Haz click">
+                SEND
+              </button>
+            </div>
           </div>
+          <section class ="contenedor-slide" id="columna1">
+             <div class="mySlides">
+              <ul>
+                <li><img class="imagen" src="images/adopt3.jpeg" width="450px" height="580px" alt="imagen1" /> </li>
+                <li><img class="imagen" src="images/adopt2.jpeg" width="450px" height="580px" alt="imagen2"/> </li>
+                <li><img class="imagen" src="images/adopt5.jpeg" width="450px" height="580px" alt ="imagen3"/> </li>
+              </ul>
+            </div>
         </section>
-        </form>
       </section>
     </main>
     <footer class="footer">
