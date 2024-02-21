@@ -29,6 +29,7 @@ nav ul li a:active{
 }
 nav ul li a.donate-link:link, a.donate-link:visited{
   background-color: rgba(144, 56, 202, 0.582);
+  padding: 10px;
   color: white;
 }
 
@@ -105,6 +106,7 @@ width: auto;
 .footer-home p {
   margin: 0;
 }
+
 .popup-home{
   display: block;
   position: fixed;
@@ -152,7 +154,7 @@ color: #fb02a8;
 /* Estilos para hacer el encabezado responsive */
 @media screen and (max-width: 768px) {
   .header-home{
-    height: auto;
+    width: 100%;
   }
   .logomenu img{
   max-width: 100%;
@@ -164,15 +166,15 @@ color: #fb02a8;
     font-size: 1em;
   }
   .campaña img {
-    width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
-    height: 100%; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+    width: 100%;
+    height: auto;
   }
   .quienes-somos {
     display: flex;
     width: 100%;
   }
   .texto-bienvenida{
-    width: 78%;
+    width: 70%;
     color: rgb(36, 36, 36);
   }
   .texto-bienvenida h1{
@@ -191,8 +193,9 @@ color: #fb02a8;
     flex-direction: column;
     text-align: center;
     position: fixed;
-    background-color: rgba(90, 19, 134, 0.486);
+    background-color: rgba(69, 16, 100, 0.486);
     text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
+    font-size: 0.9em;
   }
   .popup-home{
     display: none !important;
@@ -406,12 +409,16 @@ color: #fb02a8;
     z-index: 2;
     opacity: 1;
     transition: none;
+    position: relative;
+    max-width: 100%;
   }
   .columna1 img {
     flex: 1;
     width: auto;
     float: none;
     object-fit: cover;
+    position: relative;
+    overflow: hidden;
   }
 .main-adopta .send {
   font-size: 22px;
@@ -427,7 +434,7 @@ color: #fb02a8;
   cursor: pointer;
 }
 .main-adopta .send #btn-send {
-  background: rgba(218, 64, 238, 0.915);
+  background: rgba(218, 64, 238, 0.815);
   font-family: cursive;
   font-size: 25px;
   font-weight: 600;
@@ -438,9 +445,13 @@ color: #fb02a8;
   border-color: #aaaaaa46;
 }
 .main-adopta .send #btn-send:hover{
+  background: rgba(228, 20, 255, 0.915);
   cursor: pointer;
   transform: scale(1.1);
   border: #4e4e4e 2px;
+}
+.main-adopta .send #btn-send:active{
+  background: rgba(228, 20, 255, 0.915);
 }
 
 @media only screen and (max-width: 768px) {
@@ -860,7 +871,7 @@ article img{
   margin: 3em 0 4.5em 0;
 }
 .gracias-dona a{
-  background-color: rgb(255, 57, 189);
+  background-color: rgba(255, 16, 175, 0.63);
   padding: 10px;
   color: black;
   border-radius: 30px;
