@@ -444,63 +444,7 @@ color: #fb02a8;
   width: 450px;
   height: 580px;
 }
-.mySlides {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.mySlides ul {
-  list-style-type: none; /* Elimina los puntos de lista */
-  padding: 0; /* Elimina el relleno interior */
-  margin: 0; /* Elimina el margen exterior */
-}
 
-.mySlides img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.mySlides .imagen {
-  opacity: 0; /* Comenzamos con opacidad 0 para todas las imágenes */
-}
-
-.mySlides .imagen:nth-child(1) {
-  animation: fadeInOut 90s infinite; /* Aplicar la animación a la primera imagen */
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0; /* Comenzamos con opacidad 0 */
-  }
-  5% {
-    opacity: 1; /* Aparece la imagen1 durante 5 segundos (5% de 90s) */
-  }
-  35% {
-    opacity: 1; /* Mantenemos la imagen1 visible durante 30 segundos */
-  }
-  40% {
-    opacity: 0; /* Desvanecemos la imagen1 durante 5 segundos */
-  }
-  45% {
-    opacity: 0; /* Comenzamos con opacidad 0 para la imagen2 */
-  }
-  75% {
-    opacity: 1; /* Aparece la imagen2 durante 30 segundos */
-  }
-  80% {
-    opacity: 0; /* Desvanecemos la imagen2 durante 5 segundos */
-  }
-  85% {
-    opacity: 0; /* Comenzamos con opacidad 0 para la imagen3 */
-  }
-  100% {
-    opacity: 1; /* Aparece la imagen3 durante 15 segundos */
-  }
-}
 
 @media only screen and (max-width: 768px) {
   .header-general {
