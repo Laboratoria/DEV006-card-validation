@@ -447,33 +447,34 @@ color: #fb02a8;
   position: relative;
   display: flex;
 }
-.slide1, .slide2 {
+.slide1, .slide2, .slide3 {
   position: absolute;
   width: 100%;
   height: 100%;
+  opacity: 0;
 }
 .slide1 {
-  animation: fadeInOut 20s infinite;
+  animation: fadeInOut 15s infinite;
 }
 .slide2 {
-  animation: fadeOutIn 20s infinite;
+  animation: fadeOutIn 15s infinite;
+  animation-delay: 11s; /* Comienza después de 3 segundos para crear el efecto de alternancia */
 }
 
 .slide3 {
-  animation: fadeOutIn 20s infinite;
+  animation: fadeOutIn 15s infinite;
+  animation-delay: 22s; /* Comienza después de 6 segundos para crear el efecto de alternancia */
 }
-.slide4 {
-  animation: fadeOutIn 20s infinite;
-}
+
 /* Definición de las animaciones */
 @keyframes fadeInOut {
-  0%, 100% { opacity: 1; } /* La imagen está completamente visible al principio y al final */
-  50% { opacity: 0; } /* La imagen se desvanece a la mitad del tiempo */
+  0%, 100% { opacity: 0; } /* Las imágenes están completamente invisibles al principio y al final */
+  10%, 90% { opacity: 1; } /* Las imágenes se muestran durante el 80% de la animación */
 }
 
 @keyframes fadeOutIn {
-  0%, 100% { opacity: 0; } /* La imagen está completamente invisible al principio y al final */
-  50% { opacity: 1; } /* La imagen se muestra a la mitad del tiempo */
+  0%, 100% { opacity: 0; } /* Las imágenes están completamente invisibles al principio y al final */
+  10%, 90% { opacity: 1; } /* Las imágenes se muestran durante el 80% de la animación */
 }
 
 @media only screen and (max-width: 768px) {
