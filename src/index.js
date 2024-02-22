@@ -36,19 +36,25 @@ document.getElementById('validar').addEventListener('click', function (event) {
     msjVal.classList.add('show');
     mensajeValido.style.display = 'block'; //mostrar mensaje de éxito
     errorMensaje.style.display =  'none'; //ocultar mensaje de error
+
+    //para redirigir a la pagina gracias
+    cerrar.addEventListener('click', () =>  {
+      msjVal.classList.remove('show');
+      window.location.href="gracias.html";
+    });
+
   } else {
     // si la tarjeta es inválida mostrará este mensaje
     msj.innerHTML ="There was an error with the payment. Please try again.";
     msjVal.classList.add('show');
     mensajeValido.style.display = 'none'; //mostrar mensaje de éxito
     errorMensaje.style.display =  'block'; //ocultar mensaje de error
+
+    // para cerrar la ventana emergente
+    cerrar.addEventListener('click', () =>  {
+      msjVal.classList.remove('show');
+    });
   }
-});
-
-
-//para cerrar la ventana emergente
-cerrar.addEventListener('click', () =>  {
-  msjVal.classList.remove('show');
 });
 
 
@@ -164,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// eslint-disable-next-line no-console
 console.log(validator);
 
 
