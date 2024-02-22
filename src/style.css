@@ -462,6 +462,9 @@ color: #fb02a8;
 .slide3 {
   animation: fadeOutIn 20s infinite;
 }
+.slide4 {
+  animation: fadeOutIn 20s infinite;
+}
 /* Definición de las animaciones */
 @keyframes fadeInOut {
   0%, 100% { opacity: 1; } /* La imagen está completamente visible al principio y al final */

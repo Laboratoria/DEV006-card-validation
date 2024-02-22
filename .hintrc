@@ -23,7 +23,13 @@
         "list": "off"
       }
     ],
-    "detect-css-reflows/paint": "off"
+    "detect-css-reflows/paint": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id": "off"
+      }
+    ]
   },
   "browserslist": [
     "defaults",
