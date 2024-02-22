@@ -420,7 +420,7 @@ color: #fb02a8;
   cursor: pointer;
 }
 .main-adopta .send #btn-send {
-  background: rgba(218, 64, 238, 0.815);
+  background: rgba(218, 64, 238, 0.664);
   font-family: cursive;
   font-size: 25px;
   font-weight: 600;
@@ -428,12 +428,11 @@ color: #fb02a8;
   padding: 7px 15px;
   border-radius: 9px;
   cursor: pointer;
-  border-color: #aaaaaa46;
+  border: none;
 }
 .main-adopta .send #btn-send:hover{
   background: rgba(228, 20, 255, 0.915);
   cursor: pointer;
-  transform: scale(1.1);
   border: #4e4e4e 2px;
 }
 .main-adopta .send #btn-send:active{
@@ -444,7 +443,28 @@ color: #fb02a8;
   width: 450px;
   height: 580px;
 }
+.contenedor-slide {
+  overflow: hidden;
+  position: relative;
+}
+.imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease; /* Duración y tipo de transición */
+  opacity: 0; /* Inicialmente, las imágenes están ocultas */
+}
+.imagen1 {
+  z-index: 3; /* Asegura que la primera imagen sea la más visible inicialmente */
+  opacity: 1; /* La primera imagen está visible inicialmente */
+}
 
+/* Las siguientes reglas controlan qué imagen se muestra cuando el contenedor está en hover */
+.contenedor-slide:hover .imagen1 { opacity: 1; }
+.contenedor-slide:hover .imagen2 { opacity: 0; }
+.contenedor-slide:hover .imagen3 { opacity: 0; }
 
 @media only screen and (max-width: 768px) {
   .header-general {
