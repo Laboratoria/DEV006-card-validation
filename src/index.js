@@ -7,6 +7,7 @@ const numero = document.getElementById('inputNumero');
 const msjVal = document.getElementById('msjVal');
 const msj = document.getElementById('msj');
 const cerrar = document.getElementById('cerrar');
+const errorMensaje = document.getElementById('errorMsj');
 
 
 //llamando al button VALIDAR por si ID
@@ -17,23 +18,24 @@ document.getElementById('validar').addEventListener('click', function (event) {
 
   if(numArray.length < 11 || numArray.length > 19){
     alert ("Your card number must contain between 11 to 19 digits.");
-    // eslint-disable-next-line no-console
     console.log(numero);
     return false
   }
 
   //Algoritmo de Luhn
   const resultado = validator.isValid(numero.value);
-  // eslint-disable-next-line no-console
   console.log(resultado);
 
   //MASKIFY
   const mask = validator.maskify(numero.value);
   if (resultado === true){
-  //debe mostrarse algo
-  //ventana emergente
+  //si la tarjeta es válida debe mostrar el mensaje de verificación
     msj.innerHTML = "Card verified N°" + mask;
     //se debe mostrar una alerta como ventana emergente
+    msjVal.classList.add('show');
+  } else {
+    // si la tarjeta es inválida mostrará este mensaje
+    msj.innerHTML ="Invalid Card Number";
     msjVal.classList.add('show');
   }
 });
