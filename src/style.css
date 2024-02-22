@@ -444,8 +444,14 @@ color: #fb02a8;
   height: 580px;
 }
 .contenedor-slide {
-  overflow: hidden;
   position: relative;
+  display: flex;
+}
+.imagen1{
+  display: flex;
+}
+.imagen2{
+  display: none;
 }
 
 
