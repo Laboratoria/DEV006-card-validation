@@ -16,7 +16,7 @@ document.getElementById('validar').addEventListener('click', function (event) {
   const numArray = numero.value;
 
   if(numArray.length < 11 || numArray.length > 19){
-    alert ("Your card number must contain between 11 to 19 digits.");
+    alert ("Tu número de tarjeta debe contener entre 11 a 19 dígitos");
     // eslint-disable-next-line no-console
     console.log(numero);
     return false
@@ -27,16 +27,18 @@ document.getElementById('validar').addEventListener('click', function (event) {
   // eslint-disable-next-line no-console
   console.log(resultado);
 
+
   //MASKIFY
   const mask = validator.maskify(numero.value);
   if (resultado === true){
   //debe mostrarse algo
   //ventana emergente
-    msj.innerHTML = "Card verified N°" + mask;
+    msj.innerHTML = "Se verificó tu N°" + mask;
     //se debe mostrar una alerta como ventana emergente
     msjVal.classList.add('show');
   }
 });
+
 
 
 //para cerrar la ventana emergente
