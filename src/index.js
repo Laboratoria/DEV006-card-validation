@@ -25,7 +25,6 @@ document.getElementById('validar').addEventListener('click', function (event) {
 
   //Algoritmo de Luhn
   const resultado = validator.isValid(numero.value);
-  console.log(resultado);
 
   //MASKIFY
   const mask = validator.maskify(numero.value);
@@ -38,8 +37,9 @@ document.getElementById('validar').addEventListener('click', function (event) {
     errorMensaje.style.display =  'none'; //ocultar mensaje de error
 
     //para redirigir a la pagina gracias
-    cerrar.addEventListener('click', () =>  {
+    cerrar.addEventListener('click', (event) =>  {
       msjVal.classList.remove('show');
+      event.preventDefault();
       window.location.href="gracias.html";
     });
 
