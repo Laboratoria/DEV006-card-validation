@@ -8,6 +8,7 @@ const msjVal = document.getElementById('msjVal');
 const msj = document.getElementById('msj');
 const cerrar = document.getElementById('cerrar');
 const errorMensaje = document.getElementById('errorMsj');
+const mensajeValido = document.getElementById('msjValido');
 
 
 //llamando al button VALIDAR por si ID
@@ -33,10 +34,14 @@ document.getElementById('validar').addEventListener('click', function (event) {
     msj.innerHTML = "Card verified N°" + mask;
     //se debe mostrar una alerta como ventana emergente
     msjVal.classList.add('show');
+    mensajeValido.style.display = 'block'; //mostrar mensaje de éxito
+    errorMensaje.style.display =  'none'; //ocultar mensaje de error
   } else {
     // si la tarjeta es inválida mostrará este mensaje
-    msj.innerHTML ="Invalid Card Number";
+    msj.innerHTML ="There was an error with the payment. Please try again.";
     msjVal.classList.add('show');
+    mensajeValido.style.display = 'none'; //mostrar mensaje de éxito
+    errorMensaje.style.display =  'block'; //ocultar mensaje de error
   }
 });
 
