@@ -62,7 +62,7 @@ const validator = {
     }
   },
 
-  //pcultando los solo los 4 primeros digitos
+  //ocultando los solo los 4 primeros digitos
   maskify: function(numero) {
 
     //toString para convertir de numero a una cadena de caracteres
