@@ -447,24 +447,7 @@ color: #fb02a8;
   overflow: hidden;
   position: relative;
 }
-.imagen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 1s ease; /* Duración y tipo de transición */
-  opacity: 0; /* Inicialmente, las imágenes están ocultas */
-}
-.imagen1 {
-  z-index: 3; /* Asegura que la primera imagen sea la más visible inicialmente */
-  opacity: 1; /* La primera imagen está visible inicialmente */
-}
 
-/* Las siguientes reglas controlan qué imagen se muestra cuando el contenedor está en hover */
-.contenedor-slide:hover .imagen1 { opacity: 1; }
-.contenedor-slide:hover .imagen2 { opacity: 0; }
-.contenedor-slide:hover .imagen3 { opacity: 0; }
 
 @media only screen and (max-width: 768px) {
   .header-general {
