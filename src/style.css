@@ -425,7 +425,7 @@ color: #fb02a8;
   cursor: pointer;
 }
 .main-adopta .send #btn-send {
-  background: rgba(218, 64, 238, 0.664);
+  background: rgb(233, 70, 255);
   font-family: cursive;
   font-size: 25px;
   font-weight: 600;
@@ -437,7 +437,7 @@ color: #fb02a8;
   margin-top: 14px;
 }
 .main-adopta .send #btn-send:hover{
-  background: rgba(228, 20, 255, 0.915);
+  background: rgba(226, 8, 255, 0.915);
   cursor: pointer;
   border: #4e4e4e 2px;
 }
