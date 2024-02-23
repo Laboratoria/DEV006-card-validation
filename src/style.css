@@ -430,10 +430,11 @@ color: #fb02a8;
   font-size: 25px;
   font-weight: 600;
   color: white;
-  padding: 7px 15px;
+  padding: 6px 12px;
   border-radius: 9px;
   cursor: pointer;
   border: none;
+  margin-top: 14px;
 }
 .main-adopta .send #btn-send:hover{
   background: rgba(228, 20, 255, 0.915);
