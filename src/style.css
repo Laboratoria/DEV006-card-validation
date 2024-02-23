@@ -148,7 +148,7 @@ color: #fb02a8;
 }
 .texto-saludo p{
   text-align: justify;
-  font-size: small;
+  font-size: 1em;
 }
 
 /* Estilos para hacer el encabezado responsive */
