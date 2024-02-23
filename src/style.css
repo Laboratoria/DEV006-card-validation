@@ -453,28 +453,31 @@ color: #fb02a8;
   height: 100%;
   opacity: 0;
 }
+
 .slide1 {
-  animation: fadeInOut 15s infinite;
+  animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
 }
+
 .slide2 {
-  animation: fadeOutIn 15s infinite;
-  animation-delay: 11s; /* Comienza después de 3 segundos para crear el efecto de alternancia */
+  animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
+  animation-delay: 15s; /* Comienza después de 15 segundos de la animación anterior */
 }
 
 .slide3 {
-  animation: fadeOutIn 15s infinite;
-  animation-delay: 22s; /* Comienza después de 6 segundos para crear el efecto de alternancia */
+  animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
+  animation-delay: 30s; /* Comienza después de 30 segundos de la animación anterior */
 }
 
-/* Definición de las animaciones */
+/* Definición de la animación */
 @keyframes fadeInOut {
-  0%, 100% { opacity: 0; } /* Las imágenes están completamente invisibles al principio y al final */
-  10%, 90% { opacity: 1; } /* Las imágenes se muestran durante el 80% de la animación */
+  0%, 30% { opacity: 0; } /* Las imágenes están completamente invisibles al principio y al final */
+  30%, 65% { opacity: 1; } /* Las imágenes se muestran durante el 30% del tiempo */
+  70%, 100% { opacity: 0; } /* Las imágenes están completamente invisibles al final */
 }
 
-@keyframes fadeOutIn {
-  0%, 100% { opacity: 0; } /* Las imágenes están completamente invisibles al principio y al final */
-  10%, 90% { opacity: 1; } /* Las imágenes se muestran durante el 80% de la animación */
+/* Mantener la primera imagen visible al final */
+.slide1 {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
