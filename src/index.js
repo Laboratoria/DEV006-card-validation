@@ -160,15 +160,21 @@ formulario.selectYear.addEventListener('change', (e) => {
   irFrente();
 });
 
-//PARA OCULTAR CVV DE LA TARJETA
-document.addEventListener('DOMContentLoaded', function() {
-  const inputCCV = document.getElementById('inputCCV');
+//para ver el ccv
+function toggleCCVVisibility() {
+  const cvvInput = document.getElementById('inputCCV');
+  const toggleButton = document.getElementById('toggleVisibility');
 
-  inputCCV.addEventListener('input', function() {
-    // Reemplazar el valor del campo con asteriscos
-    this.value = this.value.replace(/\d/g, '*');
-  });
-});
+  if (cvvInput.type === "password") {
+    cvvInput.type = "text";
+    toggleButton.querySelector('img').src = "images/eye-icon.png"; // Cambiar a ojo abierto
+  } else {
+    cvvInput.type = "password";
+    toggleButton.querySelector('img').src = "images/eye-icon-hide.png"; // Cambiar a ojo cerrado
+  }
+}
+const toggleButton = document.getElementById('toggleVisibility');
+toggleButton.addEventListener('click', toggleCCVVisibility);
 
 console.log(validator);
 

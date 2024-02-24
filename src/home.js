@@ -5,3 +5,4 @@ const closeButton = document.querySelector('.close-home');
 closeButton.addEventListener('click', function() {
   popup.style.display = 'none';
 });
+
