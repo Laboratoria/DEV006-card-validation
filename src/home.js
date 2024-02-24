@@ -47,3 +47,36 @@ document.addEventListener('DOMContentLoaded', function() {
     return age;
   }
 });
+
+// Detectar cuando el traductor está activo
+document.addEventListener('DOMContentLoaded', function() {
+  // Función para detectar cambios de idioma
+  function detectLanguageChange() {
+    // Obtener el texto original del documento
+    const originalText = document.body.textContent;
+
+    // Observar los cambios en el texto del documento
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        // Verificar si el texto del documento ha cambiado
+        if (mutation.type === 'characterData') {
+          const newText = document.body.textContent;
+          // Verificar si el texto ha sido traducido
+          if (originalText !== newText) {
+            // Cambiar la imagen a la versión en español
+            document.getElementById('flyer-img').src = 'images/flyer_es.png';
+          } else {
+            // Cambiar la imagen a la versión original (inglés)
+            document.getElementById('flyer-img').src = 'images/flyer.png';
+          }
+        }
+      });
+    });
+
+    // Configurar el observador para observar cambios en el texto del documento
+    observer.observe(document.body, { subtree: true, characterData: true });
+  }
+
+  // Llamar a la función para detectar cambios de idioma
+  detectLanguageChange();
+});
