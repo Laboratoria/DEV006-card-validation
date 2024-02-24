@@ -474,6 +474,14 @@ color: #fb02a8;
   animation-delay: 30s; /* Comienza después de 30 segundos de la animación anterior */
 }
 
+.imagen-es {
+  display: none;
+}
+
+.imagen-en {
+  display: block;
+}
+
 /* Definición de la animación */
 @keyframes fadeInOut {
   0%, 30% { opacity: 0; } /* Las imágenes están completamente invisibles al principio y al final */
