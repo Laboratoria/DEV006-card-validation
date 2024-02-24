@@ -7,19 +7,34 @@ closeButton.addEventListener('click', function() {
 });
 
 
-document.getElementById("myForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Evita que el formulario se envíe automáticamente
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  // Evitar que el formulario se envíe automáticamente
+  event.preventDefault();
 
-  const dobInput = document.getElementById("hb");
-  const dob = new Date(dobInput.value);
-  const eighteenYearsAgo = new Date();
-  eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+  // Obtener la fecha de nacimiento ingresada por el usuario
+  const birthday = new Date(document.getElementById('hb').value);
 
-  if (dob <= eighteenYearsAgo) {
-    // Si el usuario es mayor de edad, se envía el formulario a "gracias.html"
+  // Calcular la edad basada en la fecha de nacimiento
+  const age = calculateAge(birthday);
+
+  // Verificar si la persona es mayor de edad (18 años o más)
+  if (age >= 18) {
+    // Si es mayor de edad, enviar el formulario
     this.submit();
   } else {
-    // Si el usuario no es mayor de edad, se muestra un mensaje de alerta
-    alert("Debes ser mayor de edad para enviar el formulario.");
+    // Si es menor de edad, mostrar un mensaje de alerta
+    alert('Debes ser mayor de edad para enviar este formulario.');
   }
 });
+
+// Función para calcular la edad basada en la fecha de nacimiento
+function calculateAge(birthday) {
+  const today = new Date();
+  let age = today.getFullYear() - birthday.getFullYear();
+  const month = today.getMonth() - birthday.getMonth();
+
+  if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
+    age--;
+  }
+  return age;
+}
