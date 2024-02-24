@@ -763,23 +763,22 @@ color: #fb02a8;
 .grupo.ccv {
   position: relative;
 }
-.grupo.ccv input[type="password"] {
-    padding-right: 30px; /* Ajusta el padding derecho para dejar espacio al botón */
-}
 .grupo.ccv button {
     position: absolute;
     right: 5px; /* Ajusta la posición del botón a la derecha */
     top: 50%; /* Ajusta la posición verticalmente al centro */
-    transform: translateY(25%);
+    transform: translateY(20%);
 }
 #toggleVisibility{
-  background-color: white;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   padding-right: 8px;
+  outline: none;
 }
 .ojo-cerrado{
-  width: 1em;
+  width: 2em;
+  height: auto;
 }
 .formulario-tarjeta .Validar #validar {
   border: 3px solid rgb(255, 255, 255);
