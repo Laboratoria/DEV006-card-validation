@@ -160,7 +160,7 @@ formulario.selectYear.addEventListener('change', (e) => {
   irFrente();
 });
 
-//para ver el ccv
+//para ver y ocultar la clave del ccv
 function toggleCCVVisibility() {
   const cvvInput = document.getElementById('inputCCV');
   const toggleButton = document.getElementById('toggleVisibility');
