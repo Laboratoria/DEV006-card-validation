@@ -892,28 +892,39 @@ article img{
 .agradecimiento h1{
   font-size: 1.5em;
   padding: 2em;
+  text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555); /* Sombra */
 }
-.contenedor-imagenes{
+.contenedor-imagenes {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas */
   grid-auto-rows: minmax(200px, auto); /* altura variable */
-  gap: 20px; /* espacio entre las imágenes */
+  gap: 25px; /* espacio entre las imágenes */
+  justify-content: center;
 }
-.contenedor-imagenes article{
- margin: 10px;
- overflow: hidden;
- position: relative;
-}
-.contenedor-imagenes img{
-  width: 450px;
-  height: 300px;
-  border-radius: 10px;
-  box-shadow:  0 4px 6px rgba(255, 31, 244, 0.507);
+
+.contenedor-imagenes article {
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background-color: #ff69b4; /* Color de fondo rosa/fucsia */
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5); /* Sombra */
   transition: transform 0.3s ease;
 }
-.contenedor-imagenes img:hover {
-    transform: scale(1.05);
+
+.contenedor-imagenes img {
+  width: 97%; /* Ajustar al ancho del contenedor */
+  height: 100%; /* Ajustar al alto del contenedor */
+  border-radius: 12px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(255, 31, 244, 0.507);
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Ajustar la imagen al tamaño del contenedor */
 }
+
+.contenedor-imagenes img:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
 .album{
   border-radius: 10px;
 }
@@ -925,7 +936,7 @@ article img{
 }
 .gracias-dona a{
   background-color: rgba(255, 16, 175, 0.63);
-  padding: 15px;
+  padding: 18px;
   color: whitesmoke;
   border-radius: 30px;
   font-weight: 900;
