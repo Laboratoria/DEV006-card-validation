@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
-document.addEventListener('DOMContentLoaded', function() {
+export {closePopupOnLoad}
+function closePopupOnLoad() {
   const popup = document.getElementById('popup-home');
   const closeButton = document.querySelector('.close-home');
 
   if (popup && closeButton) {
-    // Cerrar la ventana emergente al hacer clic en el botón de cerrar
     closeButton.addEventListener('click', function() {
       popup.style.display = 'none';
     });
   }
-});
+}
 
 // para enviar el formulario
 document.addEventListener('DOMContentLoaded', function() {
