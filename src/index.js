@@ -176,6 +176,13 @@ function toggleCCVVisibility() {
 const toggleButton = document.getElementById('toggleVisibility');
 toggleButton.addEventListener('click', toggleCCVVisibility);
 
+//para que permita escribir solo numeros
+const ccvInput = document.getElementById('inputCCV');
+ccvInput.addEventListener('input', function() {
+  // Reemplazar cualquier carácter que no sea un número con una cadena vacía
+  this.value = this.value.replace(/\D/g, '');
+});
+
 console.log(validator);
 
 
