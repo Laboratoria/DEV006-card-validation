@@ -30,10 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Redirigir a la página de gracias.html
       window.location.href = 'gracias.html';
     } else {
-      // Si es menor de edad, mostrar un mensaje de alerta traducido
-      const mensajeIngles = 'You must be of legal age to submit this form.';
-      const mensajeTraducido = traducirTexto(mensajeIngles);
-      alert(mensajeTraducido);
+      // Si es menor de edad, mostrar un mensaje de alerta
+      alert('You must be of legal age to submit this form.');
     }
   });
 
@@ -48,24 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     return age;
   }
-
-  // Función para traducir el texto utilizando el traductor de Google
-  function traducirTexto(texto) {
-    // URL del traductor de Google
-    const url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=es&dt=t&q=" + encodeURIComponent(texto);
-
-    // Realizar una solicitud GET para traducir el texto
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", url, false);
-    xhr.send();
-
-    // Parsear la respuesta JSON
-    const respuesta = JSON.parse(xhr.responseText);
-
-    // Extraer y retornar el texto traducido
-    return respuesta[0][0][0];
-  }
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
   // Función para detectar cambios de idioma y cambiar la imagen del flyer
