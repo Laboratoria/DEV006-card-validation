@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'gracias.html';
     } else {
       // Si es menor de edad, mostrar un mensaje de alerta
-      alert('Debes ser mayor de edad para enviar este formulario.');
+      alert('You must be of legal age to submit this form.');
     }
   });
 
