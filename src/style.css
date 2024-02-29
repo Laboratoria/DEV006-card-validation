@@ -912,9 +912,14 @@ article img{
 }
 .agradecimiento .gracias{
   padding-top: 2em;
+  padding-bottom: 0.4em;
+  color: #770181;
+  font-weight: 600;
   text-align: center;
-  color: rgb(36, 36, 36);
   font-size: 1.2em;
+}
+.agradecimiento .gracias2{
+font-size: 1.15em;
 }
 .agradecimiento h1{
   text-align: center;
@@ -929,7 +934,6 @@ article img{
   gap: 25px; /* espacio entre las imágenes */
   justify-content: center;
 }
-
 .contenedor-imagenes article {
   margin: 10px;
   overflow: hidden;
@@ -939,7 +943,6 @@ article img{
   box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5); /* Sombra */
   transition: transform 0.3s ease;
 }
-
 .contenedor-imagenes img {
   width: 97%; /* Ajustar al ancho del contenedor */
   height: 100%; /* Ajustar al alto del contenedor */
@@ -948,19 +951,30 @@ article img{
   transition: transform 0.3s ease;
   object-fit: cover; /* Ajustar la imagen al tamaño del contenedor */
 }
-
 .contenedor-imagenes img:hover {
   transform: scale(1.05); /* Efecto de escala al pasar el cursor */
 }
-
 .album{
   border-radius: 10px;
 }
 .gracias-dona{
   display: flex;
+  width: 80%;
   flex-direction: column;
   align-items: center;
   margin: 3em 0 4.5em 0;
+}
+.apoyo{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 1.15em;
+  text-align: justify;
+}
+.gracias-dona .apoyo-link{
+  color: #fb02a8;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 20px 0 15px 0;
 }
 .gracias-dona a{
   background-color: rgba(255, 16, 175, 0.63);
