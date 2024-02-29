@@ -121,7 +121,8 @@ width: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 78%;
+  height: 80%;
+  max-width: 500px; /* Ancho máximo */
   transform: translate(-50%, -50%);
   background-color: rgba(255, 234, 255, 0.979);
   padding: 20px;
@@ -138,10 +139,10 @@ width: auto;
 color: #fb02a8;
 }
 .bienvenida img{
-  width: 74%;
+  width: 100%;
 }
 .texto-saludo{
-  width: 92%;
+  width: 100%;
 }
 .texto-saludo h1{
   font-size: 1.39em;
