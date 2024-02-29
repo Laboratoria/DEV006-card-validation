@@ -121,7 +121,6 @@ width: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 80%;
   max-width: 500px; /* Ancho máximo */
   transform: translate(-50%, -50%);
   background-color: rgba(255, 234, 255, 0.979);
@@ -130,7 +129,7 @@ width: auto;
 }
 .close-home {
   position: absolute;
-  top: 0.2em;
+  top: 0.85em;
   right: 0.55em;
   font-size: 2.3em;
   cursor: pointer;
@@ -140,16 +139,20 @@ color: #fb02a8;
 }
 .bienvenida img{
   width: 100%;
+  margin: auto; /* Centrar la imagen */
 }
 .texto-saludo{
   width: 100%;
 }
 .texto-saludo h1{
   font-size: 1.39em;
+  padding-top: 25px;
 }
 .texto-saludo p{
   text-align: justify;
   font-size: 1em;
+  padding-top: 15px;
+  padding-bottom: 50px;
 }
 
 /* Estilos para hacer el encabezado responsive */
