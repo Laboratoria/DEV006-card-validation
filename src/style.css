@@ -976,7 +976,7 @@ article img{
 /*-- estilos de todos los footers de los html--*/
 .footer{
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
-  height: 270px;
+  height: 210px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
