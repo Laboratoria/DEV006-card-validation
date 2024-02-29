@@ -292,24 +292,35 @@ color: #fb02a8;
   text-align: start;
   flex-direction: row;
   font-weight: 620;
-  font-size: 1.99em;
+  font-size: 2em;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
-  margin: 10px auto 15px;
+  margin: 6px auto 15px;
 }
 .main-adopta p {
   text-align: justify;
-  font-size: 1.15em;
+  font-size: 1.08em;
   font-weight: 650;
   width: 70%;
-  color: rgb(49, 49, 49);
+  color: rgb(65, 64, 64);
   margin: 0 auto;
-  padding-top: 15px;
+  padding-top: 14px;
+}
+.main-adopta h3{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(2, 2, 2);
+  text-shadow: 2px 2px 2px rgba(196, 196, 196, 0.673);
+  font-size: 1.35em;
+  text-align: center;
+  padding-bottom: 9px;
+  padding-top: 9px;
 }
 .main-adopta h2{
   margin-top: 25px;
   text-align: center;
-  padding-bottom: 9px;
+  padding-bottom: 12px;
   color: rgb(49, 49, 49);
   text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
 }
