@@ -906,6 +906,10 @@ article img{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url("images/fondo-gracias.png");
+  background-size: 100% 100%;
+  position: relative;
+  background-repeat: no-repeat;
 }
 .agradecimiento{
   width: 80%;
