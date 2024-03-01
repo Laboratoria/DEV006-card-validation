@@ -2,13 +2,70 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Se insertó un ícono antes del nombre de la página para que aparezca en la pestaña-->
+    <link rel="icon" type="image.png" href="images/huellaicono.png">
+    <title>Welcome to PetsFriends Wasi</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header-home">
+      <figure class="logomenu">
+        <img src="images/logosinfondo.png" alt="logo de la marca" />
+      </figure>
+      <!-- Se utilizó nav para hacer una barra de menú desplegable con algunos enlaces de navegación-->
+      <nav class="barra-home">
+        <ul class="home-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="adopta.html">ADOPT</a></li>
+          <li id="donar">
+            <a class="donate-link" href="validardonation.html">
+              <img src="images/iconos/donar2.png" class="donar-icon" width="45px" alt="donar1">
+              <span class="donate-text">DONATE</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-home">
+      <section class ="seccion-bienvenida">
+      <figure class="campaña">
+        <img src="images/flyer.png" id="flyer-img" width="100%" alt="imagen-campaña">
+      </figure>
+      <article class="quienes-somos">
+        <br>
+        <div class = "texto-bienvenida">
+        <h1>Welcome to PetsFriends Wasi,</h1>
+        <br>
+        <p>We're a community dedicated to the well-being of our furry friends. Our mission is to provide a safe and loving shelter for animals in need and promote responsible adoption. Thank you for joining us on this journey to make the world a better place. Let's make a difference together!</p>
+      </div>
+      <img src="images/animales.png" class="animales" alt="imagen-bienvenida">
+      </article>
+    </section>
+    </main>
+    <footer class="footer-home">
+      <article class="autora">
+        <div class="Copyright">
+          <p>Copyright &copy; 2023 | All rights reserved</p>
+          <p>Created by Nacdul V. Ramirez Zavala-Laboratoria</p>
+        </div>
+      </article>
+      </footer>
+      <!-- Ventana emergente -->
+      <div id="popup-home" class="popup-home">
+        <div class="popup-content">
+          <span class="close-home">&times;</span>
+          <article class="bienvenida">
+            <div class = "texto-saludo">
+              <h1>Welcome to PetsFriends Wasi,</h1>
+              <br>
+              <p>We're a community dedicated to the well-being of our furry friends. Our mission is to provide a safe and loving shelter for animals in need and promote responsible adoption. Thank you for joining us on this journey to make the world a better place. Let's make a difference together!</p>
+            </div>
+            <img src="images/animales.png" alt="imagen-bienvenida">
+          </article>
+          </div>
+      </div>
+      <script src="home.js" type="module"></script>
     <script src="index.js" type="module"></script>
   </body>
 </html>

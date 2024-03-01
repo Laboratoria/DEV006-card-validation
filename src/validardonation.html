@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image.png" href="images/huellaicono.png">
+  <title>Donation PetsFriends Wasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header-general">
+    <div class="logomenup">
+      <img src="images/logo.png" alt="logo de la marca" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="adopta.html">ADOPT</a></li>
+        <li id="donar">
+          <a class="donate-link" href="validardonation.html">
+            <img src="images/iconos/donar2.png" class="donar-icon" width="45px" alt="donar1">
+            <span class="donate-text">DONATE</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-validation">
+    <section class="texto-donar">
+      <h1>Join Us in Saving Lives!</h1>
+      <p>Every day, countless innocent animals suffer in silence, battling illness, hunger, and abandonment. In our fight to protect and care for these defenseless beings, every donation matters. Your generosity can make the difference between despair and hope, between life and death.</p>
+      <p>Imagine the heartbeat of a heart that has lost all hope, and then imagine the miracle of seeing it beat again with strength thanks to your help. By joining us, you're not just donating, you're offering a second chance, a ray of light in the darkness, a helping hand in times of need.</p>
+      <p>We invite you to be part of this mission of compassion and love. Together, we can make a real difference in the lives of these vulnerable beings. Join our cause today and be the voice that speaks for those who cannot speak for themselves.</p>
+    </section>
+    <!-- haciendo el formulario dinámico para la tarjeta de crédito-->
+    <div class="contenedor">
+      <!--simulación de la tarjeta de crédito-->
+      <section class="tarjeta" id="tarjeta">
+        <!-- TARJETA DELANTERA-->
+        <div class="delantera">
+          <div class="logo" id="logo">
+            <img src="images/logotipos/visa.png" alt="">
+          </div>
+          <img src="images/chip.png" class="chip" alt="">
+
+          <!--DATOS DENTRO DE LA TARJETA CON FLEXBOX-->
+          <div class="datos">
+            <!-- AGRUPAMOS CADA VALOR CON LOS DATOS QUE APARECERÁN DENTRO DE LA TARJETA-->
+            <div class="grupo" id="numero">
+              <p class="label">Credit card number</p>
+              <p class="numero">#### #### #### ####</p>
+            </div>
+            <div class="flexbox">
+              <div class="grupo" id="fullName">
+                <p class="label">Cardholder name</p>
+                <p class="fullName">Nacdul Ramirez</p>
+              </div>
+
+              <div class="grupo" id="expiracion">
+                <p class="label">Expiration</p>
+                <!-- sE PONE UN SPAN A MES Y A YEAR POR SEPARADO PARA QUE CUANDO SE CAMBIE LA FECHA O EL MES SE HAGA DE MANERA INDEPENDIENTE-->
+                <p class="expiracion"><span class="mes">MM</span> / <span class="year">YY</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reversa">
+          <div class="barra"></div>
+          <div class="datos">
+            <div class="grupo" id="firma">
+              <p class="label">Signature</p>
+            </div>
+          </div>
+          <p class="leyenda">This card is the property of Pay Banck Bank and is for personal and non-transferable use. In case of loss or theft, the cardholder must call the bank immediately, or whoever finds it should return it to any bank branch.</p>
+          <a href="#" class="link-banco">www.paybanck.com</a>
+        </div>
+      </section>
+
+      <!-- Contenedor botón abrir formulario -->
+      <div class="contenedor-btn">
+        <button class="btn-abrir" id="btnAbrir" value="btnAbrir">
+          <img src="images/iconos/iconosuma.png" width="70px" alt="iconosuma"></button>
+      </div>
+
+      <!--formulario-->
+      <form action="" id="formulario-tarjeta" class="formulario-tarjeta" method="POST">
+        <div class="grupo">
+          <!--Se limitan los caracteres máximo a 16 con maxLength-->
+          <label for="inputNumero">Credit card number</label>
+          <input type="text" id="inputNumero" name="numeroTarjeta" value="" minlength="11" maxlength="19" placeholder="#### #### #### ####" autocomplete="off" required>
+        </div>
+        <div class="grupo">
+          <label for="inputNombre">Full Name </label>
+          <input type="text" id="inputNombre" autocomplete="off" required>
+        </div>
+
+        <div class="flexbox">
+          <div class="grupo expira">
+            <label for="selectMes">Expiration</label>
+            <div class="flexbox">
+              <div class="grupo-select">
+                <select name="mes" id="selectMes">
+                  <option disable selected>Month</option>
+                </select>
+              </div>
+              <br>
+              <div class="grupo-select">
+                <select name="year" id="selectYear">
+                  <option disable selected>Year</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="grupo ccv">
+            <label for="inputCCV">CCV</label>
+            <input type="password" id="inputCCV" name="cvv" maxlength="3" autocomplete="current-password" required>
+              <button type="button" id="toggleVisibility">
+                <img src="images/eye-icon-hide.png" class="ojo-cerrado" alt="Toggle CCV Visibility">
+            </button>
+          </div>
+        </div>
+        <div class="caja">
+          <label for="cantidad">Donation $</label>
+          <!-- step para poner la cantidad base a donar, en este caso $1 como minimo -->
+          <input type="number" id="cantidad" placeholder="000 000 000" step="1" min="1" required>
+        </div>
+        <div class="Validar">
+          <button id="validar" name="validar" value="validartarjeta">CARD VALIDATE</button>
+        </div>
+        <br>
+        <div id="msjVal" class="container">
+          <div class="modal">
+          <h3 id="msjValido">The donation has been successfully completed!</h3>
+          <h3 id="errorMsj" style="display: none;">Invalid Card Number</h3>
+          <p id="msj"></p>
+          <button id="cerrar">CLOSE</button>
+          </div>
+        </div>
+  </form>
+</div>
+<section class="contribution">
+  <p>We understand that not everyone can contribute financially, but your support in other ways is also invaluable. If you'd like to donate food, clothing, toys, or other items that you believe could benefit our rescued animals, we would love to receive your generosity!</p>
+  <p>Additionally, if you're interested in becoming part of the PetsFriends Wasi family and contributing more actively, we welcome you! Whether as a volunteer, by adopting one of our animals, or simply providing your moral support, every gesture counts and is deeply appreciated.</p>
+  <p>Feel free to contact us via email at <a href="mailto:petsfriendswasi@gmail.com" style="color: rgb(212, 0, 255); text-decoration: underline;">petsfriendswasi@gmail.com</a>. We're eager to meet you and work together to make the world a better place for our furry friends.</p>
+  <h2>Your Help Can Make a Difference!</h2>
+</section>
+  </main>
+  <footer class="footer">
+    <div class="logo">
+    <a href="index.html"> <img src="images/logosinfondo.png" alt="logofooter"></a>
+    </div>
+    <div class="contacto">
+      <h3>Contact us:</h3>
+      <br>
+      <h3>+51 941 895 233</h3>
+      <br>
+      <a href="mailto:petsfriendswasi@gmail.com" style="color: white; text-decoration: none;">petsfriendswasi@gmail.com</a>
+    </div>
+    <div class="redes">
+      <a
+      href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr"
+      class="social-icono"
+      ><img src="images/iconos/facebook.png" alt="facebook"
+    /></a>
+    <a href="https://www.instagram.com/" class="social-icono">
+      <img src="images/iconos/insta.png" alt="instagram"
+    /></a>
+    <a
+      href="https://twitter.com/i/flow/login"
+      class="social-icono"
+    >
+      <img src="images/iconos/twitter.png" alt="twitter" />
+    </a>
+  </div>
+  <article class="autora">
+    <div class="Copyright">
+      <p>Copyright &copy; 2023 | All rights reserved</p>
+      <p>Created by Nacdul Ramirez Zavala-Laboratoria</p>
+    </div>
+  </article>
+    </footer>
+  <script src="index.js" type="module"></script>
+</body>
+</html>

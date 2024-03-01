@@ -1,0 +1,1065 @@
+body {
+  box-sizing: border-box; /* Hace que el modelo de caja incluya el padding y border en el ancho y alto */
+  font-family: cursive;
+  font-weight: 300;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/*ESTILO DE NAV PARA TODOS AL HACER CLICK O PASAR EL CURSOS*/
+nav{
+  display: block;
+}
+nav ul{
+  list-style: none;
+  float: right;
+}
+nav ul li a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+nav ul li a:hover{
+  background-color: rgba(255, 16, 175, 0.74);
+  color: white;
+}
+nav ul li a:active{
+  background-color:rgba(144, 56, 202, 0.582);
+}
+nav ul li a.donate-link:link, a.donate-link:visited{
+  background-color: rgba(144, 56, 202, 0.582);
+  padding: 10px;
+  color: white;
+}
+
+nav ul li a.donate-link:hover,
+nav ul li a.donate-link:focus {
+  background-color: rgba(255, 16, 175, 0.836); /* Color de fondo con la opacidad proporcionada */
+  color: white;
+}
+
+/*ESTILOS ESPECÍFICOS DE LA BARRA DE MENÚ PAG 1*/
+.header-home{
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  background-color: rgba(90, 29, 128, 0.234);
+}
+.logomenu img{
+height: 3.8em;
+width: auto;
+}
+.barra-home {
+  cursor: pointer;
+  flex: 1; /* El nav ocupará todo el espacio restante */
+}
+.home-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 800;
+  align-items: center;
+}
+.donate-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.donate-text {
+  margin-left: 5px; /* Ajusta el margen para alinear el texto con la imagen */
+}
+.main-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
+}
+.campaña {
+  position: relative; /* Asegúrate de que el contenedor de la imagen tenga una posición relativa */
+  z-index: 1; /* Asegúrate de que el z-index del contenedor de la imagen sea menor que el del footer */
+}
+.campaña img {
+  width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
+  height: 100vh; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+}
+.quienes-somos {
+  display: none;
+}
+.footer-home {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em 0;
+  background-color: rgba(72, 24, 102, 0.356);
+  color: white;
+  text-align: center;
+  font-weight: 550;
+  z-index: 3; /* Asegúrate de que el z-index del footer sea mayor que el del contenedor de la imagen */
+}
+.footer-home p {
+  margin: 0;
+}
+
+.popup-home{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 0, 62, 0.644); /* Fondo transparente fucsia */
+  z-index: 9999;
+}
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 500px; /* Ancho máximo */
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 234, 255, 0.979);
+  padding: 20px;
+  border-radius: 5px;
+}
+.close-home {
+  position: absolute;
+  top: 0.85em;
+  right: 0.55em;
+  font-size: 2.3em;
+  cursor: pointer;
+}
+.close-home:hover{
+color: #fb02a8;
+}
+.bienvenida img{
+  width: 100%;
+  margin: auto; /* Centrar la imagen */
+}
+.texto-saludo{
+  width: 100%;
+}
+.texto-saludo h1{
+  font-size: 1.39em;
+  padding-top: 25px;
+}
+.texto-saludo p{
+  text-align: justify;
+  font-size: 1em;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+/* Estilos para hacer el encabezado responsive */
+@media screen and (max-width: 768px) {
+  .header-home{
+    width: 100%;
+  }
+  .logomenu img{
+  max-width: 100%;
+  }
+  .barra-home{
+    flex-direction: row;
+  }
+  .home-links li a {
+    font-size: 1em;
+  }
+  .campaña img {
+    width: 100%;
+    height: auto;
+  }
+  .quienes-somos {
+    display: flex;
+    width: 100%;
+  }
+  .texto-bienvenida{
+    width: 70%;
+    color: rgb(36, 36, 36);
+  }
+  .texto-bienvenida h1{
+    font-size: 1.2em;
+    text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
+  }
+  .texto-bienvenida p{
+    text-align: justify;
+  }
+  .quienes-somos img{
+    background-image: url("images/huella-bienvenida.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .footer-home {
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    background-color: rgba(69, 16, 100, 0.486);
+    text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
+    font-size: 0.9em;
+  }
+  .popup-home{
+    display: none !important;
+  }
+}
+
+/* Estilos para la sección de bienvenida en pantallas con altura menor a 800px */
+@media screen and (max-height: 800px) {
+  .campaña {
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Asegura que el contenedor tenga el mismo ancho que la pantalla */
+    height: 100vh; /* Asegura que el contenedor tenga el mismo alto que la pantalla */
+  }
+  .campaña img {
+    width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+  }
+  .popup-content {
+    height: 91%;
+    padding: 19px;
+  }
+}
+
+
+/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
+.header-general {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 5px solid  rgba(255, 89, 200, 0.959);
+  background-image: url("images/huella-bienvenida.gif");
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px 0 3px 0;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+}
+/*--tamaño del logo--*/
+.logomenup img {
+  height: 3.8em;
+  width: auto;
+  transition: all 0.5s;
+}
+/*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
+.header-general .logomenup img:hover {
+  transform: scale(1.1);
+}
+/*-- darle forma a la lista desordenada (links)--*/
+.home-links,
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;  /* Alinea los enlaces en el centro */
+  align-items: center;
+}
+.home-links li,
+.nav-links li {
+  padding: 0 0.6em; /* Espacio entre los elementos del menú */
+}
+.nav-links a {
+  font-size: 1.38rem;
+  font-weight: 850;
+  color:  rgb(36, 36, 36);
+  text-decoration: none;
+}
+
+/*--estilo de ícono DONATE--*/
+.donar {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.donar img {
+  transition: all 0.3s;
+}
+
+/*--ESTILO PAG 3--*/
+.main-adopta{
+  background-image:url("images/fondoadopta.png");
+  background-size: 100% 100%;
+  position: relative; /* Importante para que los elementos dentro del main respeten el z-index */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  z-index: 1;
+}
+.main-adopta h1 {
+  width: 70%;
+  text-align: start;
+  flex-direction: row;
+  font-weight: 620;
+  font-size: 2em;
+  color: #c103da;
+  text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
+  margin: 6px auto 15px;
+}
+.main-adopta p {
+  text-align: justify;
+  font-size: 1.08em;
+  width: 70%;
+  color: rgb(65, 64, 64);
+  margin: 0 auto;
+  padding-top: 14px;
+}
+.main-adopta h3{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(2, 2, 2);
+  text-shadow: 2px 2px 2px rgba(196, 196, 196, 0.673);
+  font-size: 1.3em;
+  text-align: center;
+  padding-bottom: 9px;
+  padding-top: 9px;
+}
+.main-adopta h2{
+  margin-top: 25px;
+  text-align: center;
+  padding-bottom: 12px;
+  color: rgb(49, 49, 49);
+  text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 75%;
+  margin: 0 auto;
+}
+.neon:hover{
+  box-shadow: 0 0 38px rgb(255, 20, 153);
+}
+.main-adopta .neon {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 65%;
+  padding: 5px 5px 0;
+}
+.main-adopta .neon img{
+    background-color: #ffffff;
+    width: 100%;
+    justify-content: center;
+    height: 160px;
+    border: 12px solid transparent;
+    border-radius: 8px;
+    animation: neonAnimation 8s linear infinite;
+}
+@keyframes neonAnimation {
+  0% {
+      border-color: #ff09b5;
+  }
+  33% {
+      border-color: #ef02fb;
+  }
+  66% {
+      border-color:#9bf3ff;
+  }
+  100% {
+      border-color:#ff71f8;
+  }
+  }
+  #myForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding:  50px 0 30px 0;
+    position: relative;
+  }
+.main-adopta .columna {
+  padding: 0 50px 0 0;
+  color: rgb(194, 2, 219);
+  font-size: 1em;
+  font-weight: 600;
+  box-sizing: border-box;
+  width: calc((100% - 500px) / 2);
+}
+
+.label{
+  margin-top: 15px;
+  display: block;
+}
+.main-adopta .columna input{
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  margin-top: 2px;
+  border-radius: 6px;
+  text-align: left;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  font-family: cursive;
+  }
+  /* Estilo para cuando el campo de entrada está enfocado */
+.columna input:focus {
+  border-color: #ff058f; /* Cambia el color del borde al estar enfocado */
+  box-shadow: 0 0 5px rgba(255, 5, 143, 0.5); /* Añade una sombra al estar enfocado */
+  outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+  .columna input:hover{
+    border-color: #aaa;
+    cursor: pointer;
+  }
+#opciones{
+  border-radius: 6px;
+  width: 100%;
+  appearance: none;
+  padding: 5px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  font-family: cursive;
+  text-align: center;
+}
+#opciones:hover{
+  border-color: #aaa;
+  cursor: pointer;
+}
+#opciones:focus {
+  border-color: #ff058f;
+  box-shadow: 0 0 5px rgba(255, 5, 143, 0.5);
+  outline: none;
+}
+.main-adopta .send {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px;
+  display: flex;
+  width: 90%;
+  padding: 22px 20px;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.main-adopta .send #btn-send {
+  background: rgb(233, 70, 255);
+  font-family: cursive;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  border: none;
+  margin-top: 14px;
+}
+.main-adopta .send #btn-send:hover{
+  background: rgba(226, 8, 255, 0.915);
+  cursor: pointer;
+  border: #4e4e4e 2px;
+}
+.main-adopta .send #btn-send:focus{
+  background: rgba(228, 20, 255, 0.915);
+}
+#columna1 {
+  position: relative;
+  width: 450px;
+  height: 580px;
+}
+.contenedor-slide {
+  position: relative;
+  display: flex;
+}
+.slide1, .slide2, .slide3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slide1 {
+  animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
+}
+
+.slide2 {
+  animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
+  animation-delay: 15s; /* Comienza después de 15 segundos de la animación anterior */
+}
+
+.slide3 {
+  animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
+  animation-delay: 30s; /* Comienza después de 30 segundos de la animación anterior */
+}
+
+.imagen-es {
+  display: none;
+}
+
+.imagen-en {
+  display: block;
+}
+
+/* Definición de la animación */
+@keyframes fadeInOut {
+  0%, 30% { opacity: 0; } /* Las imágenes están completamente invisibles al principio y al final */
+  30%, 65% { opacity: 1; } /* Las imágenes se muestran durante el 30% del tiempo */
+  70%, 100% { opacity: 0; } /* Las imágenes están completamente invisibles al final */
+}
+
+/* Mantener la primera imagen visible al final */
+.slide1 {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-general {
+    flex-direction: row;
+    height: auto;
+  }
+  .title{
+    width: 100%;
+  }
+  #myForm{
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-adopta .columna {
+    padding: 0;
+    width: 50%; /* Ajustar el ancho para adaptarse a pantallas más pequeñas */
+  }
+  .main-adopta .send {
+    width: 90%; /* Ajustar el ancho del botón de envío */
+  }
+  .img-adopta {
+    margin-top: 20px;
+  }
+}
+
+
+/* ESTILO DE LA 4TA PÁGINA HTML
+  /*--estilo de la página de validar donation--*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main-validation{
+    background-image:url("images/fondovalidation.png");
+    background-size: 100% 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+.contenedor {
+  width: 90%;
+  /*--límite para que no sea muy ancho con el max-width en caso el usuario acceda a la página desde una pantalla más grande que la de nosotros--*/
+  max-width: 900px;
+  padding: 40px 20px;
+  /*--para centrar la página de manera horizontal se usa el margin auto --*/
+  margin: auto;
+  /*--Se trabaja con flexbox porque tenemos la tarjeta, un botón y el formulario --*/
+  display: flex;
+  /*-- se utilizó flex direccion para que los elementos como el botón y el formulario no se desplieguen hacia le derecha, sino mantenga el orden hacia abajo-*/
+  flex-direction: column;
+  /*-- como rotamos la posición de flexbox de horizontal a vertical, debemos de invertir el alineado con el aling items center--*/
+  /*-- por eso utilizamos el align porque debemos invertir el alineado centrado a horizontal--*/
+  align-items: center;
+}
+
+/*------ Estilos generales de la tarjeta ------*/
+.tarjeta {
+  width: 90%;
+  max-width: 500px;
+  /*-- para poder rotar la tarjeta sin que la cara posterior se coloque debajo de la primera cara, quise darle un efecto 3D al rotar en el mismo lugar--*/
+  position: relative;
+  color: rgba(255, 0, 106, 0.966);
+  font-weight: 600;
+  transition: .3s ease all;
+  /*--por defecto una rotación de 0 grados, es decir que no se mueva y quede fija --*/
+  transform: rotateY(0deg);
+  /*-- efecto de girar la tarjeta--*/
+  transform-style: preserve-3d;
+  /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
+  backface-visibility: hidden;
+  cursor: pointer;
+  /*-- como tenemos 3 capas el z-index permite que cada capa se vea según el orden que lo establezcamos--*/
+  z-index: 2;
+}
+
+/*-- .tarjeta:hover es para cuando quieres que gire pero cuando pones el cursor encima--*/
+/*-- por eso se cambia hover por active--*/
+/*-- se crea tarjeta active para que cuando el usuario de un click sobre ella, la tarjeta gire--*/
+/*-- la tarjeta active se mostrará con js al dar click--*/
+.tarjeta.active {
+  /*--y girará en 180°--*/
+  transform: rotateY(180deg);
+}
+
+/*-- Como tenemos 2 div dentro de nuestra tarjeta, quiero que ambas tengan estas características, tanto la tarjeta delantera y la trasera--*/
+.tarjeta>div {
+  padding: 25px;
+  border-radius: 15px;
+  /*--para que tenga un alto mínimo se usa min-height--*/
+  min-width: 20px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  /*--espaceado entre cada elemento sea separado se usa justify-content--*/
+  justify-content: space-between;
+  /*--sombra con box-shadow--*/
+  box-shadow: 0 10px 10px 0 rgba(174, 82, 235, 0.3);
+}
+
+/*-----TARJETA DELANTERA-----*/
+/*--- FONDO DE GATITO DE LA TARJETA--*/
+.tarjeta .delantera {
+  width: 100%;
+  background: url("images/bg-tarjeta/fondodelantera1.png");
+  background-size: cover;
+}
+/*--cambiar los tamaños de chip, logo y fondo de la tarjeta ya que cogieron el tamaño del 100% por el display flex de los div anteriores--*/
+.delantera .logo {
+  text-align: right;
+  min-height: 50px;
+}
+.delantera .logo img {
+  width: 100%;
+  height: 100%;
+  /*--LA IMAGEN DEL LOGO SE VUELVE MÁS PEQUEÑA--*/
+  object-fit: cover;
+  max-width: 80px;
+}
+.delantera .chip {
+  width: 100%;
+  max-width: 65px;
+  max-width: 35px;
+}
+.delantera .grupo .label {
+  font-size: 19px;
+  font-weight: 630;
+  color: #982db3;
+  margin-bottom: 5px;
+}
+.delantera .grupo .numero,
+.delantera .grupo .fullName,
+.delantera .grupo .expiracion {
+  color: rgba(255, 0, 106, 0.966);
+  font-size: 20px;
+  font-weight: 600;
+  /*--PARA QUE ESTÉN EN MAYUSCULAS UPPERCASE--*/
+  text-transform: uppercase;
+}
+
+.delantera .flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/*------ TARJETA TRASERA ------*/
+/*-- FONDO Y ESTILO DE LA TARJETA TRASERA--*/
+.reversa {
+  background: url("images/bg-tarjeta/Ttrasera.png");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  /*--GIRAMOS LA TARJETA 180 GRADOS CON LA PROPIEDAD DE TRANSFORM --*/
+  transform: rotateY(180deg);
+  /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
+  backface-visibility: hidden;
+}
+.reversa .barra {
+  height: 40px;
+  background: #570179;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.reversa .datos {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.reversa .datos p {
+  margin-bottom: 5px;
+}
+.reversa .datos #firma {
+  width: 70%;
+}
+
+.reversa .datos #firma .firma p {
+  line-height: 40px;
+  font-family: unset, cursive;
+  color: rgb(23, 1, 36);
+  font-size: 25px;
+  padding: 0 10px;
+  text-transform: capitalize;
+}
+.reversa .leyenda {
+  font-size: 12px;
+  line-height: 23px;
+}
+.reversa .link-banco {
+  font-size: 16px;
+  font-weight: 300;
+  font-weight: 600;
+  color: #9d05b1;
+}
+/*-- contenedor botón --*/
+.contenedor-btn .btn-abrir {
+  position: relative;
+  top: -30px;
+  border-style: none;
+}
+.contenedor-btn .btn-abrir img {
+  position: relative;
+  z-index: 3;
+  transition: all .3s ease;
+  padding: 2px;
+  border: rgb(238, 22, 148);
+  border-radius: 200%;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: -5px 2px 8px rgba(255, 14, 114, 0.77);
+}
+.contenedor-btn .btn-abrir img:hover {
+  background: rgba(255, 14, 114, 0.77);
+}
+.contenedor-btn .btn-abrir img.active {
+  transform: rotate(45deg);
+}
+
+/*--formulario--*/
+.formulario-tarjeta {
+  background: rgba(231, 135, 255, 0.801);
+  color:  rgb(36, 36, 36);
+  font-family: cursive;
+  font-weight: 650;
+  width: 90%;
+  max-width: 610px;
+  padding: 125px 30px 7px 30px;
+  border-radius: 10px;
+  position: relative;
+  top: -150px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path .3s ease-out;
+}
+
+/*-- cuando formulario tenga la clase active y se de un click quiero que tenga un clip-path--*/
+.formulario-tarjeta.active {
+  /*--funciona con JS--*/
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.formulario-tarjeta input,
+.formulario-tarjeta select {
+  border: 3px solid  rgba(255, 14, 114, 0.837);
+  font-size: 16px;
+  height: 32px;
+  width: 100%;
+  padding: 1px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: cursive;
+  font-weight: 620;
+  color:  rgb(77, 76, 76);
+}
+
+/*--para que las lineas del border de cada espacio a completar en el formulario cambien de color--*/
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+  border: 3px solid  rgb(194, 2, 219);
+}
+.formulario-tarjeta input {
+  margin-bottom: 7px;
+}
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+  box-shadow: 0 0 8px rgba(134, 5, 146, 0.644);
+  outline: none;
+}
+.grupo.ccv {
+  position: relative;
+}
+.grupo.ccv button {
+    position: absolute;
+    right: 5px; /* Ajusta la posición del botón a la derecha */
+    top: 50%; /* Ajusta la posición verticalmente al centro */
+    transform: translateY(20%);
+}
+#toggleVisibility{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-right: 8px;
+  outline: none;
+}
+.ojo-cerrado{
+  width: 2em;
+  height: auto;
+}
+.formulario-tarjeta .Validar #validar {
+  border: 3px solid rgb(255, 255, 255);
+  font-size: 18px;
+  color: white;
+  background: rgba(17, 17, 17, 0.622);
+  font-weight: bold;
+  padding: 0.4em;
+  font-family: cursive;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.formulario-tarjeta .Validar #validar:hover {
+  background:rgba(255, 0, 106, 0.966);
+}
+.formulario-tarjeta .Validar #validar:focus{
+  box-shadow: 0 0 8px rgba(255, 5, 143, 0.76);
+}
+.formulario-tarjeta .flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+article{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+article img{
+  width: 100%;
+  height: auto;
+  margin: 5px;
+}
+.caja{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 7px 0;
+}
+.container{
+  display: flex;
+  background-color: rgba(173, 12, 120, 0.473);
+  align-items:center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top:0;
+  left: 0;
+  height: 101vh;
+  width: 101vw;
+  transition: opacity 0.3s ease;
+}
+.modal{
+  background-color: #fff;
+  width: 560px;
+  max-width: 100%;
+  padding: 28px 38px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: auto; /* Centra el modal horizontalmente */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal h3{
+  margin: 0;
+}
+.modal p{
+  opacity: 0.6;
+  font-size: 15px;
+  font-family: cursive;
+}
+#cerrar{
+  font-weight: 700;
+  font-size: 18px;
+  font-family: cursive;
+  color:rgba(255, 0, 106, 0.966);
+  background: rgba(255, 179, 232, 0.979);
+  border:rgba(255, 0, 106, 0.966);
+  border-radius: 35px;
+  cursor:pointer;
+  width: 90px;
+  margin-top: 10px;
+  }
+  #cerrar:hover{
+    background-color:rgba(255, 0, 106, 0.966);
+    color: white;
+    transform: scale(1.1);
+  }
+  .show{
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+/*--ESTILO DE LA PAG5--*/
+.main-gracias{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url("images/fondo-gracias.png");
+  background-size: 100% 100%;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.agradecimiento{
+  width: 80%;
+}
+.agradecimiento .gracias{
+  padding-top: 2em;
+  padding-bottom: 0.4em;
+  color: #770181;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2em;
+}
+.agradecimiento .gracias2{
+font-size: 1.15em;
+text-align: justify;
+}
+.agradecimiento h1{
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1em;
+  text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555);
+  padding-bottom: 45px;
+}
+.contenedor-imagenes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-auto-rows: minmax(200px, auto); /* altura variable */
+  gap: 25px; /* espacio entre las imágenes */
+  justify-content: center;
+}
+.contenedor-imagenes article {
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background-color: #ff69b4; /* Color de fondo rosa/fucsia */
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5); /* Sombra */
+  transition: transform 0.3s ease;
+}
+.contenedor-imagenes img {
+  width: 97%; /* Ajustar al ancho del contenedor */
+  height: 100%; /* Ajustar al alto del contenedor */
+  border-radius: 12px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(255, 31, 244, 0.507);
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Ajustar la imagen al tamaño del contenedor */
+}
+.contenedor-imagenes img:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+.album{
+  border-radius: 10px;
+}
+.gracias-dona{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em 0 4.5em 0;
+}
+.apoyo{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 1.15em;
+  text-align: justify;
+}
+.gracias-dona .apoyo-link{
+  color: #fb02a8;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 20px 0 15px 0;
+  text-align: center;
+}
+.gracias-dona a{
+  background-color: rgba(255, 16, 175, 0.63);
+  padding: 18px;
+  color: whitesmoke;
+  border-radius: 30px;
+  font-weight: 900;
+  margin-top: 1em;
+  text-decoration: none;
+}
+.gracias-dona a:hover{
+  background-color: #fb02a8;
+  color: white;
+}
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+  @media (max-width: 768px) {
+  .contenedor-imagenes {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columnas */
+  }
+  .centrar-imagen img{
+    padding: 1.5em;
+  }
+}
+
+/* Media query para ajustar el diseño en pantallas aún más pequeñas */
+@media (max-width: 576px) {
+  .contenedor-imagenes {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 1 columna */
+  }
+}
+/*-- estilos de todos los footers de los html--*/
+.footer{
+  background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
+  height: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+  line-height: 12px;
+  text-shadow: -2px -2px 6px  rgba(80, 80, 80, 0.733),
+  2px -2px 6px    rgba(80, 80, 80, 0.733),
+  -2px 2px 6px    rgba(80, 80, 80, 0.733),
+  2px 2px 6px   rgba(80, 80, 80, 0.733);
+  color:  rgb(255, 255, 255);
+  z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
+}
+
+.footer > div {
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+.footer h3
+.Copyriht {
+  font-size: 1em;
+}
+
+.logo,
+.contacto,
+.redes{
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+.footer .logo img{
+  height: auto;
+  width: 90%;
+}
+
+.redes img{
+  width: 15%;
+  height: 45%;
+}
+
+.Copyright p{
+  margin-top: auto;
+  white-space: nowrap;
+  display: inline-block;
+}
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!--Se insertó un ícono antes del nombre de la página para que aparezca en la pestaña-->
+    <link rel="icon" type="image/png" href="images/huellaicono.png">
+    <title>Adoption PetsFriends Wasi</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header class="header-general">
+      <div class="logomenup">
+        <img src="images/logo.png" alt="logo de la marca" />
+      </div>
+      <!-- Se utilizó nav para hacer una barra de menú desplegable con algunos enlaces de navegación-->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="adopta.html">ADOPT</a></li>
+          <li id="donar">
+            <a class="donate-link" href="validardonation.html">
+              <img src="images/iconos/donar2.png" class="donar-icon" width="45px" alt="donar1">
+              <span class="donate-text">DONATE</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-adopta">
+      <section class="párrafo">
+        <br>
+        <h1>Hello animal lover!</h1>
+        <h3>Have you ever wondered what it would be like to have a loyal and affectionate friend by your side?</h3>
+        <p>Imagine the joy and gratitude a four-legged companion would feel when finding a home where they can be loved and cared for as they deserve. That joy can be yours!</p>
+        <p>Our furry friends are eager to meet their special someone, someone like you who is ready to open their heart and home to a new family member. Whether it's a playful kitten or a loving puppy, we have the perfect companion waiting for you.</p>
+        <p>To submit the adoption form, it's important that you are at least 18 years old. This requirement is essential to ensure responsibility and commitment in caring for our pets.</p>
+        <p>Adopting at PetsFriends Wasi not only changes the life of a pet but also transforms yours. We guarantee that the love and gratitude you receive from your new pet will be endless.</p>
+        <p>Are you ready to make a difference in the life of a furry friend in need? Complete our adoption form and join us in this beautiful mission of love and compassion!</p>
+        <p>Thank you for considering being part of our family. We look forward to meeting you soon and seeing the joy you will bring to the life of one of our furry friends!</p>
+            <h2>Thank you for considering adoption with us!</h2>
+      <br>
+    <br>
+      </section>
+      <section class="informacion">
+        <div class="title">
+          <figure class= "neon" id="neonDiv">
+           <img src="images/adoptme2.png" id="adoptme-img" alt="titulo">
+          </figure>
+        </div>
+        <form action="" id="myForm" method="POST">
+          <div class="columna">
+            <label for="Names">Names: </label>
+            <input
+              type="text"
+              id="Names"
+              placeholder="Ej: Nacdul V."
+              required
+              autocomplete="given-name"
+            />
+            <label for="Last name" class = "label">Last name: </label>
+            <input
+              type="text"
+              id="Last name"
+              placeholder="Ej. Ramirez Zavala"
+              required autocomplete="family-name"/>
+              <div class="hb">
+                <label for="hb" class="label">Birthday:</label>
+                <input type="date" id="hb" required lang="en" />
+            </div>
+            <label for="Adress" class = "label">Adress: </label>
+            <input type="text" id="Adress" name="Adress" required  autocomplete="street-address"/>
+            <label for="Phone" class = "label">Cell phone: </label>
+            <input
+              type="text"
+              id="Phone"
+              placeholder="Ej. +51 862 235 277"
+              name="Phone"
+              required autocomplete="tel-extension"/>
+            <label for="correo" class = "label">E-mail:</label>
+            <input type="text" id="correo" name="correo" required autocomplete="email"/>
+            <label for="opciones" class = "label">Select an option:</label>
+            <select id="opciones" name="opciones">
+              <option value="option1">Dog</option>
+              <option value="option2">Cat</option>
+            </select>
+            <div class="send">
+              <button id="btn-send" name="btn-enviar" value="Haz click">
+                SEND
+              </button>
+            </div>
+          </div>
+          <section class ="contenedor-slide" id="columna1">
+             <div class="slide1" id="slide1">
+                <img id="imagen1" src="images/adopt3.jpeg" width="450px" height="580px" alt="imagen1" />
+             </div>
+             <div class ="slide2" id="slide2">
+                <img id="imagen2" src="images/adopt5.jpeg" width="450px" height="580px" alt="imagen2"/>
+             </div>
+             <div class ="slide3" id="slide3">
+              <img id="imagen3" src="images/adopt2.jpeg" width="450px" height="580px" alt="imagen3"/>
+            </div>
+        </section>
+      </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="logo">
+      <a href="index.html"> <img src="images/logosinfondo.png" alt="logofooter"></a>
+      </div>
+      <div class="contacto">
+        <h3>Contact us:</h3>
+        <br>
+        <h3>+51 941 895 233</h3>
+        <br>
+        <a href="mailto:petsfriendswasi@gmail.com" style="color: white; text-decoration: none;">petsfriendswasi@gmail.com</a>
+      </div>
+      <div class="redes">
+        <a
+        href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr"
+        class="social-icono"
+        ><img src="images/iconos/facebook.png" alt="facebook"
+      /></a>
+      <a href="https://www.instagram.com/" class="social-icono">
+        <img src="images/iconos/insta.png" alt="instagram"
+      /></a>
+      <a
+        href="https://twitter.com/i/flow/login"
+        class="social-icono"
+      >
+        <img src="images/iconos/twitter.png" alt="twitter" />
+      </a>
+    </div>
+    <article class="autora">
+      <div class="Copyright">
+        <p>Copyright &copy; 2023 | All rights reserved.</p>
+        <p>Created by Nacdul Ramirez Zavala-Laboratoria</p>
+      </div>
+    </article>
+      </footer>
+    <script src="home.js" type="module"></script>
+  </body>
+</html>

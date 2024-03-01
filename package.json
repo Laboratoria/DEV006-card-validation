@@ -16,12 +16,12 @@
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "babel-jest": "^27.0.1",
-    "eslint": "^8.3.0",
+    "eslint": "^8.56.0",
     "gh-pages": "^3.1.0",
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
     "opener": "^1.5.1",
-    "serve": "^13.0.2"
+    "serve": "^14.2.1"
   },
   "engines": {
     "node": ">=16.x"
@@ -30,5 +30,8 @@
     "createdAt": "2023-03-02T18:11:22.652Z",
     "version": "5.6.0",
     "commit": "ffa75c8b2bede153844195479abeff01f3e34227"
+  },
+  "dependencies": {
+    "markdown-it": "^14.0.0"
   }
 }
