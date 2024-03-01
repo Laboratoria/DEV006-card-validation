@@ -553,7 +553,7 @@ padding-left: 4em;
 }
 .texto-donar .title-validation{
   padding-top: 2em;
-  padding-bottom: 0.8em;
+  padding-bottom: 1em;
   font-size: 1.7em;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
@@ -565,13 +565,12 @@ padding-left: 4em;
   font-size: 1.1em;
   padding-bottom: 0.5em;
 }
-
 .contenedor {
   width: 65%;
   float: right;
   /*--límite para que no sea muy ancho con el max-width en caso el usuario acceda a la página desde una pantalla más grande que la de nosotros--*/
   max-width: 900px;
-  padding: 20px;
+  padding: 10px;
   /*--para centrar la página de manera horizontal se usa el margin auto --*/
   margin: 0 auto;
   /*--Se trabaja con flexbox porque tenemos la tarjeta, un botón y el formulario --*/
@@ -582,7 +581,11 @@ padding-left: 4em;
   /*-- por eso utilizamos el align porque debemos invertir el alineado centrado a horizontal--*/
   align-items: center;
 }
-
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /*------ Estilos generales de la tarjeta ------*/
 .tarjeta {
   width: 94%;
@@ -673,56 +676,6 @@ padding-left: 4em;
   margin-top: 20px;
 }
 
-/*------ TARJETA TRASERA ------*/
-/*-- FONDO Y ESTILO DE LA TARJETA TRASERA--*/
-.reversa {
-  background: url("images/bg-tarjeta/Ttrasera.png");
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  /*--GIRAMOS LA TARJETA 180 GRADOS CON LA PROPIEDAD DE TRANSFORM --*/
-  transform: rotateY(180deg);
-  /*-- este efecto ayuda para que al rotar la tarjeta se oculte la info de la primera cara y solo se vea la posterior--*/
-  backface-visibility: hidden;
-}
-.reversa .barra {
-  height: 40px;
-  background: #570179;
-  width: 100%;
-  position: absolute;
-  top: 30px;
-  left: 0;
-}
-.reversa .datos {
-  margin-top: 60px;
-  display: flex;
-  justify-content: space-between;
-}
-.reversa .datos p {
-  margin-bottom: 5px;
-}
-.reversa .datos #firma {
-  width: 70%;
-}
-
-.reversa .datos #firma .firma p {
-  line-height: 40px;
-  font-family: unset, cursive;
-  color: rgb(23, 1, 36);
-  font-size: 25px;
-  padding: 0 10px;
-  text-transform: capitalize;
-}
-.reversa .leyenda {
-  font-size: 12px;
-  line-height: 23px;
-}
-.reversa .link-banco {
-  font-size: 16px;
-  font-weight: 300;
-  font-weight: 600;
-  color: #9d05b1;
-}
 /*-- contenedor botón --*/
 .contenedor-btn .btn-abrir {
   position: relative;
@@ -863,7 +816,7 @@ article img{
 }
 .container{
   display: flex;
-  background-color: rgba(173, 12, 120, 0.473);
+  background-color: rgba(0, 0, 0, 0.459);
   align-items:center;
   justify-content: center;
   position: fixed;
@@ -877,8 +830,8 @@ article img{
 }
 .modal{
   background-color: #fff;
-  width: 560px;
-  max-width: 100%;
+  width: 60%;
+  max-width: 560px;
   padding: 28px 38px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -887,7 +840,7 @@ article img{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-8%, -50%);
 }
 .modal h3{
   margin: 0;
@@ -918,6 +871,9 @@ article img{
     pointer-events: auto;
     opacity: 1;
   }
+.contribution{
+  display: none;
+}
 
 /*--ESTILO DE LA PAG5--*/
 .main-gracias{
