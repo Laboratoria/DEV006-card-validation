@@ -920,12 +920,14 @@ article img{
 }
 .agradecimiento .gracias2{
 font-size: 1.15em;
+text-align: justify;
 }
 .agradecimiento h1{
   text-align: center;
   font-size: 1.5em;
   padding: 1em;
-  text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555); /* Sombra */
+  text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555);
+  padding-bottom: 45px;
 }
 .contenedor-imagenes {
   display: grid;
@@ -975,6 +977,7 @@ font-size: 1.15em;
   font-size: 1.2em;
   font-weight: 600;
   padding: 20px 0 15px 0;
+  text-align: center;
 }
 .gracias-dona a{
   background-color: rgba(255, 16, 175, 0.63);
