@@ -549,7 +549,7 @@ color: #fb02a8;
 .texto-donar {
 width: 40%;
 float: left;
-padding: 2em 4em;
+padding: 4em;
 }
 .texto-donar::before {
   content: "";
@@ -563,7 +563,7 @@ padding: 2em 4em;
   z-index: -1;
 }
 .texto-donar .title-validation{
-  padding-bottom: 1em;
+  padding-bottom: 1.2em;
   font-size: 1.6em;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
@@ -573,7 +573,7 @@ padding: 2em 4em;
   text-align: justify;
   color: rgb(49, 49, 49);
   font-size: 1.1em;
-  padding-bottom: 0.8em;
+  padding-bottom: 1em;
 }
 .contenedor {
   width: 60%;
