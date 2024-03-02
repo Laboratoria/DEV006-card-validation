@@ -541,20 +541,30 @@ color: #fb02a8;
     box-sizing: border-box;
   }
   .main-validation{
-    background-image: url("images/fondo-gracias.png");
     background-size: 100% 100%;
     position: relative;
     background-repeat: no-repeat;
     z-index: 1;
   }
 .texto-donar {
-width: 35%;
+width: 40%;
 float: left;
-padding: 3em;
+padding: 2em 4em;
+}
+.texto-donar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #FFF2F8;
+  background-size: 100% 100%; /* O puedes usar '100% 100%' */
+  z-index: -1;
 }
 .texto-donar .title-validation{
-  padding-bottom: 1.3em;
-  font-size: 1.9em;
+  padding-bottom: 1em;
+  font-size: 1.6em;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
   text-align: justify;
@@ -563,10 +573,11 @@ padding: 3em;
   text-align: justify;
   color: rgb(49, 49, 49);
   font-size: 1.1em;
-  padding-bottom: 1em;
+  padding-bottom: 0.8em;
 }
 .contenedor {
-  width: 65%;
+  width: 60%;
+  height: 100%;
   /*--límite para que no sea muy ancho con el max-width en caso el usuario acceda a la página desde una pantalla más grande que la de nosotros--*/
   max-width: 800px;
   /*--para centrar la página de manera horizontal se usa el margin auto --*/
@@ -578,6 +589,7 @@ padding: 3em;
   /*-- como rotamos la posición de flexbox de horizontal a vertical, debemos de invertir el alineado con el aling items center--*/
   /*-- por eso utilizamos el align porque debemos invertir el alineado centrado a horizontal--*/
   align-items: center;
+  padding-top: 2.5em;
 }
 .clearfix::after {
   content: "";
@@ -640,14 +652,14 @@ padding: 3em;
 /*--cambiar los tamaños de chip, logo y fondo de la tarjeta ya que cogieron el tamaño del 100% por el display flex de los div anteriores--*/
 .delantera .logo {
   text-align: right;
-  min-height: 50px;
+  min-height: 60px;
 }
 .delantera .logo img {
   width: 100%;
   height: 100%;
   /*--LA IMAGEN DEL LOGO SE VUELVE MÁS PEQUEÑA--*/
   object-fit: cover;
-  max-width: 80px;
+  max-width: 75px;
 }
 .delantera .chip {
   width: 100%;
@@ -655,8 +667,8 @@ padding: 3em;
   max-width: 35px;
 }
 .delantera .grupo .label {
-  font-size: 19px;
-  font-weight: 630;
+  font-size: 18px;
+  font-weight: 600;
   color: #982db3;
   margin-bottom: 5px;
 }
@@ -664,7 +676,7 @@ padding: 3em;
 .delantera .grupo .fullName,
 .delantera .grupo .expiracion {
   color: rgba(255, 0, 106, 0.966);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   /*--PARA QUE ESTÉN EN MAYUSCULAS UPPERCASE--*/
   text-transform: uppercase;
@@ -673,7 +685,7 @@ padding: 3em;
 .delantera .flexbox {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
 /*------ TARJETA TRASERA ------*/
@@ -753,16 +765,16 @@ padding: 3em;
 
 /*--formulario--*/
 .formulario-tarjeta {
-  background: rgba(231, 135, 255, 0.801);
-  color:  rgb(36, 36, 36);
+  background: rgba(240, 175, 240, 0.801);
+  color: rgb(49, 49, 49);
   font-family: cursive;
-  font-weight: 650;
+  font-weight: 600;
   width: 90%;
   max-width: 610px;
   padding: 125px 30px 7px 30px;
   border-radius: 10px;
   position: relative;
-  top: -140px;
+  top: -154px;
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: clip-path .3s ease-out;
@@ -782,7 +794,7 @@ padding: 3em;
 .formulario-tarjeta select {
   border: 3px solid  rgba(255, 14, 114, 0.837);
   font-size: 16px;
-  height: 32px;
+  height: 30px;
   width: 100%;
   padding: 1px 15px;
   border-radius: 5px;
@@ -829,7 +841,7 @@ padding: 3em;
   border: 3px solid rgb(255, 255, 255);
   font-size: 18px;
   color: white;
-  background: rgba(17, 17, 17, 0.622);
+  background: rgba(41, 41, 41, 0.534);
   font-weight: bold;
   padding: 0.4em;
   font-family: cursive;
@@ -881,17 +893,17 @@ article img{
 }
 .modal{
   background-color: #fff;
+  box-shadow: 3px 3px 8px rgba(255, 87, 205, 0.979);
   width: 60%;
   max-width: 560px;
   padding: 28px 38px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
   margin: auto; /* Centra el modal horizontalmente */
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-8%, -50%);
+  transform: translate(-2%, -50%);
 }
 .modal h3{
   margin: 0;
