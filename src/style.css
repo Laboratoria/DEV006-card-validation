@@ -589,7 +589,7 @@ padding: 2em 4em;
   /*-- como rotamos la posición de flexbox de horizontal a vertical, debemos de invertir el alineado con el aling items center--*/
   /*-- por eso utilizamos el align porque debemos invertir el alineado centrado a horizontal--*/
   align-items: center;
-  padding-top: 2.5em;
+  padding-top: 4em;
 }
 .clearfix::after {
   content: "";
@@ -765,7 +765,7 @@ padding: 2em 4em;
 
 /*--formulario--*/
 .formulario-tarjeta {
-  background: rgba(240, 175, 240, 0.801);
+  background: rgba(236, 186, 236, 0.801);
   color: rgb(49, 49, 49);
   font-family: cursive;
   font-weight: 600;
@@ -879,7 +879,8 @@ article img{
 }
 .container{
   display: flex;
-  background-color: rgba(0, 0, 0, 0.281);
+  background-color: rgba(0, 0, 0, 0.603);
+  border-radius: 30px;
   align-items:center;
   justify-content: center;
   position: fixed;
@@ -893,7 +894,7 @@ article img{
 }
 .modal{
   background-color: #fff;
-  box-shadow: 3px 3px 8px rgba(255, 87, 205, 0.979);
+  box-shadow: 2px 2px 8px rgba(255, 87, 205, 0.979);
   width: 60%;
   max-width: 560px;
   padding: 28px 38px;
@@ -938,7 +939,7 @@ article img{
   display: none;
 }
 .footer-validation {
-  background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
+  background: linear-gradient(90deg, rgba(255, 182, 231, 0.781), rgba(255, 115, 208, 0.808));
   color: white;
   padding: 36px 0;
 }
@@ -968,7 +969,7 @@ article img{
 }
 .footer-bottom .derechos-autor{
   text-align: center;
-  background-color: rgba(255, 62, 191, 0.808);
+  background-color: rgba(255, 62, 191, 0.644);
   padding: 10px 0;
 }
 /*--ESTILO DE LA PAG5--*/
