@@ -940,7 +940,7 @@ article img{
 .footer-validation {
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
   color: white;
-  padding: 50px 0;
+  padding: 36px 0;
 }
 .container-validation {
   display: flex;
@@ -964,10 +964,12 @@ article img{
 }
 .footer-bottom {
   text-align: center;
-  padding: 10px 0;
+  padding-top: 30px;
 }
 .footer-bottom .derechos-autor{
-  background-color: rgba(255, 36, 182, 0.808);
+  text-align: center;
+  background-color: rgba(255, 62, 191, 0.808);
+  padding: 10px 0;
 }
 /*--ESTILO DE LA PAG5--*/
 .main-gracias{
