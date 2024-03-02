@@ -937,7 +937,38 @@ article img{
 .contribution{
   display: none;
 }
-
+.footer-validation {
+  background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
+  color: white;
+  padding: 50px 0;
+}
+.container-validation {
+  display: flex;
+  justify-content: center;
+}
+.footer-social {
+  text-align: center;
+}
+.footer-social h3 {
+  margin-bottom: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons a {
+  margin: 0 10px;
+}
+.social-icons img {
+  width: 30px;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+}
+.footer-bottom .derechos-autor{
+  background-color: rgba(255, 36, 182, 0.808);
+}
 /*--ESTILO DE LA PAG5--*/
 .main-gracias{
   display: flex;
