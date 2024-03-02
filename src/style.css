@@ -589,7 +589,7 @@ padding: 2em 4em;
   /*-- como rotamos la posición de flexbox de horizontal a vertical, debemos de invertir el alineado con el aling items center--*/
   /*-- por eso utilizamos el align porque debemos invertir el alineado centrado a horizontal--*/
   align-items: center;
-  padding-top: 4em;
+  padding-top: 6em;
 }
 .clearfix::after {
   content: "";
