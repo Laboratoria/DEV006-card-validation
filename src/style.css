@@ -938,10 +938,13 @@ article img{
 .contribution{
   display: none;
 }
+
+/*footer especial para la PAG 4*/
 .footer-validation {
-  background: linear-gradient(90deg, rgba(255, 182, 231, 0.781), rgba(255, 115, 208, 0.808));
+  background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
   color: white;
-  padding: 36px 0;
+  padding: 20px 0;
+  height: 120px;
 }
 .container-validation {
   display: flex;
@@ -965,11 +968,11 @@ article img{
 }
 .footer-bottom {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 19px;
 }
 .footer-bottom .derechos-autor{
   text-align: center;
-  background-color: rgba(255, 62, 191, 0.644);
+  background-color: rgba(255, 9, 173, 0.644);
   padding: 10px 0;
 }
 /*--ESTILO DE LA PAG5--*/
