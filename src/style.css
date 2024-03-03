@@ -550,7 +550,7 @@ color: #fb02a8;
 width: 40%;
 margin: 0 auto;
 float: left;
-padding: 4em 3em;
+padding: 4em 2.5em;
 }
 .texto-donar::before {
   content: "";
@@ -979,6 +979,45 @@ article img{
   text-align: center;
   background-color:  rgba(53, 1, 85, 0.438);;
   padding: 7px 0;
+}
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  /* Ajuste de padding para el texto de donar */
+ .main-validation{
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/fondo-gracias.png");
+ }
+  .texto-donar {
+    padding: 1em;
+    margin: 0 auto;
+    justify-content: center;
+    width: 80%;
+  }
+  .texto-donar::before{
+    background-color: transparent;
+  }
+  .contenedor {
+    width: 80%;
+    max-width: 680px;
+    padding-top: 2em;
+  }
+  .formulario-tarjeta {
+    width: 95%;
+    max-width: 920px;
+  }
+  .container{
+    height: 101vh;
+    width: 101vw;
+  }
+  .modal{
+    margin: 0 auto;
+    width: 70%;
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
+  }
 }
 /*--ESTILO DE LA PAG5--*/
 .main-gracias{
