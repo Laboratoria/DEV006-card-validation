@@ -1045,10 +1045,10 @@ article img{
   text-align: justify;
   font-size: 1.05em;
 }
-.agradecimiento h1{
+.agradecimiento h2{
   font-family: "Atma", system-ui;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.5em;
   padding: 1em;
   text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555);
   padding-bottom: 45px;
@@ -1098,7 +1098,7 @@ article img{
   padding-top: 20px;
   padding-bottom: 10px;
   font-family: system-ui;
-  font-size: 1.15em;
+  font-size: 1em;
   text-align: justify;
 }
 .gracias-dona .apoyo-link{
