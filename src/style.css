@@ -964,6 +964,7 @@ article img{
   text-align: center;
 }
 .footer-social h3 {
+  font-family: system-ui;
   margin-bottom: 15px;
   text-shadow: 2px 2px 3px  rgba(80, 80, 80, 0.733);
 }
@@ -979,12 +980,13 @@ article img{
 }
 .footer-bottom {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 .footer-bottom .derechos-autor{
+  font-family: "Atma", system-ui;
   text-align: center;
   background-color:  rgba(53, 1, 85, 0.438);;
-  padding: 7px 0;
+  padding: 6px 0;
 }
 /* Estilos específicos para dispositivos móviles */
 @media only screen and (max-width: 767px) {
