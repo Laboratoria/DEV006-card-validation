@@ -989,7 +989,7 @@ article img{
   padding: 6px 0;
 }
 /* Estilos específicos para dispositivos móviles */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   /* Ajuste de padding para el texto de donar */
  .main-validation{
   display: flex;
@@ -1025,6 +1025,10 @@ article img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
+  }
+  .footer-validation {
+    width: 100%;
+    height: 100px;
   }
 }
 /*--ESTILO DE LA PAG5--*/
