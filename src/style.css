@@ -682,13 +682,15 @@ padding: 4em 2.5em;
   font-weight: 600;
   color: #982db3;
   margin-bottom: 5px;
+  font-family: "Atma", system-ui;
 }
 .delantera .grupo .numero,
 .delantera .grupo .fullName,
 .delantera .grupo .expiracion {
+  font-family: system-ui;
   color: rgba(255, 0, 106, 0.966);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   /*--PARA QUE ESTÉN EN MAYUSCULAS UPPERCASE--*/
   text-transform: uppercase;
 }
