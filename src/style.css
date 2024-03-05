@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
 body {
   box-sizing: border-box; /* Hace que el modelo de caja incluya el padding y border en el ancho y alto */
-  font-family: cursive;
-  font-weight: 300;
+  font-weight: 600;
   background-position: center;
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@ body {
 /*ESTILO DE NAV PARA TODOS AL HACER CLICK O PASAR EL CURSOS*/
 nav{
   display: block;
+  font-family: "Atma", system-ui;
 }
 nav ul{
   list-style: none;
@@ -96,11 +98,11 @@ width: auto;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1em 0;
+  padding: 0.3em 0;
   background-color: rgba(72, 24, 102, 0.356);
+  text-shadow: 3px 3px 4px rgba(37, 37, 37, 0.628);
   color: white;
-  text-align: center;
-  font-weight: 550;
+  font-family: "Atma", system-ui;
   z-index: 3; /* Asegúrate de que el z-index del footer sea mayor que el del contenedor de la imagen */
 }
 .footer-home p {
@@ -147,12 +149,14 @@ color: #fb02a8;
 .texto-saludo h1{
   font-size: 1.39em;
   padding-top: 25px;
+  font-family: "Atma", system-ui;
 }
 .texto-saludo p{
   text-align: justify;
   font-size: 1em;
   padding-top: 15px;
   padding-bottom: 50px;
+  font-family: system-ui;
 }
 
 /* Estilos para hacer el encabezado responsive */
@@ -293,11 +297,13 @@ color: #fb02a8;
   flex-direction: row;
   font-weight: 620;
   font-size: 2em;
+  font-family: "Atma", system-ui;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
   margin: 6px auto 15px;
 }
 .main-adopta p {
+  font-family: system-ui;
   text-align: justify;
   font-size: 1.08em;
   width: 70%;
@@ -307,6 +313,7 @@ color: #fb02a8;
 }
 .main-adopta h3{
   width: 70%;
+  font-family: "Atma", system-ui;
   margin-left: auto;
   margin-right: auto;
   color: rgb(2, 2, 2);
@@ -317,6 +324,7 @@ color: #fb02a8;
   padding-top: 9px;
 }
 .main-adopta h2{
+  font-family: "Atma", system-ui;
   margin-top: 25px;
   text-align: center;
   padding-bottom: 2.5em;
@@ -373,6 +381,7 @@ color: #fb02a8;
     position: relative;
   }
 .main-adopta .columna {
+  font-family: "Atma", system-ui;
   padding: 0 50px 0 0;
   color: rgb(194, 2, 219);
   font-size: 1em;
@@ -393,7 +402,7 @@ color: #fb02a8;
   text-align: left;
   border: 2px solid #ccc;
   background-color: #f8f8f8;
-  font-family: cursive;
+  font-family: system-ui;
   }
   /* Estilo para cuando el campo de entrada está enfocado */
 .columna input:focus {
@@ -413,7 +422,7 @@ color: #fb02a8;
   cursor: pointer;
   border: 2px solid #ccc;
   background-color: #f8f8f8;
-  font-family: cursive;
+  font-family: system-ui;
   text-align: center;
 }
 #opciones:hover{
@@ -439,8 +448,8 @@ color: #fb02a8;
   cursor: pointer;
 }
 .main-adopta .send #btn-send {
+  font-family: "Atma", system-ui;
   background: rgb(233, 70, 255);
-  font-family: cursive;
   font-size: 25px;
   font-weight: 600;
   color: white;
@@ -1138,6 +1147,7 @@ text-align: justify;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  font-family: system-ui;
   padding-top: 5px;
   line-height: 12px;
   text-shadow: -2px -2px 6px  rgba(80, 80, 80, 0.733),
@@ -1179,5 +1189,6 @@ text-align: justify;
   margin-top: auto;
   white-space: nowrap;
   display: inline-block;
+  font-family: "Atma", system-ui;
 }
 
