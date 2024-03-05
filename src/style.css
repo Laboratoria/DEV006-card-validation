@@ -774,7 +774,7 @@ padding: 4em 2.5em;
   color: rgb(49, 49, 49);
   width: 90%;
   max-width: 600px;
-  padding: 125px 30px 7px 30px;
+  padding: 125px 30px 15px 30px;
   border-radius: 10px;
   position: relative;
   top: -154px;
@@ -904,8 +904,8 @@ article img{
 .modal{
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(255, 87, 205, 0.979);
-  width: 60%;
-  max-width: 570px;
+  width: 100%;
+  max-width: 510px;
   padding: 28px 38px;
   border-radius: 10px;
   text-align: center;
@@ -913,7 +913,7 @@ article img{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
-  margin-left: 20%;
+  margin-left: 19.3%;
 }
 .modal h3{
   margin: 0;
