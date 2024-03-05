@@ -131,7 +131,7 @@ width: auto;
 }
 .close-home {
   position: absolute;
-  top: 0.85em;
+  top: 1.2em;
   right: 0.55em;
   font-size: 2.3em;
   cursor: pointer;
@@ -147,7 +147,7 @@ color: #fb02a8;
   width: 100%;
 }
 .texto-saludo h1{
-  font-size: 1.39em;
+  font-size: 1.8em;
   padding-top: 25px;
   font-family: "Atma", system-ui;
 }
@@ -296,7 +296,7 @@ color: #fb02a8;
   text-align: start;
   flex-direction: row;
   font-weight: 620;
-  font-size: 2em;
+  font-size: 1.8em;
   font-family: "Atma", system-ui;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
@@ -574,7 +574,7 @@ padding: 4em 2.5em;
 .texto-donar .title-validation{
   padding-bottom: 1.2em;
   font-family: "Atma", system-ui;
-  font-size: 1.7em;
+  font-size: 1.8em;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
   text-align: justify;
@@ -1049,7 +1049,7 @@ article img{
 .agradecimiento h1{
   font-family: "Atma", system-ui;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   padding: 1em;
   text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555);
   padding-bottom: 45px;
