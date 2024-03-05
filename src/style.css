@@ -917,16 +917,17 @@ article img{
 }
 .modal h3{
   margin: 0;
+  font-family: "Atma", system-ui;
 }
 .modal p{
   opacity: 0.6;
   font-size: 15px;
-  font-family: cursive;
+  font-family: system-ui;
 }
 #cerrar{
   font-weight: 700;
   font-size: 18px;
-  font-family: cursive;
+  font-family: "Atma", system-ui;
   color:rgba(255, 0, 106, 0.966);
   background: rgba(255, 179, 232, 0.979);
   border:rgba(255, 0, 106, 0.966);
