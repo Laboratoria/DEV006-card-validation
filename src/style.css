@@ -574,15 +574,17 @@ padding: 4em 2.5em;
 }
 .texto-donar .title-validation{
   padding-bottom: 1.2em;
-  font-size: 1.6em;
+  font-family: "Atma", system-ui;
+  font-size: 1.7em;
   color: #c103da;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
   text-align: justify;
 }
 .texto-donar .text-validation{
+  font-family: system-ui;
   text-align: justify;
   color: rgb(49, 49, 49);
-  font-size: 1.1em;
+  font-size: 1.05em;
   padding-bottom: 1em;
 }
 .contenedor {
