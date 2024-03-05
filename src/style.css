@@ -1096,28 +1096,35 @@ font-family: system-ui;
 .gracias-dona{
   display: flex;
   width: 80%;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin: 3em 0 4.5em 0;
+}
+.gracias-dona img {
+  max-width: 100%;
 }
 .apoyo{
   padding-top: 20px;
   padding-bottom: 10px;
+  font-family: system-ui;
   font-size: 1.15em;
   text-align: justify;
 }
 .gracias-dona .apoyo-link{
   color: #fb02a8;
   font-size: 1.2em;
-  font-weight: 600;
+  font-family: system-ui;
   padding: 20px 0 15px 0;
-  text-align: center;
 }
 .gracias-dona a{
   background-color: rgba(255, 16, 175, 0.63);
   padding: 18px;
   color: whitesmoke;
   border-radius: 30px;
+  font-family: "Atma", system-ui;
+  font-size: 1.3em;
   font-weight: 900;
   margin-top: 1em;
   text-decoration: none;
