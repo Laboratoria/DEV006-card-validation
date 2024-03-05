@@ -1043,13 +1043,8 @@ article img{
 .agradecimiento .gracias{
   padding-top: 2em;
   font-family: system-ui;
-  text-align: center;
+  text-align: justify;
   font-size: 1.05em;
-}
-.agradecimiento .gracias2{
-font-size: 1.05em;
-text-align: justify;
-font-family: system-ui;
 }
 .agradecimiento h1{
   font-family: "Atma", system-ui;
