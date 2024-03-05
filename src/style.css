@@ -285,7 +285,7 @@ color: #fb02a8;
 
 /*--ESTILO PAG 3--*/
 .main-adopta{
-  background-image:url("images/fondoadopta.png");
+  background-image:url("images/fondo-gracias.png");
   background-size: 100% 100%;
   position: relative; /* Importante para que los elementos dentro del main respeten el z-index */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
