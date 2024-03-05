@@ -772,8 +772,6 @@ padding: 4em 2.5em;
 .formulario-tarjeta {
   background: rgba(228, 220, 228, 0.801);
   color: rgb(49, 49, 49);
-  font-family: cursive;
-  font-weight: 600;
   width: 90%;
   max-width: 600px;
   padding: 125px 30px 7px 30px;
@@ -791,6 +789,8 @@ padding: 4em 2.5em;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .formulario-tarjeta label {
+  font-family: "Atma", system-ui;
+  font-weight: 700;
   display: block;
   margin-bottom: 5px;
   font-size: 16px;
@@ -804,8 +804,8 @@ padding: 4em 2.5em;
   padding: 1px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: cursive;
-  font-weight: 620;
+  font-family: system-ui;
+  font-weight: 650;
   color:  rgb(77, 76, 76);
 }
 
@@ -853,7 +853,7 @@ padding: 4em 2.5em;
   background: rgba(0, 0, 0, 0.534);
   font-weight: bold;
   padding: 0.4em;
-  font-family: cursive;
+  font-family: "Atma", system-ui;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
