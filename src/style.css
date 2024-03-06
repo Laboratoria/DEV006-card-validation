@@ -1141,8 +1141,14 @@ article img{
 }
 
 /*-- estilos de los footers de adopt y gracias--*/
-
-
+.footer{
+  color: black;
+}
+.contenedor-footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /*.footer{
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
