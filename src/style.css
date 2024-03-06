@@ -1139,55 +1139,51 @@ article img{
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 1 columna */
   }
 }
-/*-- estilos de todos los footers de los html--*/
+
+/*-- estilos de los footers de adopt y gracias--*/
 .footer{
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
-  height: 180px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   font-family: system-ui;
-  padding-top: 5px;
-  line-height: 12px;
+  padding: 20px;
+  line-height: 13px;
   text-shadow: -2px -2px 6px  rgba(80, 80, 80, 0.733),
   2px -2px 6px    rgba(80, 80, 80, 0.733),
   -2px 2px 6px    rgba(80, 80, 80, 0.733),
   2px 2px 6px   rgba(80, 80, 80, 0.733);
   color:  rgb(255, 255, 255);
-  z-index: 2; /* Asegura que los elementos dentro del main aparezcan encima del fondo */
 }
 
 .footer > div {
   flex-basis: calc(100% / 3);
   text-align: center;
+  padding: 5px;
 }
-
-.footer h3
-.Copyriht {
-  font-size: 0.8em;
-}
-
 .logo,
 .contacto,
 .redes{
-  flex-basis: calc(100% / 3);
-  text-align: center;
+  flex-basis: 100%;
 }
 
 .footer .logo img{
   height: auto;
-  width: 80%;
+  width: 100%;
+  max-width: 300px;
 }
 
 .redes img{
-  width: 12%;
-  height: 42%;
+  width: 40px;
+  height: auto;
 }
 
 .Copyright p{
-  margin-top: auto;
   white-space: nowrap;
   display: inline-block;
   font-family: "Atma", system-ui;
+  justify-content: center;
+  text-align: center;
+  padding-top: 15px;
 }
 
