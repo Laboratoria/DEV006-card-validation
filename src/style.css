@@ -1141,7 +1141,10 @@ article img{
 }
 
 /*-- estilos de los footers de adopt y gracias--*/
-.footer{
+
+
+
+/*.footer{
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
   display: flex;
   flex-wrap: wrap;
@@ -1185,5 +1188,5 @@ article img{
   justify-content: center;
   text-align: center;
   padding-top: 15px;
-}
+}*/
 
