@@ -944,6 +944,9 @@ article img{
 .contribution{
   display: none;
 }
+.recaudacion{
+  display: none;
+}
 
 /*footer especial para la PAG 4*/
 .footer-validation {
