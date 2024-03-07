@@ -1142,30 +1142,21 @@ article img{
 
 /*-- estilos de los footers de adopt y gracias--*/
 .footer{
-  color: black;
-}
-.contenedor-footer{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-/*.footer{
   background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  color: white;
   font-family: system-ui;
-  padding: 20px;
-  line-height: 13px;
-  text-shadow: -2px -2px 6px  rgba(80, 80, 80, 0.733),
-  2px -2px 6px    rgba(80, 80, 80, 0.733),
-  -2px 2px 6px    rgba(80, 80, 80, 0.733),
-  2px 2px 6px   rgba(80, 80, 80, 0.733);
-  color:  rgb(255, 255, 255);
+  font-size: 1em;
+  text-shadow: 2px 2px 6px rgba(80, 80, 80, 0.733);
+  line-height: 12px;
+  padding: 10px;
 }
-
-.footer > div {
+.container-footer {
+  display: flex;
+  flex-wrap: wrap; /* Para que los elementos no se envuelvan verticalmente */
+  flex-direction:row;
+  align-items: center;
+}
+.container-footer > div {
   flex-basis: calc(100% / 3);
   text-align: center;
   padding: 5px;
@@ -1175,24 +1166,14 @@ article img{
 .redes{
   flex-basis: 100%;
 }
-
-.footer .logo img{
-  height: auto;
-  width: 100%;
+.logo img{
+  width: 80%;
   max-width: 300px;
 }
-
 .redes img{
-  width: 40px;
-  height: auto;
+  width: 50px;
 }
-
-.Copyright p{
-  white-space: nowrap;
-  display: inline-block;
+.footer-copyright{
   font-family: "Atma", system-ui;
-  justify-content: center;
-  text-align: center;
-  padding-top: 15px;
-}*/
-
+  padding: 5px;
+}
