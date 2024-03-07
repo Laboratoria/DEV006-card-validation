@@ -301,6 +301,17 @@ color: #fb02a8;
   text-shadow: 2px 2px 2px rgba(182, 180, 180, 0.628);
   margin: 6px auto 15px;
 }
+.main-adopta h2{
+  width: 70%;
+  font-family: "Atma", system-ui;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(36, 36, 36);
+  text-shadow: 2px 2px 2px rgba(196, 196, 196, 0.673);
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 9px;
+}
 .main-adopta p {
   font-family: system-ui;
   text-align: justify;
@@ -311,25 +322,12 @@ color: #fb02a8;
   padding-top: 14px;
 }
 .main-adopta h3{
-  width: 70%;
-  font-family: "Atma", system-ui;
-  margin-left: auto;
-  margin-right: auto;
-  color: rgb(36, 36, 36);
-  text-shadow: 2px 2px 2px rgba(196, 196, 196, 0.673);
-  font-size: 1.3em;
-  text-align: center;
-  padding-bottom: 5px;
-  padding-top: 9px;
-}
-.main-adopta h2{
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-family: "Atma", system-ui;
   margin-top: 25px;
   text-align: center;
   padding-bottom: 2.5em;
   color: rgb(36, 36, 36);
-  text-shadow: 3px 3px 4px rgba(126, 124, 124, 0.673);
 }
 .title {
   display: flex;
@@ -1050,7 +1048,6 @@ article img{
 .agradecimiento h2{
   font-family: "Atma", system-ui;
   text-align: center;
-  font-size: 1.5em;
   padding: 1em;
   text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555);
   padding-bottom: 45px;
