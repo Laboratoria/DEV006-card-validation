@@ -557,6 +557,7 @@ width: 40%;
 margin: 0 auto;
 float: left;
 padding: 4em 2.5em;
+height: auto;
 }
 .texto-donar::before {
   content: "";
@@ -566,7 +567,7 @@ padding: 4em 2.5em;
   width: 40%;
   height: 100%;
   background-color: #FFF2F8;
-  background-size: 100% 100%;
+  background-size: auto 100%;
   z-index: -1;
 }
 .texto-donar .title-validation{
