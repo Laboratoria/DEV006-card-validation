@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+
+//para abrir la barra de menú en modo celular
+const toggleMenu = document.querySelector(".toggle-menu");
+const menu = document.querySelector(".barra-home");
+
+toggleMenu.addEventListener("click", function() {
+  menu.classList.toggle("show");
+});
+
+
 // para enviar el formulario
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('myForm').addEventListener('submit', function(event) {
