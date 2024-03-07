@@ -346,12 +346,14 @@ color: #fb02a8;
 .main-adopta .neon {
   overflow: hidden;
   border-radius: 10px;
-  width: 65%;
+  width: 100%;
+  max-width: 650px;
   padding: 5px 5px 0;
 }
 .main-adopta .neon img{
     background-color: #ffffff;
     width: 100%;
+    max-width: 650px;
     justify-content: center;
     height: 160px;
     border: 12px solid transparent;
