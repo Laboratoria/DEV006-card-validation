@@ -19,7 +19,7 @@ nav ul{
 }
 nav ul li a{
   display: block;
-  padding: 15px;
+  padding: 17px 12px;
   text-decoration: none;
 }
 nav ul li a:hover{
@@ -82,13 +82,9 @@ width: auto;
   align-items: center;
   min-height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
 }
-.campaña {
-  position: relative; /* Asegúrate de que el contenedor de la imagen tenga una posición relativa */
-  z-index: 1; /* Asegúrate de que el z-index del contenedor de la imagen sea menor que el del footer */
-}
 .campaña img {
-  width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
-  height: 100vh; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+  width: 100vw;
+  height: 100vh;
 }
 .quienes-somos {
   display: none;
@@ -108,6 +104,7 @@ width: auto;
 .footer-home p {
   margin: 0;
 }
+
 .popup-home{
   display: block;
   position: fixed;
@@ -159,30 +156,52 @@ color: #fb02a8;
 }
 
 /* Estilos para hacer el encabezado responsive */
-@media screen and (max-width: 767px) {
-  .toggle-menu {
-    display: block; /* Muestra el botón de hamburguesa */
+@media screen and (max-width: 768px) {
+  .header-home{
+    max-height: 58px;
   }
-  .barra-home {
-    display: none; /* Oculta el menú por defecto */
+  .logomenu img{
+  max-width: 130px;
+  height: 48px;
+  padding-top: 5px;
+  }
+  .barra-home{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .home-links{
+    padding: 0;
+  }
+  .home-links li a {
+    font-size: 0.8em;
+  }
+  .donar-icon{
+    width: 35px;
   }
   .campaña img {
     width: 100%;
-    height: 100%;
+    max-height: 340px;
+    height: auto;
+    margin: 0;
   }
   .quienes-somos {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
   .texto-bienvenida{
     width: 70%;
+    margin-bottom: 20px;
     color: rgb(36, 36, 36);
   }
   .texto-bienvenida h1{
-    text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
+    text-shadow: 2px 2px 4px rgba(255, 16, 175, 0.893);
+    font-family: "Atma", system-ui;
+    font-size: 1.2em;
   }
   .texto-bienvenida p{
     text-align: justify;
+    font-family: system-ui;
   }
   .quienes-somos img{
     background-image: url("images/huella-bienvenida.gif");
@@ -190,12 +209,11 @@ color: #fb02a8;
     background-size: contain;
   }
   .footer-home {
-    flex-direction: column;
     text-align: center;
-    position: fixed;
+    position: relative;
     background-color: rgba(69, 16, 100, 0.486);
     text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
-    font-size: 0.9em;
+    font-size: 0.63em;
   }
   .popup-home{
     display: none !important;
@@ -255,7 +273,6 @@ color: #fb02a8;
   justify-content: center;  /* Alinea los enlaces en el centro */
   align-items: center;
 }
-.home-links li,
 .nav-links li {
   padding: 0 0.6em; /* Espacio entre los elementos del menú */
 }
