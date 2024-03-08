@@ -82,6 +82,10 @@ width: auto;
   align-items: center;
   min-height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
 }
+.campaña {
+  position: relative;
+  z-index: 1;
+}
 .campaña img {
   width: 100vw;
   height: 100vh;
@@ -195,12 +199,13 @@ color: #fb02a8;
     margin-bottom: 20px;
     color: rgb(36, 36, 36);
   }
-  .texto-bienvenida h1{
+  .texto-bienvenida .welcome{
     text-shadow: 2px 2px 4px rgba(255, 16, 175, 0.893);
     font-family: "Atma", system-ui;
     font-size: 1.2em;
+    padding-top: 15px;
   }
-  .texto-bienvenida p{
+  .texto-bienvenida .text-welcome{
     text-align: justify;
     font-family: system-ui;
   }
@@ -211,7 +216,7 @@ color: #fb02a8;
   }
   .footer-home {
     text-align: center;
-    position: relative;
+    position: fixed;
     background-color: rgba(69, 16, 100, 0.486);
     text-shadow: 0.1em 0.1em 0.3em rgba(255, 16, 175, 0.893);
     font-size: 0.63em;
@@ -244,26 +249,19 @@ color: #fb02a8;
 /*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
 .header-general {
   display: flex;
+  top: 0;
+  left: 0;
   background-color: #fff;
-  border-bottom: 5px solid  rgba(255, 89, 200, 0.959);
   background-image: url("images/huella-bienvenida.gif");
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  padding: 6px 0 3px 0;
-  margin: 0;
+  border-bottom: 5px solid  rgba(255, 16, 175, 0.836);
+}
+.barra-general{
   cursor: pointer;
-  width: 100%;
+  flex: 1;
 }
-/*--tamaño del logo--*/
-.logomenup img {
-  height: 3.8em;
-  width: auto;
-  transition: all 0.5s;
-}
-/*--hover para hacer un efecto al pasar el mouse sobre el logo--*/
-.header-general .logomenup img:hover {
-  transform: scale(1.1);
-}
+
 /*-- darle forma a la lista desordenada (links)--*/
 .home-links,
 .nav-links {
@@ -272,26 +270,21 @@ color: #fb02a8;
   padding: 0;
   display: flex;
   justify-content: center;  /* Alinea los enlaces en el centro */
-  align-items: center;
 }
-.nav-links li {
-  padding: 0 0.6em; /* Espacio entre los elementos del menú */
-}
-.nav-links a {
-  font-size: 1.3rem;
-  font-weight: 850;
+
+.nav-links li a {
+  font-size: 1.2rem;
+  font-weight: 800;
   color:  rgb(36, 36, 36);
   text-decoration: none;
+  align-items: center;
 }
 
 /*--estilo de ícono DONATE--*/
 .donar {
   cursor: pointer;
-  transition: all 0.3s ease 0s;
 }
-.donar img {
-  transition: all 0.3s;
-}
+
 
 /*--ESTILO PAG 3--*/
 .main-adopta{
