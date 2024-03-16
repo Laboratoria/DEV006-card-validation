@@ -173,8 +173,8 @@ color: #fb02a8;
   }
   .logomenu img{
   max-width: 170px;
-  height: 45px;
-  padding-top: 5px;
+  height: 42px;
+  padding-top: 2px;
   }
   .barra-home{
     flex-direction: row;
@@ -293,7 +293,6 @@ color: #fb02a8;
 .donar {
   cursor: pointer;
 }
-
 
 /*--ESTILO PAG 2--*/
 .main-adopta{
