@@ -479,7 +479,7 @@ color: #fb02a8;
   position: relative;
   display: flex;
   justify-content: center;
-   overflow: hidden;
+  overflow: hidden;
 }
 .slide1, .slide2, .slide3 {
   position: absolute;
@@ -576,20 +576,28 @@ color: #fb02a8;
     width: 100%;
     max-height: auto;
     padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #columna1 img{
     display: flex;
-    max-width: 360px;
+    max-width: 380px;
     max-height: 540px;
     justify-content: center;
     align-self: center;
+    margin: 0 auto;
+  }
+  .footer{
+    padding: 5px;
+    line-height: 10px;
   }
   .contacto h3,
   .contacto a{
     font-size: 0.8em;
   }
   .redes img{
-    max-width: 30px;
+    max-width: 20px;
   }
   .footer-copyright{
     font-size: 0.6em;
@@ -1282,13 +1290,13 @@ article img{
   flex-basis: 100%;
 }
 .logo img{
-  width: 80%;
-  max-width: 320px;
+  width: 100%;
+  max-width: 340px;
 }
 .redes img{
   width: 50px;
 }
 .footer-copyright{
-  font-family: "Atma", system-ui;
+  font-family: system-ui;
   padding: 5px;
 }
