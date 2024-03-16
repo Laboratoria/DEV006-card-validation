@@ -172,7 +172,7 @@ color: #fb02a8;
     max-height: 58px;
   }
   .logomenu img{
-  max-width: 200px;
+  max-width: 170px;
   height: 45px;
   padding-top: 5px;
   }
@@ -256,7 +256,7 @@ color: #fb02a8;
 }
 
 
-/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 1 HASTA LA PAG 5--*/
+/*--ESTILO DE LA BARRA DE MENÚ DE TODOS LOS HTML PÁG 2 HASTA LA PAG 5--*/
 .header-general {
   display: flex;
   top: 0;
@@ -295,7 +295,7 @@ color: #fb02a8;
 }
 
 
-/*--ESTILO PAG 3--*/
+/*--ESTILO PAG 2--*/
 .main-adopta{
   background-image:url("images/fondo-gracias.png");
   background-size: 100% 100%;
@@ -544,13 +544,15 @@ color: #fb02a8;
   }
   .main-adopta h2{
     width: 85%;
-    font-size: 1.15em;
+    font-size: 1.1em;
     text-align: justify;
+    padding-top: 4px;
   }
   .main-adopta p{
     width: 85%;
   }
   .main-adopta h3{
+    font-size: 1em;
     width: 85%;
     margin: 0 auto;
     padding-top: 10px;
