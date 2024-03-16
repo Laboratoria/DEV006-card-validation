@@ -29,6 +29,14 @@
       {
         "duplicate-id": "off"
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "max-height: fit-content"
+        ]
+      }
     ]
   },
   "browserslist": [

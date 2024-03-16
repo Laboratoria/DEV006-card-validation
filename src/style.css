@@ -162,6 +162,12 @@ color: #fb02a8;
 
 /* Estilos para hacer el encabezado responsive */
 @media screen and (max-width: 768px) {
+  nav ul li a{
+    padding: 14px 10px;
+  }
+  nav ul li a.donate-link:link, a.donate-link:visited{
+    padding: 7px;
+  }
   .header-home{
     max-height: 58px;
   }
@@ -185,7 +191,7 @@ color: #fb02a8;
   }
   .campaña img {
     width: 100%;
-    max-height: 600px;
+    max-height: 380px;
     height: auto;
     margin: 0;
   }
@@ -231,16 +237,17 @@ color: #fb02a8;
 
 /* Estilos para la sección de bienvenida en pantallas con altura menor a 800px */
 @media screen and (max-height: 800px) {
-  .campaña img {
+  .campaña{
     overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
     margin: 0;
     padding: 0;
-    width: 100vw; /* Asegura que el contenedor tenga el mismo ancho que la pantalla */
-    height: 100vh; /* Asegura que el contenedor tenga el mismo alto que la pantalla */
+    background-size: auto;
+    width: 100%; /* Asegura que el contenedor tenga el mismo ancho que la pantalla */
+    height: 100%; /* Asegura que el contenedor tenga el mismo alto que la pantalla */
   }
   .campaña img {
-    width: 100%; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
-    height: 100%; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
+    width: 100vw; /* La imagen de la campaña ocupará el 100% del ancho del contenedor */
+    height: 100vh; /* La imagen de la campaña ocupará el 100% del alto del contenedor */
   }
   .popup-content {
     height: 91%;
