@@ -1256,11 +1256,19 @@ article img{
 
 /* Media query para ajustar el diseño en pantallas más pequeñas */
   @media (max-width: 768px) {
+    .agradecimiento .gracias{
+      font-size: 1em;
+    }
   .contenedor-imagenes {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columnas */
+  display: block;
+  text-align: center;
+  }
+  .contenedor-imagenes article {
+    margin: 30px auto; /* Margen automático para centrar las imágenes */
+    width: 85%; /* Ancho máximo para las imágenes */
   }
   .centrar-imagen img{
-    padding: 1.5em;
+    padding: 2em;
   }
 }
 
