@@ -103,7 +103,7 @@ width: auto;
   background-color: rgba(72, 24, 102, 0.356);
   text-shadow: 3px 3px 4px rgba(37, 37, 37, 0.628);
   color: white;
-  font-family: "Atma", system-ui;
+  font-family: system-ui;
   z-index: 3; /* Asegúrate de que el z-index del footer sea mayor que el del contenedor de la imagen */
 }
 .footer-home p {
@@ -167,7 +167,7 @@ color: #fb02a8;
   }
   .logomenu img{
   max-width: 130px;
-  height: 48px;
+  height: 45px;
   padding-top: 5px;
   }
   .barra-home{
@@ -185,7 +185,7 @@ color: #fb02a8;
   }
   .campaña img {
     width: 100%;
-    max-height: 340px;
+    max-height: 600px;
     height: auto;
     margin: 0;
   }
@@ -193,17 +193,20 @@ color: #fb02a8;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 10px;
   }
   .texto-bienvenida{
     width: 70%;
     margin-bottom: 20px;
     color: rgb(36, 36, 36);
+    padding-top: 20px;
   }
   .texto-bienvenida .welcome{
     text-shadow: 2px 2px 4px rgba(255, 16, 175, 0.893);
     font-family: "Atma", system-ui;
     font-size: 1.2em;
-    padding-top: 15px;
   }
   .texto-bienvenida .text-welcome{
     text-align: justify;
@@ -222,13 +225,13 @@ color: #fb02a8;
     font-size: 0.63em;
   }
   .popup-home{
-    display: none !important;
+    display: none;
   }
 }
 
 /* Estilos para la sección de bienvenida en pantallas con altura menor a 800px */
 @media screen and (max-height: 800px) {
-  .campaña {
+  .campaña img {
     overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
     margin: 0;
     padding: 0;
@@ -271,7 +274,6 @@ color: #fb02a8;
   display: flex;
   justify-content: center;  /* Alinea los enlaces en el centro */
 }
-
 .nav-links li a {
   font-size: 1.2rem;
   font-weight: 800;
@@ -339,11 +341,11 @@ color: #fb02a8;
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
 }
 .neon:hover{
-  box-shadow: 0 0 38px rgb(255, 20, 153);
+  box-shadow: 0 0 28px rgb(255, 20, 153);
 }
 .main-adopta .neon {
   overflow: hidden;
@@ -476,6 +478,8 @@ color: #fb02a8;
 .contenedor-slide {
   position: relative;
   display: flex;
+  justify-content: center;
+   overflow: hidden;
 }
 .slide1, .slide2, .slide3 {
   position: absolute;
@@ -483,25 +487,20 @@ color: #fb02a8;
   height: 100%;
   opacity: 0;
 }
-
 .slide1 {
   animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
 }
-
 .slide2 {
   animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
   animation-delay: 15s; /* Comienza después de 15 segundos de la animación anterior */
 }
-
 .slide3 {
   animation: fadeInOut 30s 1; /* Duración total de 30 segundos, solo se reproduce una vez */
   animation-delay: 30s; /* Comienza después de 30 segundos de la animación anterior */
 }
-
 .imagen-es {
   display: none;
 }
-
 .imagen-en {
   display: block;
 }
@@ -520,15 +519,48 @@ color: #fb02a8;
 
 @media only screen and (max-width: 768px) {
   .header-general {
-    flex-direction: row;
-    height: auto;
+    max-height: 58px;
   }
-  .title{
-    width: 100%;
+  .barra-general{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav-links{
+    padding: 0;
+  }
+  .nav-links li a{
+    font-size: 0.8em;
+  }
+  .main-adopta h1{
+    width: 85%;
+    font-size: 1.6em;
+  }
+  .main-adopta h2{
+    width: 85%;
+    font-size: 1.15em;
+    text-align: justify;
+  }
+  .main-adopta p{
+    width: 85%;
+  }
+  .main-adopta h3{
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+  .main-adopta .neon{
+    max-width: 340px;
+  }
+  .main-adopta .neon img{
+    max-width: 340px;
+    height: 110px;
+    border: 6px solid transparent;
   }
   #myForm{
     flex-direction: column;
     align-items: center;
+    padding: 30px 0;
   }
   .main-adopta .columna {
     padding: 0;
@@ -537,8 +569,31 @@ color: #fb02a8;
   .main-adopta .send {
     width: 90%; /* Ajustar el ancho del botón de envío */
   }
-  .img-adopta {
+   .img-adopta {
     margin-top: 20px;
+  }
+  #columna1{
+    width: 100%;
+    max-height: auto;
+    padding-top: 30px;
+  }
+  #columna1 img{
+    display: flex;
+    max-width: 360px;
+    max-height: 540px;
+    justify-content: center;
+    align-self: center;
+  }
+  .contacto h3,
+  .contacto a{
+    font-size: 0.8em;
+  }
+  .redes img{
+    max-width: 30px;
+  }
+  .footer-copyright{
+    font-size: 0.6em;
+    text-align: center;
   }
 }
 
@@ -1228,7 +1283,7 @@ article img{
 }
 .logo img{
   width: 80%;
-  max-width: 300px;
+  max-width: 320px;
 }
 .redes img{
   width: 50px;
