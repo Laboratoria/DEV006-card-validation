@@ -1079,7 +1079,7 @@ article img{
     line-height: 1.4; /* Espaciado de línea */
   }
   .texto-despedida{
-    padding-bottom: 2.5em;
+    padding-bottom: 4em;
   }
   .close-recaudacion{
     background-color: rgba(200, 200, 200, 0.342);
@@ -1090,7 +1090,9 @@ article img{
     border-radius: 90%;
     padding: 0.5em;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
