@@ -1141,7 +1141,7 @@ article img{
   padding-top: 8px;
 }
 .footer-bottom .derechos-autor{
-  font-family: "Atma", system-ui;
+  font-family: system-ui;
   text-align: center;
   background-color:  rgba(53, 1, 85, 0.438);;
   padding: 6px 0;
