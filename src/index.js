@@ -11,7 +11,7 @@ const errorMensaje = document.getElementById('errorMsj');
 const mensajeValido = document.getElementById('msjValido');
 
 
-//llamando al button VALIDAR por si ID
+//llamando al button VALIDAR por su ID
 document.getElementById('validar').addEventListener('click', function (event) {
   event.preventDefault()
 
@@ -40,7 +40,7 @@ document.getElementById('validar').addEventListener('click', function (event) {
     cerrar.addEventListener('click', (event) =>  {
       msjVal.classList.remove('show');
       event.preventDefault();
-      window.location.href="gracias.html";
+      document.querySelector('.recaudacion').style.display= 'block';
     });
 
   } else {
@@ -181,6 +181,11 @@ const ccvInput = document.getElementById('inputCCV');
 ccvInput.addEventListener('input', function() {
   // Reemplazar cualquier carácter que no sea un número con una cadena vacía
   this.value = this.value.replace(/\D/g, '');
+});
+
+//ocultar la seccion recaudacion
+document.getElementById('closeButton').addEventListener('click', () => {
+  document.querySelector('.recaudacion').style.display = 'none';
 });
 
 console.log(validator);
