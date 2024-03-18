@@ -824,7 +824,7 @@ height: auto;
   position: relative;
   z-index: 3;
   transition: all .3s ease;
-  padding: 2px;
+  padding: 1px;
   border: rgb(238, 22, 148);
   border-radius: 200%;
   cursor: pointer;
@@ -983,7 +983,7 @@ article img{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
-  margin-left: 19.3%;
+  margin-left: 20%;
 }
 .modal h3{
   margin: 0;
@@ -1132,15 +1132,69 @@ article img{
   .texto-donar::before{
     background-color: transparent;
   }
+  .texto-donar .title-validation{
+    font-size: 1.3em;
+    padding-top: 1em;
+    padding-bottom: 0.6em;
+   }
   .contenedor {
-    width: 80%;
-    max-width: 680px;
+    width: 100%;
+    max-width: 600px;
     padding-top: 2em;
   }
-  .formulario-tarjeta {
-    width: 95%;
-    max-width: 920px;
+  .tarjeta{
+    width: 90%;
+    max-width: 500px;
+    height: 250px;
+    max-height: auto;
   }
+  .tarjeta>div {
+    padding: 12px;
+  }
+  .tarjeta .delantera {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .delantera .logo img {
+    max-width: 75px;
+    max-height: 55px;
+  }
+  .delantera .grupo .label {
+    font-size: 1em;
+    margin-bottom: 2px;
+  }
+  .delantera .grupo .numero,
+  .delantera .grupo .fullName,
+  .delantera .grupo .expiracion {
+  font-size: 0.9em;
+}
+.reversa .link-banco {
+  font-size: 0.9em;
+}
+.contenedor-btn .btn-abrir {
+  top: -15px;
+}
+.contenedor-btn .btn-abrir img {
+  width: 45px;
+  max-width: 100%;
+}
+  .formulario-tarjeta {
+    width: 96%;
+    max-width: 700px;
+    top: -120px;
+  }
+  .formulario-tarjeta label {
+    font-size: 1em;
+    margin-bottom: 3px;
+  }
+  .formulario-tarjeta input,
+.formulario-tarjeta select {
+  font-size: 0.9em;
+  padding: 2px;
+}
+.formulario-tarjeta .Validar #validar {
+  font-size: 1em;
+}
   .container{
     height: 101vh;
     width: 101vw;
