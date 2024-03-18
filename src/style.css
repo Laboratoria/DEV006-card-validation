@@ -1030,6 +1030,9 @@ article img{
     z-index: 9999;
     padding: 20px;
   }
+  .recaudacion::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento */
+}
   .recaudacion h1 {
     margin-top: 20px; /* Agregamos un margen superior */
     text-align: center;
@@ -1054,7 +1057,7 @@ article img{
     align-items: center;
     flex-direction: column;
     margin-bottom: 30px;
-    padding: 25px;
+    padding: 30px 25px;
     box-shadow: 0px 4px 8px rgba(41, 1, 66, 0.394);;
     border-radius: 8px;
     background-color: rgba(157, 8, 249, 0.079);
@@ -1062,10 +1065,10 @@ article img{
   .recaudacion img {
     border-radius: 8px;
     max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
-    height: 250px; /* Establece una altura fija para todas las imágenes */
+    height: 270px; /* Establece una altura fija para todas las imágenes */
     object-fit: cover; /* Ajusta la imagen manteniendo su relación de aspecto y recortando si es necesario */
     display: block; /* Asegura que la imagen no tenga espacios adicionales */
-    margin-bottom: 10px; /* Agrega un margen inferior */
+    margin-bottom: 15px; /* Agrega un margen inferior */
   }
   .recaudacion p {
     text-align: center;
@@ -1075,6 +1078,34 @@ article img{
     color: rgb(36, 36, 36);
     line-height: 1.4; /* Espaciado de línea */
   }
+  .texto-despedida{
+    padding-bottom: 2.5em;
+  }
+  .close-recaudacion{
+    background-color: rgba(200, 200, 200, 0.342);
+    color: #787878;
+    font-size: 2em;
+    width: 1.7em;
+    height: 1.7em;
+    border-radius: 90%;
+    padding: 0.5em;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .close-recaudacion:hover {
+    color:  rgb(36, 36, 36);
+    background-color: rgba(170, 168, 168, 0.512); /* Cambiar el color de fondo al pasar el mouse */
+}
+.close-recaudacion i::before {
+  content: '×'; /* Contenido para la 'x' */
+}
+.close-recaudacion::after {
+  display: none; /* Oculta la pseudo-clase ::after */
+}
 
 /*footer especial para la PAG 4*/
 .footer-validation {
@@ -1213,11 +1244,16 @@ article img{
   .recaudacion h1 {
     font-size: 1.3em;
   }
+  .recaudacion img {
+    height: 220px;
+    width: 200px;
+  }
   .footer-validation {
     width: 100%;
     height: 100px;
   }
 }
+
 /*--ESTILO DE LA PAG5--*/
 .main-gracias{
   display: flex;
