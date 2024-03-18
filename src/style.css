@@ -1207,6 +1207,12 @@ article img{
     left: 50%;
     transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
   }
+  .recaudacion{
+    display: none;
+  }
+  .recaudacion h1 {
+    font-size: 1.3em;
+  }
   .footer-validation {
     width: 100%;
     height: 100px;
