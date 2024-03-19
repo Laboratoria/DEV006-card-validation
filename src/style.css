@@ -598,18 +598,18 @@ color: #fb02a8;
   }
   .footer{
     padding: 5px;
-    line-height: 10px;
+    height: auto;
   }
   .contacto h3,
   .contacto a{
-    font-size: 0.8em;
+    font-size: 0.6em;
+    line-height: 4px;
   }
   .redes img{
-    max-width: 20px;
+    max-width: 15px;
   }
   .footer-copyright{
     font-size: 0.6em;
-    text-align: center;
   }
 }
 
@@ -1145,7 +1145,7 @@ article img{
 .footer-bottom .derechos-autor{
   font-family: system-ui;
   text-align: center;
-  background-color:  rgba(53, 1, 85, 0.438);;
+  background-color:  rgba(46, 1, 75, 0.522);
   padding: 6px 0;
 }
 /* Estilos específicos para dispositivos móviles */
@@ -1245,6 +1245,9 @@ article img{
   }
   .recaudacion h1 {
     font-size: 1.3em;
+  }
+  .recaudacion ul {
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   }
   .recaudacion img {
     height: 220px;
@@ -1378,39 +1381,47 @@ article img{
 }
 
 /*-- estilos de los footers de adopt y gracias--*/
-.footer{
-  background: linear-gradient(90deg, rgba(255, 152, 221, 0.781), rgba(253, 58, 188, 0.808));
+.footer {
+  background-color:  rgba(46, 1, 75, 0.522);
   color: white;
   font-family: system-ui;
   font-size: 1em;
-  text-shadow: 2px 2px 6px rgba(80, 80, 80, 0.733);
+  text-align: center;
   line-height: 12px;
-  padding: 10px;
+  padding: 15px;
 }
+
+/* Estilo para los elementos internos del footer */
 .container-footer {
   display: flex;
-  flex-wrap: wrap; /* Para que los elementos no se envuelvan verticalmente */
-  flex-direction:row;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.container-footer > div {
-  flex-basis: calc(100% / 3);
-  text-align: center;
-  padding: 5px;
-}
-.logo,
-.contacto,
-.redes{
-  flex-basis: 100%;
-}
-.logo img{
+.caja-footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
-  max-width: 340px;
+  align-items: center;
+  text-align: center;
 }
+
+.logo, .contacto, .redes {
+  width: 100%;
+  max-width: 33%;
+  margin-bottom: 10px;
+}
+ /* Estilo para las imágenes de redes sociales */
+ .redes .social-icono {
+  display: inline-block;
+}
+
 .redes img{
-  width: 50px;
+  width: 45px;
 }
-.footer-copyright{
-  font-family: system-ui;
-  padding: 5px;
+
+.footer-copyright {
+  width: 100%;
+  margin-top: 5px;
 }
+
