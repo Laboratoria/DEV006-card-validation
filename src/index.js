@@ -13,7 +13,7 @@ const mensajeValido = document.getElementById('msjValido');
 
 //llamando al button VALIDAR por su ID
 document.getElementById('validar').addEventListener('click', function (event) {
-  event.preventDefault()
+  event.preventDefault();
 
   const numArray = numero.value;
 
@@ -51,6 +51,7 @@ document.getElementById('validar').addEventListener('click', function (event) {
     errorMensaje.style.display =  'block'; //ocultar mensaje de error
 
     // para cerrar la ventana emergente
+    const cerrar = document.getElementById('cerrar');
     cerrar.addEventListener('click', () =>  {
       msjVal.classList.remove('show');
     });
