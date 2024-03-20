@@ -315,6 +315,7 @@ color: #fb02a8;
 }
 .main-adopta h2{
   width: 70%;
+  font-size: 1.3em;
   font-family: "Atma", system-ui;
   margin-left: auto;
   margin-right: auto;
@@ -562,7 +563,7 @@ color: #fb02a8;
   }
   .main-adopta .neon img{
     max-width: 340px;
-    height: 110px;
+    height: 90px;
     border: 6px solid transparent;
   }
   #myForm{
@@ -576,6 +577,9 @@ color: #fb02a8;
   }
   .main-adopta .send {
     width: 90%; /* Ajustar el ancho del botón de envío */
+  }
+  .main-adopta .send #btn-send {
+    font-size: 1.3em;
   }
    .img-adopta {
     margin-top: 20px;
@@ -591,31 +595,34 @@ color: #fb02a8;
   #columna1 img{
     display: flex;
     max-width: 380px;
-    max-height: 540px;
+    height: 500px;
     justify-content: center;
     align-self: center;
     margin: 0 auto;
   }
-  .footer{
+  .footer {
     padding: 5px;
     height: auto;
   }
-  .contacto h3,
-  .contacto a{
-    font-size: 0.6em;
-    line-height: 4px;
+  .contacto{
+    text-align: center;
   }
-  .redes img{
+  .contacto h3,
+  .contacto a {
+    font-size: 0.6em;
+    line-height: 0.5;
+  }
+  .redes img {
     max-width: 15px;
   }
-  .footer-copyright{
+  .footer-copyright {
     font-size: 0.6em;
+    margin-top: 10px; /* Reducir el margen superior */
   }
 }
 
 
-/* ESTILO DE LA 4TA PÁGINA HTML
-  /*--estilo de la página de validar donation--*/
+/* ESTILO DE LA 4TA PÁGINA HTML validar donation--*/
   * {
     margin: 0;
     padding: 0;
@@ -1109,7 +1116,7 @@ article img{
   display: none; /* Oculta la pseudo-clase ::after */
 }
 
-/*footer especial para la PAG 4*/
+/*footer especial para la PAG VALIDAR DONATION*/
 .footer-validation {
   background-color: rgba(72, 24, 102, 0.329);
   color: white;
@@ -1259,7 +1266,7 @@ article img{
   }
 }
 
-/*--ESTILO DE LA PAG5--*/
+/*--ESTILO DE LA PAG3--*/
 .main-gracias{
   display: flex;
   flex-wrap: wrap;
@@ -1382,13 +1389,14 @@ article img{
 
 /*-- estilos de los footers de adopt y gracias--*/
 .footer {
-  background-color:  rgba(46, 1, 75, 0.522);
+  width: 100%;
+  background-color: rgba(72, 24, 102, 0.329);
   color: white;
   font-family: system-ui;
-  font-size: 1em;
   text-align: center;
-  line-height: 12px;
-  padding: 15px;
+  line-height: 0.7;
+  padding: 10px;
+  position: relative;
 }
 
 /* Estilo para los elementos internos del footer */
@@ -1396,32 +1404,40 @@ article img{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font-size: 1em;
 }
 .caja-footer{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  text-shadow: 2px 2px 3px  rgba(80, 80, 80, 0.733);
 }
-
 .logo, .contacto, .redes {
   width: 100%;
   max-width: 33%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  height: auto;
 }
  /* Estilo para las imágenes de redes sociales */
  .redes .social-icono {
   display: inline-block;
 }
-
 .redes img{
   width: 45px;
 }
-
-.footer-copyright {
+.footer-copyright{
   width: 100%;
-  margin-top: 5px;
+  padding: 8px;
+  background-color:  rgba(46, 1, 75, 0.522);
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
 }
+
 
