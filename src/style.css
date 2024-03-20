@@ -1285,8 +1285,9 @@ article img{
   text-align: justify;
   font-size: 1.05em;
 }
-.agradecimiento h2{
+.agradecimiento h3{
   font-family: "Atma", system-ui;
+  font-size: 1.3em;
   text-align: center;
   padding: 1em;
   text-shadow: 3px 2px 5px rgba(255, 52, 153, 0.555);
